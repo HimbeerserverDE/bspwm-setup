@@ -1,0 +1,149 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	~/.local/kitty.app/bin/kitty
+
+# program launcher
+super + a
+	dmenu_run
+
+# make sxhkd reload its configuration files
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# mute output
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# lower output volume
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# raise output volume
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# mute input
+XF86AudioMicMute
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+# lower brightness
+XF86MonBrightnessDown
+	brightnessctl set 2%-
+
+# raise brightness
+XF86MonBrightnessUp
+	brightnessctl set 2%+
+
+# lock screen
+super + l
+	i3lock-fancy
+
+# power off/reboot/hibernate
+super + alt + {s,a,y}
+	systemctl {poweroff,reboot,hibernate}
+
+# firefox
+super + shift + f
+	firefox
+
+# discord
+super + shift + m
+	discord
+
+# hexchat
+super + shift + h
+	hexchat
+
+# thunderbird
+super + shift + t
+	thunderbird
+
+# signal
+super + shift + s
+	signal-desktop
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+super + {_,shift + }q
+	bspc node -{c,k}
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the given desktop
+super + {1-9}
+	D={1-9}; \
+	bspc desktop -f "$(bspc query -D -m | sed -n "$D p")"
+
+# send to the given desktop
+super + shift + {1-9}
+	D={1-9}; \
+	bspc node -d "$(bspc query -D -m | sed -n "$D p")" --follow
+
+# focus the given monitor
+super + ctrl + {1-2}
+	bspc monitor -f '^{1-2}'
+
+# send to the given monitor
+super + ctrl + shift + {1-2}
+	bspc node -m '^{1-2}' --follow
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -p {west,south,north,east}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its sides outward
+super + alt + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its sides inward
+super + alt + shift + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
