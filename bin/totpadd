@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "$2" | gpg -c > "$HOME/.2fa/$1"
+chown $USER:$USER "$HOME/.2fa/$1"
+chmod 0600 "$HOME/.2fa/$1"

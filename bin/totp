@@ -1,0 +1,3 @@
+#!/bin/sh
+
+gpg -d "$HOME/.2fa/$1" 2>/dev/null | oathtool -b --totp -
