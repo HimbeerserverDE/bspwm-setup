@@ -1,7 +1,7 @@
 # bspwm-setup
-Polybar config mainly written by
+The polybar setup was written by
 [Fleckenstein](https://github.com/EliasFleckenstein03).
-Edited to show a second bar on my external monitor.
+It is edited to display a second bar on an external monitor.
 
 ## install.sh
 The `install.sh` script installs the entire setup:
