@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 xss-lock --transfer-sleep-lock -- i3lock-fancy &
-feh --bg-fill ~/.wallpaper.png
+feh --bg-fill ~/.wallpaper
 killall -qw picom; picom -b
 pgrep -x polybar > /dev/null || ~/.config/polybar/launch.sh &
 
