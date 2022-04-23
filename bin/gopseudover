@@ -1,0 +1,7 @@
+#!/bin/bash
+
+gitstamp=$(git log -1 --format=%cI)
+timestamp=$(date -d "${gitstamp}" -u +%Y%m%d%H%M%S)
+hash=$(git rev-parse HEAD | head -c 12)
+
+echo "v0.0.0-${timestamp}-${hash}"
