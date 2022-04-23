@@ -22,6 +22,7 @@ if command_exists apt; then
 	$SUDO apt install -y \
 		bspwm \
 		xorg \
+		dmenu \
 		polybar \
 		i3lock-fancy \
 		feh \
