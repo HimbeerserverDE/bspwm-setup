@@ -27,6 +27,7 @@ if command_exists apt; then
 		i3lock-fancy \
 		feh \
 		picom \
+		dunst \
 		lua5.3 \
 		vlc \
 		firefox-esr \
