@@ -38,6 +38,3 @@ ln -s ${PWD}/himbeer.zsh-theme ~/.oh-my-zsh/themes/himbeer.zsh-theme
 
 mkdir -p ~/
 ln -s ${PWD}/zshrc ~/.zshrc
-
-mkdir -p ~/
-ln -s ${PWD}/wallpaper.png ~/.wallpaper
