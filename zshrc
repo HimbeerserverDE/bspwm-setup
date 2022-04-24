@@ -4,3 +4,4 @@ export TERM="xterm-256color"
 ZSH_THEME="smt"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh_aliases

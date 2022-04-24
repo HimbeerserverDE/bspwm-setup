@@ -35,3 +35,6 @@ ln -s ${PWD}/bin ~/bin
 
 mkdir -p ~/
 ln -s ${PWD}/zshrc ~/.zshrc
+
+mkdir -p ~/
+ln -s ${PWD}/zsh_aliases ~/.zsh_aliases
