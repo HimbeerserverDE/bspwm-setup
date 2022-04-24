@@ -8,7 +8,7 @@ killall -qw picom; picom -b
 killall -qw dunst; dunst &
 pgrep -x polybar > /dev/null || ~/.config/polybar/launch.sh &
 
-bspc monitor 'eDP-1'-n 1 -d 1 2 3 4 5 6 7 8 9
+bspc monitor 'eDP-1' -n 1 -d 1 2 3 4 5 6 7 8 9
 bspc monitor 'DP-2' -n 2 -d 1 2 3 4 5 6 7 8 9
 
 bspc config border_width		0
