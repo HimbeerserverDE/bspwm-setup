@@ -24,6 +24,7 @@ if command_exists apt; then
 		xorg \
 		dmenu \
 		polybar \
+		scrot \
 		i3lock-fancy \
 		feh \
 		picom \
