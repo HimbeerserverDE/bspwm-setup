@@ -63,7 +63,7 @@ super + shift + h
 	hexchat
 
 # thunderbird
-super + shift + t
+super + shift + l
 	thunderbird
 
 # signal
