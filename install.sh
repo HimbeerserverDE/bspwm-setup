@@ -22,7 +22,7 @@ if command_exists apt; then
 	$SUDO apt install -y \
 		bspwm \
 		xorg \
-		dmenu \
+		rofi \
 		polybar \
 		scrot \
 		i3lock-fancy \
