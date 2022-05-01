@@ -47,6 +47,9 @@ ln -s ${PWD}/bspwmrc ~/.config/bspwm/bspwmrc
 mkdir -p ~/.config/sxhkd
 ln -s ${PWD}/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
+mkdir -p ~/.config/rofi
+ln -s ${PWD}/rofi_config ~/.config/rofi/config
+
 ln -s ${PWD}/polybar ~/.config/polybar
 
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | bash
