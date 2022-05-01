@@ -50,6 +50,7 @@ ln -s ${PWD}/sxhkdrc ~/.config/sxhkd/sxhkdrc
 mkdir -p ~/.config/rofi
 ln -s ${PWD}/rofi_config ~/.config/rofi/config
 
+mkdir -p ~/.config/polybar
 ln -s ${PWD}/polybar ~/.config/polybar
 
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | bash
