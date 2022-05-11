@@ -23,7 +23,9 @@ if command_exists apt; then
 		fortune \
 		zsh \
 		git \
-		figlet
+		figlet \
+		curl \
+		wget
 else
 	echo "Your distro is not supported."
 	exit 1
@@ -38,3 +40,8 @@ ln -s ${PWD}/zshrc ~/.zshrc
 
 mkdir -p ~/
 ln -s ${PWD}/zsh_aliases ~/.zsh_aliases
+
+sudo mkdir -p /usr/local/bin
+cd /usr/local/bin
+curl https://getmic.ro/r | $SUDO sh
+$SUDO update-alternatives --set editor /usr/local/bin/micro
