@@ -41,6 +41,9 @@ ln -s ${PWD}/zshrc ~/.zshrc
 mkdir -p ~/
 ln -s ${PWD}/zsh_aliases ~/.zsh_aliases
 
+mkdir -p ~/.config/micro
+ln -s ${PWD}/micro_settings.json ~/.config/micro/settings.json
+
 sudo mkdir -p /usr/local/bin
 cd /usr/local/bin
 curl https://getmic.ro/r | $SUDO sh
