@@ -15,7 +15,7 @@ super + k
 	rofi -show window
 
 # ssh launcher
-super + s
+super + r
 	rofi -show ssh
 
 # make sxhkd reload its configuration files
