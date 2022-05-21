@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo -e "\e[1m\e[1;31mMAKE SURE YOU ARE IN THE DIRECTORY THIS SCRIPT IS LOCATED IN!"
+echo -e "\e[0m\e[1;31mIf you're sure you are in the correct dir, press Enter."
+read
+echo -e "\e[0m"
+
 function command_exists {
 	command -v $1 &> /dev/null
 }
