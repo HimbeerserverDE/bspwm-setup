@@ -35,6 +35,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ln -s ${PWD}/bin ~/bin
 
+rm ~/.zshrc
+rm ~/.zsh_aliases
+
 mkdir -p ~/
 ln -s ${PWD}/zshrc ~/.zshrc
 
