@@ -58,6 +58,10 @@ super + alt + {s,a,y}
 super + shift + f
 	firefox
 
+# discord
+super + shift + m
+	firefox https://discord.com/app
+
 # hexchat
 super + shift + h
 	hexchat
