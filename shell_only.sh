@@ -25,7 +25,8 @@ if command_exists apt; then
 		git \
 		figlet \
 		curl \
-		wget
+		wget \
+		htop
 else
 	echo "Your distro is not supported."
 	exit 1
