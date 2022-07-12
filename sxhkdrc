@@ -70,6 +70,10 @@ super + shift + l
 super + shift + s
 	signal-desktop
 
+# micro
+super + shift + m
+	~/.local/kitty.app/bin/kitty -- micro
+
 #
 # bspwm hotkeys
 #
