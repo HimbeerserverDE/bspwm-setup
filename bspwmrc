@@ -7,9 +7,9 @@ xss-lock --transfer-sleep-lock -- i3lock-fancy &
 killall -qw picom; picom -b
 killall -qw dunst; dunst &
 killall -qw polybar; ~/.config/polybar/launch.sh &
+killall -qw wait_for_monitor.sh; ~/.config/bspwm/wait_for_monitor.sh &
 
 bspc monitor 'eDP-1' -n 1 -d 1 2 3 4 5 6 7 8 9
-bspc monitor 'DP-2' -n 2 -d 1 2 3 4 5 6 7 8 9
 
 bspc config border_width		0
 bspc config window_gap			10
