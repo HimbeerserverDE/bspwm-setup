@@ -53,3 +53,6 @@ sudo mkdir -p /usr/local/bin
 cd /usr/local/bin
 curl https://getmic.ro/r | $SUDO sh
 $SUDO update-alternatives --set editor /usr/local/bin/micro
+
+mkdir -p ~/.local/bspwm-setup/
+ln -s ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
