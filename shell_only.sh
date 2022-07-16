@@ -26,7 +26,8 @@ if command_exists apt; then
 		figlet \
 		curl \
 		wget \
-		htop
+		htop \
+		tty-clock
 else
 	echo "Your distro is not supported."
 	exit 1
