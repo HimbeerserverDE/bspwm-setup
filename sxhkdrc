@@ -48,7 +48,7 @@ XF86MonBrightnessUp
 
 # lock screen
 super + l
-	i3lock-fancy
+	~/.local/kitty.app/bin/kitty -- ~/bin/lock-screen
 
 # power off/reboot/hibernate
 super + alt + {s,a,y}

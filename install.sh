@@ -30,7 +30,6 @@ if command_exists apt; then
 		rofi \
 		polybar \
 		scrot \
-		i3lock-fancy \
 		feh \
 		picom \
 		dunst \

@@ -1,0 +1,15 @@
+#! /bin/bash
+
+main() {
+	tty-clock -r -D -B -s -S
+	su $USER sh -c '' && bspc wm -r || main
+}
+
+trap "" 1 2 3 15 20 SIGTSTP
+
+killall -qw sxhkd polybar
+bspc node -t fullscreen
+
+sleep 1
+
+main
