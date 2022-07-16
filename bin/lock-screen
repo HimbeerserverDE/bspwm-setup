@@ -1,17 +1,20 @@
 #! /bin/bash
 
 main() {
+	clear
+
 	tty-clock -r -D -B -s -S
-	su $USER sh -c '' && (setxkbmap -rules /usr/share/X11/xkb/rules/evdev; dunstctl set-paused false; bspc wm -r) || main
+	su $USER sh -c '' && (setxkbmap -rules /usr/share/X11/xkb/rules/evdev; dunstctl set-paused false; bspc wm -r; bspc node -k) || main
 }
 
 trap "" 1 2 3 15 20 SIGTSTP
+
+~/bin/permafocus `bspc query -N -n` &
 
 xkbcomp ~/.local/bspwm-setup/lockscreen.xkb $DISPLAY 2>/dev/null
 
 killall -qw sxhkd polybar
 dunstctl set-paused true
-bspc node -t fullscreen
 
 sleep 1
 
