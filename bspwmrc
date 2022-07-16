@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-xss-lock --transfer-sleep-lock -- i3lock-fancy &
+xss-lock --transfer-sleep-lock -- lock-screen &
 ~/.fehbg
 killall -qw picom; picom -b
 killall -qw dunst; dunst &
