@@ -7,7 +7,7 @@ main() {
 
 trap "" 1 2 3 15 20 SIGTSTP
 
-xkbcomp ~/.local/bspwm-setup/lockscreen.xkb $DISPLAY
+xkbcomp ~/.local/bspwm-setup/lockscreen.xkb $DISPLAY 2>/dev/null
 
 killall -qw sxhkd polybar
 bspc node -t fullscreen
