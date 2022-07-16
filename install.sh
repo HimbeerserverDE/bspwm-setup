@@ -60,8 +60,7 @@ ln -s ${PWD}/polybar ~/.config/polybar
 
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | bash
 
-mkdir -p ~/.config/kitty
-ln -s ${PWD}/kitty.conf ~/.config/kitty/kitty.conf
+ln -s ${PWD}/kitty/ ~/.config/kitty
 
 mkdir -p ~/.config
 ln -s ${PWD}/picom.conf ~/.config/picom.conf
