@@ -7,7 +7,7 @@ bspc monitor -f 1
 		-c ~/.config/kitty/lock_screen.conf \
 		-- ~/bin/lock-primary-screen &
 
-sleep 1
+sleep 2
 PRIMARY_WINDOW=$(bspc query -N -n)
 
 if [ -n "$(xrandr --listmonitors | grep 'DP-2')" ]; then
@@ -16,7 +16,7 @@ if [ -n "$(xrandr --listmonitors | grep 'DP-2')" ]; then
 			-c ~/.config/kitty/lock_screen.conf \
 			-- ~/bin/lock-external-screen &
 
-	sleep 1
+	sleep 2
 	SECONDARY_WINDOW=$(bspc query -N -n)
 fi
 
