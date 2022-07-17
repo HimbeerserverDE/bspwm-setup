@@ -1,0 +1,14 @@
+#! /bin/bash
+
+main() {
+	clear
+
+	tty-clock -r -D -B -s -S
+	main
+}
+
+trap "" 1 2 3 15 20 SIGTSTP
+
+sleep 1
+
+main

@@ -3,8 +3,8 @@
 unlock() {
 	setxkbmap -rules /usr/share/X11/xkb/rules/evdev
 	dunstctl set-paused false
+
 	bspc wm -r
-	bspc node -k
 }
 
 main() {
@@ -15,8 +15,6 @@ main() {
 }
 
 trap "" 1 2 3 15 20 SIGTSTP
-
-~/bin/permafocus $(bspc query -N -n) &
 
 xkbcomp ~/.local/bspwm-setup/lockscreen.xkb $DISPLAY 2>/dev/null
 

@@ -1,0 +1,28 @@
+#! /bin/bash
+
+FOCUSED_MONITOR=$(bspc query -M -m)
+
+bspc monitor -f 1
+~/.local/kitty.app/bin/kitty \
+		-c ~/.config/kitty/lock_screen.conf \
+		-- ~/bin/lock-primary-screen &
+
+sleep 1
+PRIMARY_WINDOW=$(bspc query -N -n)
+
+if [ -n "$(xrandr --listmonitors | grep 'DP-2')" ]; then
+	bspc monitor -f 2
+	~/.local/kitty.app/bin/kitty \
+			-c ~/.config/kitty/lock_screen.conf \
+			-- ~/bin/lock-external-screen &
+
+	sleep 1
+	SECONDARY_WINDOW=$(bspc query -N -n)
+fi
+
+~/bin/permafocus ${PRIMARY_WINDOW} ${SECONDARY_WINDOW}
+
+bspc node ${PRIMARY_WINDOW} -k
+bspc node ${SECONDARY_WINDOW} -k
+
+bspc monitor -f ${FOCUSED_MONITOR}

@@ -48,7 +48,7 @@ XF86MonBrightnessUp
 
 # lock screen
 super + l
-	~/.local/kitty.app/bin/kitty -c ~/.config/kitty/lock_screen.conf -- ~/bin/lock-screen
+	~/bin/lock
 
 # power off/reboot/hibernate
 super + alt + {s,a,y}

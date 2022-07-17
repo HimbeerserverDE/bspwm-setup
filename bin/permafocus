@@ -1,5 +1,11 @@
 #! /bin/bash
 
+# THIS SCRIPT IS FOR SCREENSAVER USE ONLY
+
+bspc node -f $2
+bspc node $2 -t fullscreen
+bspc node $2 -l above
+
 bspc node -f $1
 bspc node $1 -t fullscreen
 bspc node $1 -l above
@@ -7,11 +13,15 @@ bspc node $1 -l above
 while [ -n "$(bspc query -N -n $1)" ]; do
 	while [[ "$(bspc query -N -n focused)" == "$1" ]]; do sleep 1; done
 
+	bspc node -f $2
+	bspc node $2 -t fullscreen
+	bspc node $2 -l above
+
 	bspc node -f $1
 	bspc node $1 -t fullscreen
 	bspc node $1 -l above
 
 	sleep 1
 
-	killall -9 su
+	killall -q -9 su
 done

@@ -2,8 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-xss-lock --transfer-sleep-lock -- ~/.local/kitty.app/bin/kitty \
-		-c ~/.config/kitty/lock_screen.conf -- lock-screen &
+xss-lock --transfer-sleep-lock -- lock
 
 ~/.fehbg
 killall -qw picom; picom -b
