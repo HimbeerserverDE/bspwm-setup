@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-xss-lock --transfer-sleep-lock -- lock
+xss-lock --transfer-sleep-lock -- ~/bin/lock &
 
 ~/.fehbg
 killall -qw picom; picom -b
