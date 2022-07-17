@@ -1,10 +1,17 @@
 #! /bin/bash
 
+unlock() {
+	setxkbmap -rules /usr/share/X11/xkb/rules/evdev
+	dunstctl set-paused false
+	bspc wm -r
+	bspc node -k
+}
+
 main() {
 	clear
 
 	tty-clock -r -D -B -s -S
-	su $USER sh -c '' && (setxkbmap -rules /usr/share/X11/xkb/rules/evdev; dunstctl set-paused false; bspc wm -r; bspc node -k) || main
+	su $USER sh -c '' && unlock || main
 }
 
 trap "" 1 2 3 15 20 SIGTSTP
