@@ -1,5 +1,10 @@
 #! /bin/bash
 
+if [ -n "$(pgrep -x lock)" ]; then
+	# Starting multiple screen lock instances may cause unintended side effects
+	exit 0
+fi
+
 FOCUSED_MONITOR=$(bspc query -M -m)
 
 bspc monitor -f 1
