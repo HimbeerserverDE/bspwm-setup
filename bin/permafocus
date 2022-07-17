@@ -10,6 +10,10 @@ bspc node -f $1
 bspc node $1 -t fullscreen
 bspc node $1 -l above
 
+sleep 1
+
+killall -q -9 su
+
 while [ -n "$(bspc query -N -n $1)" ]; do
 	while [[ "$(bspc query -N -n focused)" == "$1" ]]; do sleep 1; done
 	sleep 2
