@@ -3,7 +3,7 @@
 files=$(find -type f -name "*$2")
 
 for file in $files; do
-	found=`cat $file | grep -i "$1"`
+	found=$(cat $file | grep -i "$1")
 	if [ -n "$found" ]; then
 		echo -e "\e[1m$file:\e[0m"
 		echo $found
