@@ -4,7 +4,7 @@ main() {
 	clear
 
 	tty-clock -r -D -B -s -S
-	main
+	pgrep -x lock-primary-sc && main
 }
 
 trap "" 1 2 3 15 20 SIGTSTP

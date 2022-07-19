@@ -30,4 +30,7 @@ fi
 bspc node ${PRIMARY_WINDOW} -k
 bspc node ${SECONDARY_WINDOW} -k
 
+# Kill second tty-clock
+kill -9 $(ps -s $(ps -C lock-external-s -o pid=) -o pid=)
+
 bspc monitor -f ${FOCUSED_MONITOR}
