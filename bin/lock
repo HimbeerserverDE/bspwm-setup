@@ -10,7 +10,7 @@ FOCUSED_MONITOR=$(bspc query -M -m)
 bspc monitor -f 1
 ~/.local/kitty.app/bin/kitty \
 		-c ~/.config/kitty/lock_screen.conf \
-		-- ~/bin/lock-primary-screen &
+		-- ~/bin/lockscr1 &
 
 sleep 2
 PRIMARY_WINDOW=$(bspc query -N -n)
@@ -19,7 +19,7 @@ if [ -n "$(xrandr --listmonitors | grep 'DP-2')" ]; then
 	bspc monitor -f 2
 	~/.local/kitty.app/bin/kitty \
 			-c ~/.config/kitty/lock_screen.conf \
-			-- ~/bin/lock-external-screen &
+			-- ~/bin/lockscr2 &
 
 	sleep 2
 	SECONDARY_WINDOW=$(bspc query -N -n)
@@ -31,6 +31,6 @@ bspc node ${PRIMARY_WINDOW} -k
 bspc node ${SECONDARY_WINDOW} -k
 
 # Kill second tty-clock
-kill -9 $(ps -s $(ps -C lock-external-s -o pid=) -o pid=)
+kill -9 $(ps -s $(ps -C lockscr2 -o pid=) -o pid=)
 
 bspc monitor -f ${FOCUSED_MONITOR}
