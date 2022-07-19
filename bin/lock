@@ -1,7 +1,8 @@
 #! /bin/bash
 
-if [ -n "$(pgrep -x lock)" ]; then
+if [ "$(pgrep -x lock) | wc -l" -gt 1 ]; then
 	# Starting multiple screen lock instances may cause unintended side effects
+	~/.local/kitty.app/bin/kitty
 	exit 0
 fi
 
