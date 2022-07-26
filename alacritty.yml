@@ -21,3 +21,11 @@ colors:
         magenta: '#ff33ff'
         cyan:    '#33eeee'
         white:   '#e8e8e8'
+    bright:
+        black:   '#000000'
+        red:     '#ff4444'
+        green:   '#44ff44'
+        blue:    '#4477ff'
+        magenta: '#ff44ff'
+        cyan:    '#44eeee'
+        white:   '#e8e8e8'
