@@ -1,7 +1,7 @@
 #! /bin/bash
 
 refocus_fullscreen_nodes() {
-	while [ -e "$(pgrep -x permafocus)" ]; do sleep 1; done
+	while [ -z "$(pgrep -x permafocus)" ]; do sleep 1; done
 
 	for NODE in ${FULLSCREEN_NODES}; do
 		bspc node ${NODE} -t fullscreen
@@ -13,6 +13,19 @@ if [ $(pgrep -x lock | wc -l) -gt 2 ]; then
 	exit 0
 fi
 
+#
+# Security
+#
+
+xkbcomp ~/.local/bspwm-setup/lockscreen.xkb $DISPLAY 2>/dev/null
+
+killall -qw sxhkd polybar
+dunstctl set-paused true
+
+#
+# UI
+#
+
 FOCUSED_MONITOR=$(bspc query -M -m)
 FULLSCREEN_NODES=$(bspc query -N -n any.fullscreen)
 
@@ -21,7 +34,8 @@ bspc monitor -f 1
 		-c ~/.config/kitty/lock_screen.conf \
 		-- ~/bin/lockscr1 &
 
-sleep 2
+while [ -z "$(ps -C lockscr1 -o pid=)" ]; do sleep 1; done
+while [ -z "$(ps -s $(ps -C lockscr1 -o pid=) -o pid=)" ]; do sleep 1; done
 PRIMARY_WINDOW=$(bspc query -N -n)
 
 if [ -n "$(xrandr --listmonitors | grep 'DP-2')" ]; then
@@ -30,13 +44,21 @@ if [ -n "$(xrandr --listmonitors | grep 'DP-2')" ]; then
 			-c ~/.config/kitty/lock_screen.conf \
 			-- ~/bin/lockscr2 &
 
-	sleep 2
+	while [ -z "$(ps -C lockscr2 -o pid=)" ]; do sleep 1; done
+	while [ -z "$(ps -s $(ps -C lockscr2 -o pid=) -o pid=)" ]; do sleep 1; done
 	SECONDARY_WINDOW=$(bspc query -N -n)
 fi
 
 refocus_fullscreen_nodes &
 
 ~/bin/permafocus ${PRIMARY_WINDOW} ${SECONDARY_WINDOW}
+
+#
+# Unlock
+#
+
+setxkbmap -rules /usr/share/X11/xkb/rules/evdev
+dunstctl set-paused false
 
 bspc node ${PRIMARY_WINDOW} -k
 bspc node ${SECONDARY_WINDOW} -k
@@ -45,3 +67,4 @@ bspc node ${SECONDARY_WINDOW} -k
 kill -9 $(ps -s $(ps -C lockscr2 -o pid=) -o pid=)
 
 bspc monitor -f ${FOCUSED_MONITOR}
+bspc wm -r
