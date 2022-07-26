@@ -11,3 +11,13 @@ font:
     italic:
         family: "Hack"
 
+colors:
+    normal:
+        black:   '#000000'
+        red:     '#ff3333'
+        green:   '#33ff33'
+        yellow:  '#ffff33'
+        blue:    '#3366ff'
+        magenta: '#ff33ff'
+        cyan:    '#33eeee'
+        white:   '#e8e8e8'
