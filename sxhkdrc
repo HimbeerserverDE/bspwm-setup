@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	~/.cargo/bin/alacritty
+	WINIT_X11_SCALE_FACTOR=1.0 ~/.cargo/bin/alacritty
 
 # program launcher
 super + a
