@@ -38,7 +38,8 @@ if command_exists apt; then
 		firefox-esr \
 		thunderbird \
 		signal-desktop \
-		fonts-hack
+		fonts-hack \
+		fonts-noto-color-emoji
 	$SUDO apt purge -y \
 		lemonbar # automatically installed but unwanted
 else
