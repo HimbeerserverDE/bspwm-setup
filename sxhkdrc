@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	~/.local/kitty.app/bin/kitty
+	~/.cargo/bin/alacritty
 
 # program launcher
 super + a

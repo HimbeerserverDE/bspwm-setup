@@ -37,7 +37,8 @@ if command_exists apt; then
 		vlc \
 		firefox-esr \
 		thunderbird \
-		signal-desktop
+		signal-desktop \
+		fonts-hack
 	$SUDO apt purge -y \
 		lemonbar # automatically installed but unwanted
 else
@@ -58,9 +59,10 @@ ln -s ${PWD}/rofi_config ~/.config/rofi/config
 mkdir -p ~/.config/polybar
 ln -s ${PWD}/polybar ~/.config/polybar
 
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | bash
+cargo install alacritty
 
-ln -s ${PWD}/kitty/ ~/.config/kitty
+mkdir -p ~/.config/alacritty
+ln -s ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 mkdir -p ~/.config
 ln -s ${PWD}/picom.conf ~/.config/picom.conf

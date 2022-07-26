@@ -57,3 +57,5 @@ $SUDO update-alternatives --set editor /usr/local/bin/micro
 
 mkdir -p ~/.local/bspwm-setup/
 ln -s ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

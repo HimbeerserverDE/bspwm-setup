@@ -30,9 +30,7 @@ FOCUSED_MONITOR=$(bspc query -M -m)
 FULLSCREEN_NODES=$(bspc query -N -n any.fullscreen)
 
 bspc monitor -f 1
-~/.local/kitty.app/bin/kitty \
-		-c ~/.config/kitty/lock_screen.conf \
-		-- ~/bin/lockscr1 &
+alacritty -e ~/bin/lockscr1 &
 
 while [ -z "$(ps -C lockscr1 -o pid=)" ]; do sleep 1; done
 while [ -z "$(ps -s $(ps -C lockscr1 -o pid=) -o pid=)" ]; do sleep 1; done
@@ -40,9 +38,7 @@ PRIMARY_WINDOW=$(bspc query -N -n)
 
 if [ -n "$(xrandr --listmonitors | grep 'DP-2')" ]; then
 	bspc monitor -f 2
-	~/.local/kitty.app/bin/kitty \
-			-c ~/.config/kitty/lock_screen.conf \
-			-- ~/bin/lockscr2 &
+	alacritty -e ~/bin/lockscr2 &
 
 	while [ -z "$(ps -C lockscr2 -o pid=)" ]; do sleep 1; done
 	while [ -z "$(ps -s $(ps -C lockscr2 -o pid=) -o pid=)" ]; do sleep 1; done
