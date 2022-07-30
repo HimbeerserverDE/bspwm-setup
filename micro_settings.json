@@ -1,3 +1,6 @@
 {
-	"colorscheme": "geany"
+    "colorscheme": "geany",
+    "ft:rust": {
+        "tabstospaces": true
+    }
 }
