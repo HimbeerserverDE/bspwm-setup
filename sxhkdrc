@@ -155,3 +155,11 @@ super + alt + shift + {Left,Down,Up,Right}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# rotate split
+#
+
+# rotate the split of the last two focused windows
+super + {x,y}
+	bspc node @parent -R {90,-90}
