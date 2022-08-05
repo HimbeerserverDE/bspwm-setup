@@ -57,7 +57,10 @@ setxkbmap -rules /usr/share/X11/xkb/rules/evdev
 dunstctl set-paused false
 
 bspc node ${PRIMARY_WINDOW} -k
-bspc node ${SECONDARY_WINDOW} -k
+
+if [ -n "${SECONDARY_WINDOW}" ]; then
+	bspc node ${SECONDARY_WINDOW} -k
+fi
 
 # Kill second tty-clock
 kill -9 $(ps -s $(ps -C lockscr2 -o pid=) -o pid=)
