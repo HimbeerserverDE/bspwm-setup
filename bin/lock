@@ -30,7 +30,7 @@ FOCUSED_MONITOR=$(bspc query -M -m)
 FULLSCREEN_NODES=$(bspc query -N -n any.fullscreen)
 
 bspc monitor -f 1
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e ~/bin/lockscr1 &
+WINIT_X11_SCALE_FACTOR=1.0 ~/.cargo/bin/alacritty -e ~/bin/lockscr1 &
 
 while [ -z "$(ps -C lockscr1 -o pid=)" ]; do sleep 1; done
 while [ -z "$(ps -s $(ps -C lockscr1 -o pid=) -o pid=)" ]; do sleep 1; done
@@ -38,7 +38,7 @@ PRIMARY_WINDOW=$(bspc query -N -n)
 
 if [ -n "$(xrandr --listmonitors | grep 'DP-2')" ]; then
 	bspc monitor -f 2
-	WINIT_X11_SCALE_FACTOR=1.0 alacritty -e ~/bin/lockscr2 &
+	WINIT_X11_SCALE_FACTOR=1.0 ~/.cargo/bin/alacritty -e ~/bin/lockscr2 &
 
 	while [ -z "$(ps -C lockscr2 -o pid=)" ]; do sleep 1; done
 	while [ -z "$(ps -s $(ps -C lockscr2 -o pid=) -o pid=)" ]; do sleep 1; done
