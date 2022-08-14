@@ -40,7 +40,6 @@ if command_exists apt; then
 		signal-desktop \
 		fonts-hack \
 		fonts-noto-color-emoji \
-		mate-calc
 	$SUDO apt purge -y \
 		lemonbar # automatically installed but unwanted
 else
