@@ -28,7 +28,9 @@ if command_exists apt; then
 		wget \
 		htop \
 		tty-clock \
-		oathtool
+		oathtool \
+		bc \
+		units
 else
 	echo "Your distro is not supported."
 	exit 1
