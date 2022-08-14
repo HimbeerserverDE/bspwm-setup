@@ -39,7 +39,8 @@ if command_exists apt; then
 		thunderbird \
 		signal-desktop \
 		fonts-hack \
-		fonts-noto-color-emoji
+		fonts-noto-color-emoji \
+		mate-calc
 	$SUDO apt purge -y \
 		lemonbar # automatically installed but unwanted
 else
