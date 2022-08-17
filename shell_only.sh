@@ -30,7 +30,8 @@ if command_exists apt; then
 		tty-clock \
 		oathtool \
 		bc \
-		units
+		units \
+		tmux
 else
 	echo "Your distro is not supported."
 	exit 1
