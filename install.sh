@@ -50,7 +50,7 @@ fi
 
 mkdir -p ~/.config/bspwm
 ln -s ${PWD}/bspwmrc ~/.config/bspwm/bspwmrc
-ln -s ${PWD}/wait_for_monitor.sh ~/.config/bspwm/wait_for_monitor.sh
+ln -s ${PWD}/init_monitor.sh ~/.config/bspwm/init_monitor.sh
 
 mkdir -p ~/.config/sxhkd
 ln -s ${PWD}/sxhkdrc ~/.config/sxhkd/sxhkdrc
