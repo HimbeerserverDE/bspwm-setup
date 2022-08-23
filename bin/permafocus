@@ -18,15 +18,17 @@ while [ -n "$(bspc query -N -n $1)" ]; do
 	while [[ "$(bspc query -N -n focused)" == "$1" ]]; do sleep 1; done
 	sleep 2
 
-	bspc node -f $2
-	bspc node $2 -t fullscreen
-	bspc node $2 -l above
+	if [ -n "$(bspc query -N -n $1)" ]; then
+		bspc node -f $2
+		bspc node $2 -t fullscreen
+		bspc node $2 -l above
 
-	bspc node -f $1
-	bspc node $1 -t fullscreen
-	bspc node $1 -l above
+		bspc node -f $1
+		bspc node $1 -t fullscreen
+		bspc node $1 -l above
 
-	sleep 1
+		sleep 1
 
-	killall -q -9 su
+		killall -q -9 su
+	fi
 done
