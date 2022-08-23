@@ -2,5 +2,6 @@
     "colorscheme": "geany",
     "ft:rust": {
         "tabstospaces": true
-    }
+    },
+    "savecursor": true
 }
