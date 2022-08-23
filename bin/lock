@@ -17,6 +17,10 @@ fi
 # Security
 #
 
+touch /tmp/lock-xkbfile-${UID}
+chmod 0600 /tmp/lock-xkbfile-${UID}
+xkbcomp $DISPLAY /tmp/lock-xkbfile-${UID} 2>/dev/null
+
 xkbcomp ~/.local/bspwm-setup/lockscreen.xkb $DISPLAY 2>/dev/null
 
 killall -qw sxhkd polybar
@@ -53,7 +57,7 @@ refocus_fullscreen_nodes &
 # Unlock
 #
 
-setxkbmap -rules /usr/share/X11/xkb/rules/evdev
+xkbcomp /tmp/lock-xkbfile-${UID} $DISPLAY 2>/dev/null
 dunstctl set-paused false
 
 bspc node ${PRIMARY_WINDOW} -k
