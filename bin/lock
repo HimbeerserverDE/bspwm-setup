@@ -8,6 +8,13 @@ refocus_fullscreen_nodes() {
 	done
 }
 
+mark_as_ready() {
+	while [ -z "$(pgrep -x permafocus)" ]; do sleep 1; done
+
+	sleep 2
+	exec ${XSS_SLEEP_LOCK_FD}>&-
+}
+
 if [ $(pgrep -x lock | wc -l) -gt 2 ]; then
 	# Starting multiple screen lock instances may cause unintended side effects
 	exit 0
@@ -50,6 +57,8 @@ if [ -n "$(xrandr --listmonitors | grep 'DP-2')" ]; then
 fi
 
 refocus_fullscreen_nodes &
+
+mark_as_ready &
 
 ~/bin/permafocus ${PRIMARY_WINDOW} ${SECONDARY_WINDOW}
 
