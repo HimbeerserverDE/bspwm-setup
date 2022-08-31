@@ -81,11 +81,11 @@ setprompt () {
 	PR_SET_CHARSET=""
 	PR_SHIFT_IN=""
 	PR_SHIFT_OUT=""
-	PR_HBAR="─"
-        PR_ULCORNER="┌"
-        PR_LLCORNER="└"
-        PR_LRCORNER="┘"
-        PR_URCORNER="┐"
+	PR_HBAR="━"
+        PR_ULCORNER="┏"
+        PR_LLCORNER="┗"
+        PR_LRCORNER="┛"
+        PR_URCORNER="┓"
     else
         typeset -A altchar
         set -A altchar ${(s..)terminfo[acsc]}
@@ -141,7 +141,7 @@ setprompt () {
 $PR_CYAN$PR_ULCORNER$PR_HBAR [ $PR_BLUE$HOST \
 $PR_MAGENTA%$PR_PWDLEN<...<%~%<< $PR_CYAN] \
 
-$PR_CYAN$PR_LLCORNER─%{$reset_color%}`git_prompt_info``git_prompt_status`\
+$PR_CYAN$PR_LLCORNER$PR_HBAR%{$reset_color%}`git_prompt_info``git_prompt_status`\
 $PR_CYAN $PR_CHAR $PR_NO_COLOUR'
 
     # display exitcode on the right when >0
