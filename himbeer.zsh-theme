@@ -48,7 +48,6 @@ setprompt () {
 
     setopt prompt_subst
 
-
     ###
     # See if we can use colors.
 
