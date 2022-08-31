@@ -8,14 +8,18 @@ The `install.sh` script installs the entire setup:
 - bspwm
 - xorg
 - polybar
-- i3lock-fancy
+- scrot
 - feh
 - picom
+- dunst
 - lua5.3
 - vlc
 - firefox-esr (because regular firefox isn't in debian apt repos)
 - thunderbird
 - signal-desktop
+- fonts-hack
+- fonts-noto-color-emoji
+- xclip
 
 It then symlinks the configuration files for those packages
 to the files in this repository. This has two advantages.
@@ -35,6 +39,15 @@ and some utilities:
 - zsh
 - git
 - figlet
+- curl
+- wget
+- htop
+- tty-clock
+- oathtool
+- bc
+- units
+- tmux
+- vim
 
 Just like `install.sh` this script symlinks the configuration files.
 You can run this instead of install.sh to install the shell setup
