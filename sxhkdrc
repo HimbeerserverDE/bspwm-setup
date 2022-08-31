@@ -50,7 +50,7 @@ XF86MonBrightnessUp
 super + l
 	~/bin/lock
 
-# power off/reboot/hibernate
+# power off/reboot/hibernate/suspend
 super + alt + {s,a,y,m}
 	systemctl {poweroff,reboot,hibernate,suspend}
 

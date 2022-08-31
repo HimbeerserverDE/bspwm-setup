@@ -52,3 +52,21 @@ and some utilities:
 Just like `install.sh` this script symlinks the configuration files.
 You can run this instead of install.sh to install the shell setup
 on headless servers, or if you don't want to use the rest of the setup.
+
+## Keybinds / Controls
+### sxhkd
+The sxhkd keybinds are well documented in `sxhkdrc`.
+
+### Vim
+#### Normal mode
+- `Enter`: Insert new line above current line
+
+### tmux
+#### Prefix: ctrl + s
+- `x`: Display panes
+- `q`: Kill pane
+- `shift + h`: Horizontal split
+- `shift + v`: Vertical split
+- `+`: New window
+- `c`: Enter copy mode
+- `v`: Paste
