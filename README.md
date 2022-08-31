@@ -50,6 +50,7 @@ and some utilities:
 - units
 - tmux
 - vim
+- neofetch
 
 Just like `install.sh` this script symlinks the configuration files.
 You can run this instead of install.sh to install the shell setup

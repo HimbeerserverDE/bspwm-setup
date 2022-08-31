@@ -32,7 +32,8 @@ if command_exists apt; then
 		bc \
 		units \
 		tmux \
-		vim
+		vim \
+		neofetch
 else
 	echo "Your distro is not supported."
 	exit 1
