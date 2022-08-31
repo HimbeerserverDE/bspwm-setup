@@ -68,7 +68,7 @@ setprompt () {
     ZSH_THEME_GIT_PROMPT_CLEAN=""
 
     ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} +"
-    ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[orange]%} 🚧"
+    ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%} 🚧"
     ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} -"
     ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➔"
     ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[blue]%} ⛙"
