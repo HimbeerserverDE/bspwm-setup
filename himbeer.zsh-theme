@@ -127,6 +127,14 @@ setprompt () {
 	PR_STITLE=''
     fi
 
+	###
+	# Use a different prompt character for root.
+	if [[ "$UID" == "0" ]]; then
+	PR_CHAR='#'
+	else
+	PR_CHAR='$'
+	fi
+
     ###
     # Finally, the prompt.
 
@@ -138,7 +146,7 @@ $PR_MAGENTA$USER_ALIAS$PR_GREEN@$PR_MAGENTA%m:%l\
 $PR_GREEN]$PR_GREEN$PR_HBAR$PR_URCORNER\
 
 $PR_RED$PR_LLCORNER─%{$reset_color%}`git_prompt_info``git_prompt_status`\
-$PR_RED > $PR_NO_COLOUR'
+$PR_RED $PR_CHAR $PR_NO_COLOUR'
 
     # display exitcode on the right when >0
     return_code="%(?..%{$fg[yellow]%}%? ↵%{$reset_color%})"
