@@ -51,6 +51,9 @@ ln -s ${PWD}/zsh_aliases ~/.zsh_aliases
 ln -s ${PWD}/tmux.conf ~/.tmux.conf
 ln -s ${PWD}/vimrc ~/.vimrc
 
+mkdir -p ~/.oh-my-zsh/completions/
+ln -s ${PWD}/_totp ~/.oh-my-zsh/completions/_totp
+
 mkdir -p ~/.local/bspwm-setup/
 ln -s ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
 
