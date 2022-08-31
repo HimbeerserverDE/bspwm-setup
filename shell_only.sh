@@ -31,7 +31,8 @@ if command_exists apt; then
 		oathtool \
 		bc \
 		units \
-		tmux
+		tmux \
+		vim
 else
 	echo "Your distro is not supported."
 	exit 1
@@ -50,13 +51,8 @@ ln -s ${PWD}/zshrc ~/.zshrc
 mkdir -p ~/
 ln -s ${PWD}/zsh_aliases ~/.zsh_aliases
 
-mkdir -p ~/.config/micro
-ln -s ${PWD}/micro_settings.json ~/.config/micro/settings.json
-
-sudo mkdir -p /usr/local/bin
-cd /usr/local/bin
-curl https://getmic.ro/r | $SUDO sh
-$SUDO update-alternatives --set editor /usr/local/bin/micro
+mkdir -p ~/
+ln -s ${PWD}/vimrc ~/.vimrc
 
 mkdir -p ~/.local/bspwm-setup/
 ln -s ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
