@@ -47,14 +47,8 @@ rm ~/.zsh_aliases
 
 mkdir -p ~/
 ln -s ${PWD}/zshrc ~/.zshrc
-
-mkdir -p ~/
 ln -s ${PWD}/zsh_aliases ~/.zsh_aliases
-
-mkdir -p ~/
 ln -s ${PWD}/tmux.conf ~/.tmux.conf
-
-mkdir -p ~/
 ln -s ${PWD}/vimrc ~/.vimrc
 
 mkdir -p ~/.local/bspwm-setup/
