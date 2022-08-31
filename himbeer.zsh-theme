@@ -62,7 +62,7 @@ setprompt () {
 
     ###
     # Modify Git prompt
-    ZSH_THEME_GIT_PROMPT_PREFIX=" $PR_ORANGE"
+    ZSH_THEME_GIT_PROMPT_PREFIX=" $PR_BLUE"
     ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
     ZSH_THEME_GIT_PROMPT_DIRTY=""
     ZSH_THEME_GIT_PROMPT_CLEAN=""
