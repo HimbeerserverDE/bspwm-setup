@@ -62,13 +62,13 @@ setprompt () {
 
     ###
     # Modify Git prompt
-    ZSH_THEME_GIT_PROMPT_PREFIX=" $PR_YELLOW"
+    ZSH_THEME_GIT_PROMPT_PREFIX=" $PR_ORANGE"
     ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
     ZSH_THEME_GIT_PROMPT_DIRTY=""
     ZSH_THEME_GIT_PROMPT_CLEAN=""
 
     ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} +"
-    ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%} 🚧"
+    ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[orange]%} 🚧"
     ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} -"
     ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➔"
     ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[blue]%} ⛙"
@@ -139,19 +139,15 @@ setprompt () {
     # Finally, the prompt.
 
     PROMPT='$PR_SET_CHARSET$PR_STITLE${(e)PR_TITLEBAR}\
-$PR_RED$PR_ULCORNER$PR_HBAR moo \
-$PR_YELLOW%$PR_PWDLEN<...<%~%<< \
-$PR_GREEN$PR_HBAR$PR_HBAR${(e)PR_FILLBAR}─[\
-$PR_MAGENTA$USER_ALIAS$PR_GREEN@$PR_MAGENTA%m:%l\
-$PR_GREEN]$PR_GREEN$PR_HBAR$PR_URCORNER\
+$PR_CYAN$PR_ULCORNER$PR_HBAR [ $PR_BLUE$HOST \
+$PR_MAGENTA%$PR_PWDLEN<...<%~%<< $PR_CYAN] \
 
-$PR_RED$PR_LLCORNER─%{$reset_color%}`git_prompt_info``git_prompt_status`\
-$PR_RED $PR_CHAR $PR_NO_COLOUR'
+$PR_CYAN$PR_LLCORNER─%{$reset_color%}`git_prompt_info``git_prompt_status`\
+$PR_CYAN $PR_CHAR $PR_NO_COLOUR'
 
     # display exitcode on the right when >0
-    return_code="%(?..%{$fg[yellow]%}%? ↵%{$reset_color%})"
-    RPROMPT=' $return_code\
-$PR_GREEN [$PR_MAGENTA%D{%d. %b %Y %H:%M:%S}$PR_GREEN]$PR_HBAR$PR_GREEN$PR_LRCORNER$PR_NO_COLOUR'
+    return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+    RPROMPT=' $return_code$PR_NO_COLOUR'
 
     PS2='$PR_BLUE$PR_HBAR\
 $PR_BLUE$PR_HBAR(\
