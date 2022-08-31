@@ -15,8 +15,8 @@ if [ $UID -ne 0 ]; then
 fi
 
 if command_exists apt; then
-	$SUDO apt update
-	$SUDO apt install -y \
+	${SUDO} apt update
+	${SUDO} apt install -y \
 		bat \
 		lolcat \
 		cowsay \

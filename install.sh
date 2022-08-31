@@ -20,11 +20,11 @@ if [ $UID -ne 0 ]; then
 fi
 
 if command_exists apt; then
-	wget -O- https://updates.signal.org/desktop/apt/keys.asc | $SUDO apt-key add -
+	wget -O- https://updates.signal.org/desktop/apt/keys.asc | ${SUDO} apt-key add -
 	echo "deb [arch=$(dpkg --print-architecture)] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 
-	$SUDO apt update
-	$SUDO apt install -y \
+	${SUDO} apt update
+	${SUDO} apt install -y \
 		bspwm \
 		xorg \
 		rofi \
@@ -43,7 +43,7 @@ if command_exists apt; then
 		xclip \
 		hexchat \
 		brightnessctl
-	$SUDO apt purge -y \
+	${SUDO} apt purge -y \
 		lemonbar # automatically installed but unwanted
 else
 	echo "Your distro is not supported."
@@ -71,6 +71,6 @@ ln -s ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
 mkdir -p ~/.config
 ln -s ${PWD}/picom.conf ~/.config/picom.conf
 
-$SUDO usermod -G video ${USER}
+${SUDO} usermod -G video ${USER}
 
 ./shell_only.sh
