@@ -3,7 +3,7 @@
 polybar --reload -q main -c "$HOME/.config/polybar/config.ini" &
 polybar --reload -q opt -c "$HOME/.config/polybar/config.ini" &
 
-while [ -e "$(pgrep -x polybar)" ]; do sleep 1; done
+while [ -z "$(pgrep -x polybar)" ]; do sleep 1; done
 sleep 2
 
 POLYBARS=$(pgrep -x polybar)
