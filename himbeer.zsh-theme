@@ -1,5 +1,3 @@
-functions rbenv_prompt_info >& /dev/null || rbenv_prompt_info(){}
-
 if [[ "$USER_ALIAS" == "" ]]; then
 	USER_ALIAS=$USER
 fi
@@ -24,14 +22,12 @@ function theme_precmd {
     fi
 
     local promptsize=${#${(%):-------[@%m:%l)---()--}}
-    local rubyprompt=`rvm_prompt_info || rbenv_prompt_info`
-    local rubypromptsize=${#${rubyprompt}}
     local pwdsize=${#${(%):-%~}}
 
-    if [[ "$promptsize + $rubypromptsize + $pwdsize" -gt $TERMWIDTH ]]; then
+    if [[ "$promptsize + $pwdsize" -gt $TERMWIDTH ]]; then
       ((PR_PWDLEN=$TERMWIDTH - $promptsize))
     else
-      PR_FILLBAR="\${(l.(($TERMWIDTH - ($promptsize + $USER_ALIAS_LENGTH + $rubypromptsize + $pwdsize)))..${PR_HBAR}.)}"
+      PR_FILLBAR="\${(l.(($TERMWIDTH - ($promptsize + $USER_ALIAS_LENGTH + $pwdsize)))..${PR_HBAR}.)}"
     fi
 
 }
