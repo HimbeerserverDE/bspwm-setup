@@ -41,7 +41,8 @@ if command_exists apt; then
 		fonts-hack \
 		fonts-noto-color-emoji \
 		xclip \
-		hexchat
+		hexchat \
+		brightnessctl
 	$SUDO apt purge -y \
 		lemonbar # automatically installed but unwanted
 else
@@ -69,5 +70,7 @@ ln -s ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 mkdir -p ~/.config
 ln -s ${PWD}/picom.conf ~/.config/picom.conf
+
+$SUDO usermod -G video ${USER}
 
 ./shell_only.sh

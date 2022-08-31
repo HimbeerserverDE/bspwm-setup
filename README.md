@@ -21,6 +21,7 @@ The `install.sh` script installs the entire setup:
 - fonts-noto-color-emoji
 - xclip
 - hexchat
+- brightnessctl
 
 It then symlinks the configuration files for those packages
 to the files in this repository. This has two advantages.
