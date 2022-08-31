@@ -20,6 +20,7 @@ The `install.sh` script installs the entire setup:
 - fonts-hack
 - fonts-noto-color-emoji
 - xclip
+- hexchat
 
 It then symlinks the configuration files for those packages
 to the files in this repository. This has two advantages.
