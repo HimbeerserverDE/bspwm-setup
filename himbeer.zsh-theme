@@ -132,7 +132,7 @@ setprompt () {
 	if [[ "$UID" == "0" ]]; then
 	PR_CHAR='#'
 	else
-	PR_CHAR='$'
+	PR_CHAR='⊳'
 	fi
 
     ###
