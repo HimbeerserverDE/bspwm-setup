@@ -138,7 +138,7 @@ $PR_MAGENTA$USER_ALIAS$PR_GREEN@$PR_MAGENTA%m:%l\
 $PR_GREEN]$PR_GREEN$PR_HBAR$PR_URCORNER\
 
 $PR_RED╰─%{$reset_color%}`git_prompt_info``git_prompt_status`\
-$PR_RED ̣ŋ $PR_NO_COLOUR'
+$PR_RED ŋ $PR_NO_COLOUR'
 
     # display exitcode on the right when >0
     return_code="%(?..%{$fg[yellow]%}%? ↵%{$reset_color%})"
