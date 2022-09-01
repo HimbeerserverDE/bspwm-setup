@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Copyright (C) 2022  HimbeerserverDE
 # 
 # This program is free software: you can redistribute it and/or modify
@@ -12,8 +14,6 @@
 # 
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-#!/bin/sh
 
 polybar --reload -q main -c "$HOME/.config/polybar/config.ini" &
 polybar --reload -q opt -c "$HOME/.config/polybar/config.ini" &
