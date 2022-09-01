@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 gitstamp=$(git log -1 --format=%cI)
 timestamp=$(date -d "${gitstamp}" -u +%Y%m%d%H%M%S)
