@@ -55,6 +55,7 @@ else
 	exit 1
 fi
 
+rm -rf ~/.oh-my-zsh/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ln -sf ${PWD}/bin ~/bin
@@ -64,6 +65,9 @@ ln -sf ${PWD}/zshrc ~/.zshrc
 ln -sf ${PWD}/zsh_aliases ~/.zsh_aliases
 ln -sf ${PWD}/tmux.conf ~/.tmux.conf
 ln -sf ${PWD}/vimrc ~/.vimrc
+
+mkdir -p ~/.oh-my-zsh/
+ln -sf ${PWD}/himbeer.zsh-theme ~/.oh-my-zsh/themes/himbeer.zsh-theme
 
 mkdir -p ~/.oh-my-zsh/completions/
 ln -sf ${PWD}/_totp ~/.oh-my-zsh/completions/_totp
