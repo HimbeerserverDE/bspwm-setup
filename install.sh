@@ -57,7 +57,8 @@ if command_exists apt; then
 		fonts-noto-color-emoji \
 		xclip \
 		hexchat \
-		brightnessctl
+		brightnessctl \
+		cava
 	${SUDO} apt purge -y \
 		lemonbar # automatically installed but unwanted
 else
