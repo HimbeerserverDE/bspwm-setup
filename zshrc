@@ -6,3 +6,7 @@ ZSH_THEME="himbeer" # set by `omz`
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
+
+# fzf
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
