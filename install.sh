@@ -66,25 +66,25 @@ else
 fi
 
 mkdir -p ~/.config/bspwm
-ln -s ${PWD}/bspwmrc ~/.config/bspwm/bspwmrc
-ln -s ${PWD}/init_monitor.sh ~/.config/bspwm/init_monitor.sh
+ln -sf ${PWD}/bspwmrc ~/.config/bspwm/bspwmrc
+ln -sf ${PWD}/init_monitor.sh ~/.config/bspwm/init_monitor.sh
 
 mkdir -p ~/.config/sxhkd
-ln -s ${PWD}/sxhkdrc ~/.config/sxhkd/sxhkdrc
+ln -sf ${PWD}/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
 mkdir -p ~/.config/rofi
-ln -s ${PWD}/rofi_config ~/.config/rofi/config
+ln -sf ${PWD}/rofi_config ~/.config/rofi/config
 
 mkdir -p ~/.config/polybar
-ln -s ${PWD}/polybar ~/.config/polybar
+ln -sf ${PWD}/polybar ~/.config/polybar
 
 cargo install alacritty
 
 mkdir -p ~/.config/alacritty
-ln -s ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 mkdir -p ~/.config
-ln -s ${PWD}/picom.conf ~/.config/picom.conf
+ln -sf ${PWD}/picom.conf ~/.config/picom.conf
 
 ${SUDO} usermod -G video ${USER}
 

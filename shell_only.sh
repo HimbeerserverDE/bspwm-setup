@@ -57,21 +57,18 @@ fi
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-ln -s ${PWD}/bin ~/bin
-
-rm ~/.zshrc
-rm ~/.zsh_aliases
+ln -sf ${PWD}/bin ~/bin
 
 mkdir -p ~/
-ln -s ${PWD}/zshrc ~/.zshrc
-ln -s ${PWD}/zsh_aliases ~/.zsh_aliases
-ln -s ${PWD}/tmux.conf ~/.tmux.conf
-ln -s ${PWD}/vimrc ~/.vimrc
+ln -sf ${PWD}/zshrc ~/.zshrc
+ln -sf ${PWD}/zsh_aliases ~/.zsh_aliases
+ln -sf ${PWD}/tmux.conf ~/.tmux.conf
+ln -sf ${PWD}/vimrc ~/.vimrc
 
 mkdir -p ~/.oh-my-zsh/completions/
-ln -s ${PWD}/_totp ~/.oh-my-zsh/completions/_totp
+ln -sf ${PWD}/_totp ~/.oh-my-zsh/completions/_totp
 
 mkdir -p ~/.local/bspwm-setup/
-ln -s ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
+ln -sf ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
