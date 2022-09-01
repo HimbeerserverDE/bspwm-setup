@@ -22,14 +22,33 @@ function command_exists {
 set -x
 
 if [ $UID -ne 0 ]; then
-	if command_exists sudo; then
-		SUDO="sudo"
-	elif command_exists doas; then
+	if command_exists doas; then
 		SUDO="doas"
+	elif command_exists sudo; then
+		SUDO="sudo"
 	fi
 fi
 
-if command_exists apt; then
+if command_exists pacman; then
+	${SUDO} pacman -Sy --noconfirm \
+		bat \
+		lolcat \
+		cowsay \
+		fortune-mod \
+		zsh \
+		git \
+		figlet \
+		curl \
+		wget \
+		htop \
+		oath-toolkit \
+		bc \
+		units \
+		tmux \
+		vim \
+		neofetch \
+		fzf
+else if command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install -y \
 		bat \
@@ -50,6 +69,9 @@ if command_exists apt; then
 		vim \
 		neofetch \
 		fzf
+
+	git clone https://aur.archlinux.org/tty-clock-git.git
+	(cd tty-clock-git && makepkg -i)
 else
 	echo "Your distro is not supported."
 	exit 1
