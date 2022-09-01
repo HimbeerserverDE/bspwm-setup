@@ -48,7 +48,7 @@ if command_exists pacman; then
 		vim \
 		neofetch \
 		fzf
-else if command_exists apt; then
+elif command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install -y \
 		bat \
