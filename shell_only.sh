@@ -118,5 +118,5 @@ if called_directly; then
 	echo -e "\e[1m\e[1;32mIf you wish to make zsh your default shell:"
 	echo -e "\e[1m\e[1;32m	# usermod -s /bin/zsh ${USER}"
 	echo -e "\e[1m\e[1;32mOR:"
-	echo -e "\e[1m\e[1;32m	$ chpass -s /bin/zsh"
+	echo -e "\e[1m\e[1;32m	$ chsh -s /bin/zsh"
 fi
