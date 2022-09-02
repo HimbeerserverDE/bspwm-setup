@@ -114,3 +114,9 @@ mkdir -p ~/.config
 ln -sf ${PWD}/picom.conf ~/.config/picom.conf
 
 ${SUDO} usermod -G video ${USER}
+
+echo -e "\e[1m\e[1;32mSuccess! You can now log in using your preferred DM."
+echo -e "\e[1m\e[1;32mIf you wish to make zsh your default shell:"
+echo -e "\e[1m\e[1;32m	# usermod -s /bin/zsh ${USER}"
+echo -e "\e[1m\e[1;32mOR:"
+echo -e "\e[1m\e[1;32m	$ chsh -s /bin/zsh"
