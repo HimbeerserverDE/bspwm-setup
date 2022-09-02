@@ -99,4 +99,4 @@ ln -sf ${PWD}/_totp ~/.oh-my-zsh/completions/_totp
 mkdir -p ~/.local/bspwm-setup/
 ln -sf ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
