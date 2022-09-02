@@ -32,7 +32,7 @@ function command_exists {
 
 set -x
 
-if [ $UID -ne 0 ]; then
+if [ ${UID} -ne 0 ]; then
 	if command_exists doas; then
 		SUDO="doas"
 	elif command_exists sudo; then
@@ -112,3 +112,9 @@ mkdir -p ~/.local/bspwm-setup/
 ln -sf ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
+if called_directly; then
+	echo -e "\e[1m\e[1;32mShell setup has been successfully installed!"
+	echo -e "\e[1m\e[1;32mIf you wish to make zsh your default shell:"
+	echo -e "\e[1m\e[1;32m	# usermod -s /bin/zsh ${USER}"
+fi
