@@ -7,7 +7,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
-# fzf reverse history search
-reverse_history_search () { history | sort -hr | fzf }
-zle -N reverse_history_search
-bindkey '^R' reverse_history_search
+# fzf
+source ~/.zsh_fzf_key_bindings
+source ~/.zsh_fzf_completion
