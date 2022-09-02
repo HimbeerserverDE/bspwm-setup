@@ -38,7 +38,7 @@ if [ ${UID} -ne 0 ]; then
 fi
 
 if command_exists pacman; then
-	${SUDO} pacman -Sy --noconfirm \
+	${SUDO} pacman -Sy --noconfirm --needed \
 		bspwm \
 		sxhkd \
 		xorg \
