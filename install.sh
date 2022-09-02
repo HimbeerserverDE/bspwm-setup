@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+./shell_only.sh
+
 set -e
 
 echo -e "\e[1m\e[1;31mMAKE SURE YOU ARE IN THE DIRECTORY THIS SCRIPT IS LOCATED IN!"
@@ -112,5 +114,3 @@ mkdir -p ~/.config
 ln -sf ${PWD}/picom.conf ~/.config/picom.conf
 
 ${SUDO} usermod -G video ${USER}
-
-./shell_only.sh
