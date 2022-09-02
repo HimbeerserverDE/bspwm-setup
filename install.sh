@@ -70,6 +70,7 @@ elif command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install --no-install-recommends -y \
 		bspwm \
+		sxhkd \
 		xorg \
 		rofi \
 		polybar \
