@@ -78,7 +78,7 @@ else
 fi
 
 rm -rf ~/.oh-my-zsh/
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "RUN_ZSH=no $(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ln -sf ${PWD}/bin ~/bin
 
