@@ -23,6 +23,7 @@ read
 echo -e "\e[0m"
 
 ./shell_only.sh
+source ~/.cargo/env
 
 function command_exists {
 	command -v $1 &> /dev/null
@@ -107,15 +108,15 @@ ln -sf ${PWD}/rofi_config ~/.config/rofi/config
 mkdir -p ~/.config/polybar
 ln -sf ${PWD}/polybar ~/.config/polybar
 
-cargo install alacritty
-
-mkdir -p ~/.config/alacritty
-ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
-
 mkdir -p ~/.config
 ln -sf ${PWD}/picom.conf ~/.config/picom.conf
 
 ${SUDO} usermod -G video ${USER}
+
+cargo install alacritty
+
+mkdir -p ~/.config/alacritty
+ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 echo -e "\e[1m\e[1;32mSuccess! You can now log in using your preferred DM."
 echo -e "\e[1m\e[1;32mIf you wish to make zsh your default shell:"
