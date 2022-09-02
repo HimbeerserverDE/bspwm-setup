@@ -112,6 +112,7 @@ mkdir -p ~/.local/bspwm-setup/
 ln -sf ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source ~/.cargo/env
 
 if called_directly; then
 	echo -e "\e[1m\e[1;32mShell setup has been successfully installed!"
