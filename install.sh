@@ -39,6 +39,7 @@ fi
 if command_exists pacman; then
 	${SUDO} pacman -Sy --noconfirm \
 		bspwm \
+		sxhkd \
 		xorg \
 		rofi \
 		polybar \
