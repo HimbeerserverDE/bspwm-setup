@@ -57,6 +57,9 @@ if command_exists pacman; then
 		vim \
 		neofetch \
 		fzf
+
+	git clone https://aur.archlinux.org/tty-clock-git.git
+	(cd tty-clock-git && makepkg -i)
 elif command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install -y \
@@ -78,9 +81,6 @@ elif command_exists apt; then
 		vim \
 		neofetch \
 		fzf
-
-	git clone https://aur.archlinux.org/tty-clock-git.git
-	(cd tty-clock-git && makepkg -i)
 else
 	echo "Your distro is not supported."
 	exit 1
