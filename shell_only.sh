@@ -15,6 +15,17 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+function called_directly {
+	[[ ${SHLVL} -eq 2 ]]
+}
+
+if called_directly; then
+	echo -e "\e[1m\e[1;31mMAKE SURE YOU ARE IN THE DIRECTORY THIS SCRIPT IS LOCATED IN!"
+	echo -e "\e[0m\e[1;31mIf you're sure you are in the correct dir, press Enter."
+	read
+	echo -e "\e[0m"
+fi
+
 function command_exists {
 	command -v $1 &> /dev/null
 }
