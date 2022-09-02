@@ -37,7 +37,7 @@ if [ ${UID} -ne 0 ]; then
 fi
 
 if command_exists pacman; then
-	pacman -Sy --noconfirm \
+	${SUDO} pacman -Sy --noconfirm \
 		bspwm \
 		xorg \
 		rofi \
