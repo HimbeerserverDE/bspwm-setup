@@ -24,8 +24,6 @@ function command_exists {
 	command -v $1 &> /dev/null
 }
 
-set -x
-
 if [ ${UID} -ne 0 ]; then
 	if command_exists sudo; then
 		SUDO="sudo"
