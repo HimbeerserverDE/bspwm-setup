@@ -87,6 +87,7 @@ ln -sf ${PWD}/zshrc ~/.zshrc
 ln -sf ${PWD}/zsh_aliases ~/.zsh_aliases
 ln -sf ${PWD}/fzf_key_bindings.zsh ~/.zsh_fzf_key_bindings
 ln -sf ${PWD}/fzf_completion.zsh ~/.zsh_fzf_completion
+ln -sf ${PWD}/profile ~/.profile
 ln -sf ${PWD}/tmux.conf ~/.tmux.conf
 ln -sf ${PWD}/vimrc ~/.vimrc
 
