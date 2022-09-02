@@ -61,7 +61,7 @@ if command_exists pacman; then
 		fzf
 
 	git clone https://aur.archlinux.org/tty-clock-git.git
-	(cd tty-clock-git && makepkg -i)
+	(cd tty-clock-git && makepkg -i --noconfirm)
 elif command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install -y \

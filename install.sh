@@ -61,7 +61,7 @@ if command_exists pacman; then
 		iniparser
 
 	git clone https://aur.archlinux.org/cava.git
-	(cd cava/ && makepkg -i)
+	(cd cava/ && makepkg -i --noconfirm)
 elif command_exists apt; then
 	wget -O- https://updates.signal.org/desktop/apt/keys.asc | ${SUDO} apt-key add -
 	echo "deb [arch=$(dpkg --print-architecture)] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
