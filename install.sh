@@ -39,7 +39,7 @@ if command_exists apt; then
 	echo "deb [arch=$(dpkg --print-architecture)] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 
 	${SUDO} apt update
-	${SUDO} apt install -y \
+	${SUDO} apt install --no-install-recommends -y \
 		bspwm \
 		xorg \
 		rofi \
@@ -59,8 +59,6 @@ if command_exists apt; then
 		hexchat \
 		brightnessctl \
 		cava
-	${SUDO} apt purge -y \
-		lemonbar # automatically installed but unwanted
 else
 	echo "Your distro is not supported."
 	exit 1
