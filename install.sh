@@ -27,14 +27,40 @@ function command_exists {
 }
 
 if [ ${UID} -ne 0 ]; then
-	if command_exists sudo; then
-		SUDO="sudo"
-	elif command_exists doas; then
+	if command_exists doas; then
 		SUDO="doas"
+	elif command_exists sudo; then
+		SUDO="sudo"
 	fi
 fi
 
-if command_exists apt; then
+if command_exists pacman; then
+	pacman -Sy --noconfirm \
+		bspwm \
+		xorg \
+		rofi \
+		polybar \
+		scrot \
+		feh \
+		picom \
+		dunst \
+		lua53 \
+		vlc \
+		firefox \
+		thunderbird \
+		signal-desktop \
+		ttf-hack \
+		noto-fonts-emoji \
+		xclip \
+		hexchat \
+		brightnessctl \
+		sndio \
+		portaudio \
+		iniparser
+
+	git clone https://aur.archlinux.org/cava.git
+	(cd cava/ && makepkg -i)
+elif command_exists apt; then
 	wget -O- https://updates.signal.org/desktop/apt/keys.asc | ${SUDO} apt-key add -
 	echo "deb [arch=$(dpkg --print-architecture)] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 
