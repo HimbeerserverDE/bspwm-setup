@@ -10,3 +10,6 @@ source ~/.zsh_aliases
 # fzf
 source ~/.zsh_fzf_key_bindings
 source ~/.zsh_fzf_completion
+
+# SSH agent
+export SSH_AUTH_SOCK="/tmp/ssh-${UID}/agent.sock"
