@@ -48,6 +48,7 @@ if command_exists pacman; then
 		feh \
 		picom \
 		dunst \
+		libnotify \
 		lua53 \
 		vlc \
 		firefox \
