@@ -24,11 +24,8 @@ You can run this instead of install.sh to install the shell setup
 on headless servers, or if you don't want to use the rest of the setup.
 
 ## Starting a X session
-Pretty much all you need to do is start bspwm in your `~/.xinitrc`
-and maybe set the keyboard layout. Then just startx from text mode.
-You can automate startx in your shell rc.
-
-Alternatively you can use a display manager of your choice.
+By default this setup launches X when zsh is started on tty1.
+You can however use a display manager if you want.
 
 ## Keybinds / Controls
 ### sxhkd
