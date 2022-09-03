@@ -1,0 +1,13 @@
+#! /bin/bash
+
+set -e
+
+# Get all arguments excluding the lastone
+ARGSLEN=$(($#-1))
+ARGS=${@:1:${ARGSLEN}}
+
+# Get last argument
+for LAST; do true; done
+
+pacman -R ${ARGS} ${LAST}
+rm -rf ~/aur/${LAST}

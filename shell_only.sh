@@ -60,8 +60,9 @@ if command_exists pacman; then
 		neofetch \
 		fzf
 
-	git clone https://aur.archlinux.org/tty-clock-git.git
-	(cd tty-clock-git && makepkg -i --noconfirm)
+	mkdir -p ~/aur/
+
+	bin/aurinstall --noconfirm tty-clock-git
 elif command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install -y \
