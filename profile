@@ -26,3 +26,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 . "$HOME/.cargo/env"
+
+export SSH_AUTH_SOCK="/tmp/ssh-${UID}/agent.sock"
+eval "$(ssh-agent -s -a ${SSH_AUTH_SOCK})"
