@@ -27,4 +27,5 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 . "$HOME/.cargo/env"
 
-eval "$(ssh-agent -s -a ${SSH_AUTH_SOCK})"
+mkdir -p /tmp/ssh-${UID}
+eval "$(ssh-agent -s -a /tmp/ssh-${UID}/agent.sock)"
