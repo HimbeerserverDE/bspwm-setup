@@ -1,4 +1,9 @@
 # bspwm-setup
+## Software
+The software the scripts install depends on your distro.
+I don't maintain a seperate list in the README anymore,
+but you can look at the scripts yourself (you should already be doing this).
+
 ## install.sh
 The `install.sh` script installs the entire setup.
 
