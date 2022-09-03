@@ -42,6 +42,7 @@ if command_exists pacman; then
 		bspwm \
 		sxhkd \
 		xorg \
+		xorg-xinit \
 		rofi \
 		polybar \
 		scrot \
