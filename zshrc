@@ -13,6 +13,8 @@ source ~/.zsh_fzf_completion
 
 # SSH agent
 export SSH_AUTH_SOCK="/tmp/ssh-${UID}/agent.sock"
+mkdir -p /tmp/ssh-${UID}
+eval "$(ssh-agent -s -a /tmp/ssh-${UID}/agent.sock)"
 
 # Start X?
 if [[ "${TTY}" == "/dev/tty1" ]]; then
