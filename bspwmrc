@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+setxkbmap -layout de
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 xss-lock --transfer-sleep-lock -- ~/bin/lock &
