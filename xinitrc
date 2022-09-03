@@ -1,1 +1,2 @@
+setxkbmap -layout de
 bspwm
