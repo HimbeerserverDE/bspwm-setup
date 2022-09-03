@@ -15,6 +15,7 @@ source ~/.zsh_fzf_completion
 export SSH_AUTH_SOCK="/tmp/ssh-${UID}/agent.sock"
 
 # Start X?
-if [ "${TTY}" == "/dev/tty1" ]; then
+if [[ "${TTY}" == "/dev/tty1" ]]; then
 	startx
+	exit 0
 fi
