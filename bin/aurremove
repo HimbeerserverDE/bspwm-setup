@@ -24,7 +24,7 @@ ARGS=${@:1:${ARGSLEN}}
 # Get last argument
 for LAST; do true; done
 
-pacman -R ${ARGS} ${LAST}
+${SUDO} pacman -R ${ARGS} ${LAST}
 
 # Need write permissions to delete without root privileges
 chmod -R u+w ~/aur/${LAST}
