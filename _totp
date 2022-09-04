@@ -1,3 +1,0 @@
-#compdef totp
-
-_files -W ~/.2fa

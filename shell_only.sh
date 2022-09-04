@@ -108,9 +108,6 @@ ln -sf ${PWD}/vimrc ~/.vimrc
 mkdir -p ~/.oh-my-zsh/
 ln -sf ${PWD}/himbeer.zsh-theme ~/.oh-my-zsh/themes/himbeer.zsh-theme
 
-mkdir -p ~/.oh-my-zsh/completions/
-ln -sf ${PWD}/_totp ~/.oh-my-zsh/completions/_totp
-
 mkdir -p ~/.local/bspwm-setup/
 ln -sf ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
 
