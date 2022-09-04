@@ -48,7 +48,7 @@ XF86MonBrightnessUp
 
 # lock screen
 super + l
-	~/bin/lock
+	i3lock-fancy-rapid 1 10
 
 # power off/reboot/hibernate/suspend
 super + alt + {s,a,y,m}

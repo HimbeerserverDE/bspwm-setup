@@ -19,7 +19,7 @@ setxkbmap -layout de
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-xss-lock --transfer-sleep-lock -- ~/bin/lock &
+xss-lock --transfer-sleep-lock -- i3lock-fancy-rapid 1 10 &
 
 ~/.fehbg
 killall -qw picom; picom -b
