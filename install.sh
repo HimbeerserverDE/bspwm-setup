@@ -34,6 +34,9 @@ if [ ${UID} -ne 0 ]; then
 		SUDO="doas"
 	elif command_exists sudo; then
 		SUDO="sudo"
+	else
+		echo "Requires doas or sudo to be installed."
+		exit 1
 	fi
 fi
 
