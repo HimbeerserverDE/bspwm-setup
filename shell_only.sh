@@ -55,7 +55,6 @@ if command_exists pacman; then
 		curl \
 		wget \
 		htop \
-		oath-toolkit \
 		bc \
 		units \
 		tmux \
@@ -80,7 +79,6 @@ elif command_exists apt; then
 		wget \
 		htop \
 		tty-clock \
-		oathtool \
 		bc \
 		units \
 		tmux \
