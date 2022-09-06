@@ -60,7 +60,8 @@ if command_exists pacman; then
 		tmux \
 		vim \
 		neofetch \
-		fzf
+		fzf \
+		openssh
 
 	mkdir -p ~/aur/
 
@@ -84,7 +85,8 @@ elif command_exists apt; then
 		tmux \
 		vim \
 		neofetch \
-		fzf
+		fzf \
+		openssh-client
 else
 	echo "Your distro is not supported."
 	exit 1
