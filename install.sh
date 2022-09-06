@@ -114,7 +114,7 @@ ln -sf ${PWD}/polybar ~/.config/polybar
 mkdir -p ~/.config
 ln -sf ${PWD}/picom.conf ~/.config/picom.conf
 
-${SUDO} usermod -G video ${USER}
+${SUDO} usermod -aG video ${USER}
 
 cargo install alacritty
 
