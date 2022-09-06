@@ -68,7 +68,7 @@ if command_exists pacman; then
 	bin/aurinstall --noconfirm cava
 	bin/aurinstall --noconfirm i3lock-fancy-rapid-git
 elif command_exists apt; then
-	${SUDO} apt install -y gnupg gcc
+	${SUDO} apt install -y gnupg gcc cmake
 
 	wget -O- https://updates.signal.org/desktop/apt/keys.asc | ${SUDO} apt-key add -
 	echo "deb [arch=$(dpkg --print-architecture)] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
