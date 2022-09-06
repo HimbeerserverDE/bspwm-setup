@@ -112,7 +112,6 @@ mkdir -p ~/.config/rofi
 ln -sf ${PWD}/rofi_config ~/.config/rofi/config
 ln -sf ${PWD}/rofi_config.rasi ~/.config/rofi/config.rasi
 
-mkdir -p ~/.config/polybar
 ln -sf ${PWD}/polybar ~/.config/polybar
 
 mkdir -p ~/.config
