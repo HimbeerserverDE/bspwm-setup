@@ -89,6 +89,7 @@ elif command_exists apt; then
 		firefox-esr \
 		thunderbird \
 		signal-desktop \
+		terminus-font \
 		fonts-hack \
 		fonts-noto-color-emoji \
 		xclip \
