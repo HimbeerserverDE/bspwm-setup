@@ -160,7 +160,7 @@ ${PR_CYAN}${PR_LLCORNER}${PR_HBAR}%{${reset_color}%}`git_prompt_info``git_prompt
 ${PR_CYAN} ${PR_CHAR} ${PR_NO_COLOUR}'
 
     # display exitcode on the right when >0
-    return_code="%(?..%{${fg[red]}%}%? ⮐%{${reset_color}%})"
+    return_code="%(?..%{${fg[red]}%}%? ↵%{${reset_color}%})"
     RPROMPT=' ${return_code}${PR_NO_COLOUR}'
 
     PS2='${PR_BLUE}${PR_HBAR}\
