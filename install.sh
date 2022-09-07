@@ -58,6 +58,7 @@ if command_exists pacman; then
 		firefox \
 		thunderbird \
 		signal-desktop \
+		terminus-font \
 		ttf-hack \
 		noto-fonts \
 		noto-fonts-emoji \
