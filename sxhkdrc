@@ -20,7 +20,7 @@ super + Escape
 
 # screenshot
 super + Print
-	scrot -e 'mv $f ~/screenshots/'
+	mkdir -p ~/screenshots && scrot -e 'mv $f ~/screenshots/'
 
 # mute output
 XF86AudioMute
