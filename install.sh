@@ -59,6 +59,7 @@ if command_exists pacman; then
 		thunderbird \
 		signal-desktop \
 		ttf-hack \
+		noto-fonts \
 		noto-fonts-emoji \
 		xclip \
 		hexchat \
