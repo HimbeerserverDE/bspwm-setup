@@ -93,6 +93,7 @@ elif command_exists apt; then
 		signal-desktop \
 		fonts-terminus \
 		fonts-hack \
+		fonts-noto \
 		fonts-noto-color-emoji \
 		xclip \
 		hexchat \
