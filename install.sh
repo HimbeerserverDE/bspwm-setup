@@ -65,7 +65,8 @@ if command_exists pacman; then
 		xclip \
 		hexchat \
 		brightnessctl \
-		pulseaudio
+		pulseaudio \
+		pavucontrol
 
 	bin/aurinstall --noconfirm cava
 	bin/aurinstall --noconfirm i3lock-fancy-rapid-git
@@ -99,7 +100,8 @@ elif command_exists apt; then
 		hexchat \
 		brightnessctl \
 		cava \
-		pulseaudio
+		pulseaudio \
+		pavucontrol
 else
 	echo "Your distro is not supported."
 	exit 1
