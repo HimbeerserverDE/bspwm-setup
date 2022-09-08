@@ -98,7 +98,8 @@ elif command_exists apt; then
 		xclip \
 		hexchat \
 		brightnessctl \
-		cava
+		cava \
+		pulseaudio
 else
 	echo "Your distro is not supported."
 	exit 1
