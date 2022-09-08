@@ -91,7 +91,7 @@ elif command_exists apt; then
 		firefox-esr \
 		thunderbird \
 		signal-desktop \
-		fonts-terminus \
+		fonts-terminus-otb \
 		fonts-hack \
 		fonts-noto \
 		fonts-noto-color-emoji \
