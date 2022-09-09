@@ -50,9 +50,13 @@ XF86MonBrightnessUp
 super + l
 	i3lock-fancy-rapid 1 10
 
-# power off/reboot/hibernate/suspend
-super + alt + {s,a,y,m}
-	systemctl {poweroff,reboot,hibernate,suspend}
+# power off
+super + alt + s
+	poweroff || systemctl poweroff
+
+# reboot
+super + alt + a
+	reboot || systemctl reboot
 
 # firefox
 super + shift + f
