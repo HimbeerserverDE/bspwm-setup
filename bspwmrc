@@ -15,7 +15,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-setxkbmap -layout de
+KEYMAP=$(cat ~/.xkeymap)
+if [ -n "${KEYMAP}" ]; then
+	setxkbmap -layout ${KEYMAP}
+fi
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
