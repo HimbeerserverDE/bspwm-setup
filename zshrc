@@ -1,3 +1,10 @@
+# Start X?
+if [[ "${TTY}" == "/dev/tty1" ]]; then
+	startx
+	exit 0
+fi
+
+# Else: Actual ZSH RC
 export ZSH="$HOME/.oh-my-zsh"
 
 export LIBCLANG_PATH="$HOME/.espressif/tools/xtensa-esp32-elf-clang/esp-14.0.0-20220415-x86_64-unknown-linux-gnu/lib/"
@@ -23,9 +30,3 @@ function start_ssh_agent {
 }
 
 pgrep -x ssh-agent > /dev/null || start_ssh_agent
-
-# Start X?
-if [[ "${TTY}" == "/dev/tty1" ]]; then
-	startx
-	exit 0
-fi
