@@ -4,6 +4,10 @@ The software the scripts install depends on your distro.
 I don't maintain a seperate list in the README anymore,
 but you can look at the scripts yourself (you should already be doing this).
 
+bspwm will attempt to load the keyboard layout in `~/.xkeymap`.
+To set it, run `echo LAYOUT > ~/.xkeymap` where `LAYOUT` is
+the lower case two character code (e.g. `us` or `de`).
+
 ## install.sh
 The `install.sh` script installs the entire setup.
 
