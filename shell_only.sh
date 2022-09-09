@@ -108,9 +108,6 @@ ln -sf ${PWD}/vimrc ~/.vimrc
 mkdir -p ~/.oh-my-zsh/
 ln -sf ${PWD}/himbeer.zsh-theme ~/.oh-my-zsh/themes/himbeer.zsh-theme
 
-mkdir -p ~/.local/bspwm-setup/
-ln -sf ${PWD}/lockscreen.xkb ~/.local/bspwm-setup/lockscreen.xkb
-
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source ~/.cargo/env
 
