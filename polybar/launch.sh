@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-polybar --reload -q main -c "$HOME/.config/polybar/config.ini" &
-polybar --reload -q opt -c "$HOME/.config/polybar/config.ini" &
+polybar --reload -q main -c "${HOME}/.config/polybar/config.ini" &
+polybar --reload -q opt -c "${HOME}/.config/polybar/config.ini" &
 
-polybar --reload -q tray -c "$HOME/.config/polybar/config.ini" &
+polybar --reload -q tray -c "${HOME}/.config/polybar/config.ini" &
