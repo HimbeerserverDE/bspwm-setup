@@ -46,6 +46,7 @@ if command_exists pacman; then
 		sxhkd \
 		xorg \
 		xorg-xinit \
+		xdo \
 		rofi \
 		polybar \
 		scrot \
@@ -81,6 +82,7 @@ elif command_exists apt; then
 		bspwm \
 		sxhkd \
 		xorg \
+		xdo \
 		rofi \
 		polybar \
 		scrot \
