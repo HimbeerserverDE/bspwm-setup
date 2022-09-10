@@ -19,3 +19,12 @@ polybar --reload -q main -c "${HOME}/.config/polybar/config.ini" &
 polybar --reload -q opt -c "${HOME}/.config/polybar/config.ini" &
 
 polybar --reload -q tray -c "${HOME}/.config/polybar/config.ini" &
+
+while [[ $(pgrep -x polybar | wc -l) -lt 3 ]]; do sleep 1; done
+sleep 2
+
+while [ -z "$(bspc query -N -n any.fullscreen)" ]; do sleep 1; done
+sleep 2
+
+TRAYBAR=$(pgrep -x polybar | tail -n 1)
+xdo above -t $(bspc query -N -n any.fullscreen) $(xdo id -p ${TRAYBAR})
