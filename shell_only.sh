@@ -61,7 +61,8 @@ if command_exists pacman; then
 		vim \
 		neofetch \
 		fzf \
-		openssh
+		openssh \
+		paru
 
 	mkdir -p ~/aur/
 
@@ -107,6 +108,12 @@ ln -sf ${PWD}/vimrc ~/.vimrc
 
 mkdir -p ~/.oh-my-zsh/
 ln -sf ${PWD}/himbeer.zsh-theme ~/.oh-my-zsh/themes/himbeer.zsh-theme
+
+mkdir -p ~/.config/paru/
+cat <<EOT > ~/.config/paru/paru.conf
+[bin]
+Sudo = $(which ${SUDO})
+EOT
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source ~/.cargo/env
