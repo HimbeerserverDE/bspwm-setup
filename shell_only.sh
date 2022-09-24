@@ -46,7 +46,6 @@ fi
 if command_exists pacman; then
 	${SUDO} pacman -Sy --noconfirm --needed \
 		bat \
-		lolcat \
 		cowsay \
 		fortune-mod \
 		zsh \
@@ -66,6 +65,7 @@ if command_exists pacman; then
 
 	mkdir -p ~/aur/
 
+	bin/aurinstall --noconfirm c-lolcat
 	bin/aurinstall --noconfirm tty-clock-git
 elif command_exists apt; then
 	${SUDO} apt update
