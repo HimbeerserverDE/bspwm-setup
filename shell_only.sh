@@ -63,10 +63,13 @@ if command_exists pacman; then
 		openssh \
 		paru
 
-	mkdir -p ~/aur/
+	mkdir -p ~/.config/paru/
+	cat <<EOT > ~/.config/paru/paru.conf
+[bin]
+Sudo = $(which ${SUDO})
+EOT
 
-	bin/aurinstall --noconfirm c-lolcat
-	bin/aurinstall --noconfirm tty-clock-git
+	paru -S --noconfirm c-lolcat tty-clock-git
 elif command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install -y \
@@ -108,12 +111,6 @@ ln -sf ${PWD}/vimrc ~/.vimrc
 
 mkdir -p ~/.oh-my-zsh/
 ln -sf ${PWD}/himbeer.zsh-theme ~/.oh-my-zsh/themes/himbeer.zsh-theme
-
-mkdir -p ~/.config/paru/
-cat <<EOT > ~/.config/paru/paru.conf
-[bin]
-Sudo = $(which ${SUDO})
-EOT
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source ~/.cargo/env
