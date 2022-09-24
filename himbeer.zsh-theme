@@ -175,6 +175,6 @@ autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
 add-zsh-hook preexec theme_preexec
 
-fortune | cowsay | lolcat -S 23
+fortune | cowsay | lolcat -h 0.23 -v 0.129375
 echo
 neofetch
