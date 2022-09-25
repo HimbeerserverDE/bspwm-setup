@@ -49,7 +49,7 @@ if command_exists pacman; then
 		xdo \
 		rofi \
 		polybar \
-		scrot \
+		flameshot \
 		feh \
 		picom \
 		dunst \
@@ -85,7 +85,7 @@ elif command_exists apt; then
 		xdo \
 		rofi \
 		polybar \
-		scrot \
+		flameshot \
 		feh \
 		picom \
 		dunst \
