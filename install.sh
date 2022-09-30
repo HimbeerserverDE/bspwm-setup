@@ -70,7 +70,7 @@ if command_exists pacman; then
 		pavucontrol \
 		chafa
 
-	paru -S --noconfirm cava i3lock-fancy-rapid-git
+	paru -Sy --noconfirm cava i3lock-fancy-rapid-git
 elif command_exists apt; then
 	${SUDO} apt install -y gnupg gcc cmake g++ pkg-config libfontconfig1-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev
 
