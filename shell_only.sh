@@ -69,7 +69,7 @@ if command_exists pacman; then
 Sudo = $(which ${SUDO})
 EOT
 
-	paru -Sy --noconfirm c-lolcat tty-clock-git
+	paru -S --noconfirm c-lolcat tty-clock-git
 elif command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install -y \
