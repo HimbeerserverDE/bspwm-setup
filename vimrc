@@ -10,7 +10,7 @@ if 1
 endif
 
 augroup go_save | au!
-	autocmd BufWritePost *.go !goimports -l -w *.go
+	autocmd BufWritePost *.go !goimports -l -w '%:p:h'
 	autocmd BufWritePost *.go edit!
 	autocmd BufWritePost *.go redraw!
 augroup end
