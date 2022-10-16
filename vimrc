@@ -9,6 +9,12 @@ if 1
 	augroup END
 endif
 
+augroup go_save | au!
+	autocmd BufWritePost *.go !goimports -l -w *.go
+	autocmd BufWritePost *.go edit!
+	autocmd BufWritePost *.go redraw!
+augroup end
+
 autocmd FileType rust setlocal ts=4 sw=4 expandtab
 
 nnoremap <Enter> moO<Esc>`o
