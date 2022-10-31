@@ -43,6 +43,9 @@ if [ ${UID} -ne 0 ]; then
 	fi
 fi
 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source ~/.cargo/env
+
 if command_exists pacman; then
 	${SUDO} pacman -Sy --noconfirm --needed \
 		bat \
@@ -60,8 +63,9 @@ if command_exists pacman; then
 		vim \
 		neofetch \
 		fzf \
-		openssh \
-		paru
+		openssh
+
+	cargo install paru
 
 	mkdir -p ~/.config/paru/
 	cat <<EOT > ~/.config/paru/paru.conf
@@ -111,9 +115,6 @@ ln -sf ${PWD}/vimrc ~/.vimrc
 
 mkdir -p ~/.oh-my-zsh/
 ln -sf ${PWD}/himbeer.zsh-theme ~/.oh-my-zsh/themes/himbeer.zsh-theme
-
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-source ~/.cargo/env
 
 if called_directly; then
 	echo -e "\e[1m\e[1;32mShell setup has been successfully installed!"
