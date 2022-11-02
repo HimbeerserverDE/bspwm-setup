@@ -68,7 +68,8 @@ if command_exists pacman; then
 		brightnessctl \
 		pulseaudio \
 		pavucontrol \
-		chafa
+		chafa \
+		xdg-user-dirs
 
 	paru -S --noconfirm cava i3lock-fancy-rapid-git
 elif command_exists apt; then
@@ -104,7 +105,8 @@ elif command_exists apt; then
 		cava \
 		pulseaudio \
 		pavucontrol \
-		chafa
+		chafa \
+		xdg-user-dirs
 else
 	echo "Your distro is not supported."
 	exit 1
@@ -127,6 +129,9 @@ mkdir -p ~/.config
 ln -sf ${PWD}/picom.conf ~/.config/picom.conf
 
 ${SUDO} usermod -aG video ${USER}
+
+xdg-user-dirs-update --set Desktop ~
+xdg-user-dirs-update --set Downloads ~/downloads
 
 cargo install alacritty
 
