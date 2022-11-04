@@ -132,6 +132,12 @@ ${SUDO} usermod -aG video ${USER}
 
 xdg-user-dirs-update --set DESKTOP ~
 xdg-user-dirs-update --set DOWNLOAD ~/downloads
+xdg-user-dirs-update --set TEMPLATES ~
+xdg-user-dirs-update --set PUBLICSHARE ~
+xdg-user-dirs-update --set DOCUMENTS ~/documents
+xdg-user-dirs-update --set MUSIC ~/music
+xdg-user-dirs-update --set PICTURES ~/pictures
+xdg-user-dirs-update --set VIDEOS ~/videos
 
 cargo install alacritty
 
