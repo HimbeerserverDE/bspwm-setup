@@ -130,8 +130,8 @@ ln -sf ${PWD}/picom.conf ~/.config/picom.conf
 
 ${SUDO} usermod -aG video ${USER}
 
-xdg-user-dirs-update --set Desktop ~
-xdg-user-dirs-update --set Downloads ~/downloads
+xdg-user-dirs-update --set DESKTOP ~
+xdg-user-dirs-update --set DOWNLOAD ~/downloads
 
 cargo install alacritty
 
