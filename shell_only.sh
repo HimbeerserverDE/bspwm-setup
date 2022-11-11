@@ -63,9 +63,10 @@ if command_exists pacman; then
 		vim \
 		neofetch \
 		fzf \
-		openssh
+		openssh \
+		ripgrep
 
-	cargo install paru
+	cargo install paru cargo-update
 
 	mkdir -p ~/.config/paru/
 	cat <<EOT > ~/.config/paru/paru.conf
