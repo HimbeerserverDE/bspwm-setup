@@ -68,6 +68,7 @@ if command_exists pacman; then
 		pipewire \
 		pipewire-pulse \
 		wireplumber \
+		alsa-utils \
 		chafa \
 		xdg-user-dirs
 
@@ -105,6 +106,7 @@ elif command_exists apt; then
 		pipewire \
 		pipewire-bin \
 		wireplumber \
+		alsa-utils \
 		chafa \
 		xdg-user-dirs
 else
