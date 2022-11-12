@@ -66,6 +66,7 @@ if command_exists pacman; then
 		hexchat \
 		brightnessctl \
 		pipewire \
+		pipewire-alsa \
 		pipewire-pulse \
 		wireplumber \
 		alsa-utils \
