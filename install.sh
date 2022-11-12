@@ -54,7 +54,6 @@ if command_exists pacman; then
 		picom \
 		dunst \
 		libnotify \
-		lua53 \
 		vlc \
 		firefox \
 		thunderbird \
@@ -66,8 +65,9 @@ if command_exists pacman; then
 		xclip \
 		hexchat \
 		brightnessctl \
-		pulseaudio \
-		pavucontrol \
+		pipewire \
+		pipewire-pulse \
+		wireplumber \
 		chafa \
 		xdg-user-dirs
 
@@ -90,7 +90,6 @@ elif command_exists apt; then
 		feh \
 		picom \
 		dunst \
-		lua5.3 \
 		vlc \
 		firefox-esr \
 		thunderbird \
@@ -103,8 +102,9 @@ elif command_exists apt; then
 		hexchat \
 		brightnessctl \
 		cava \
-		pulseaudio \
-		pavucontrol \
+		pipewire \
+		pipewire-bin \
+		wireplumber \
 		chafa \
 		xdg-user-dirs
 else

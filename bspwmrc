@@ -24,7 +24,12 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 xss-lock --transfer-sleep-lock -- i3lock-fancy-rapid 1 10 &
 
+pipewire &
+pipewire-pulse &
+wireplumber &
+
 ~/.fehbg
+
 killall -qw picom; picom -b
 killall -qw dunst; dunst &
 killall -qw polybar; ~/.config/polybar/launch.sh &
