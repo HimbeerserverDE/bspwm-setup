@@ -150,9 +150,7 @@ ln -sf ${PWD}/xinitrc ~/.xinitrc
 mkdir -p ~/.gnupg
 ln -sf ${PWD}/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
-echo -e "\e[1m\e[1;32mSuccess! You can now log in using your preferred DM."
-echo -e "\e[1m\e[1;32mIf you wish to make zsh your default shell:"
-echo -e "\e[1m\e[1;32m	# usermod -s /bin/zsh ${USER}"
-echo -e "\e[1m\e[1;32mOR:"
-echo -e "\e[1m\e[1;32m	$ chsh -s /bin/zsh"
+chsh -s /bin/zsh
+
+echo -e "\e[1m\e[1;32mSuccess! You can now log in on tty1."
 echo -en "\e[0m"
