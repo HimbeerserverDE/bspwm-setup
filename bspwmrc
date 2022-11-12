@@ -24,9 +24,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 xss-lock --transfer-sleep-lock -- i3lock-fancy-rapid 1 10 &
 
-pipewire &
-pipewire-pulse &
-wireplumber &
+killall -qw pipewire; pipewire &
+killall -qw pipewire-pulse; pipewire-pulse &
+killall -qw wireplumber; wireplumber &
 
 ~/.fehbg
 
