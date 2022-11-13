@@ -25,8 +25,19 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 xss-lock --transfer-sleep-lock -- i3lock-fancy-rapid 1 10 &
 
 killall -qw pipewire; pipewire &
+while [ -z "$(pregp -x pipewire)" ]; do
+	sleep 1
+done
+
 killall -qw pipewire-pulse; pipewire-pulse &
+while [ -z "$(pregp -x pipewire-pulse)" ]; do
+	sleep 1
+done
+
 killall -qw wireplumber; wireplumber &
+while [ -z "$(pregp -x wireplumber)" ]; do
+	sleep 1
+done
 
 ~/.fehbg
 
