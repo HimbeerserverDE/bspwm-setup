@@ -58,6 +58,10 @@ super + alt + s
 super + alt + a
 	reboot || systemctl reboot
 
+# kill session completely
+super + alt + o
+	pkill -u ${USER}
+
 # firefox
 super + shift + f
 	firefox
