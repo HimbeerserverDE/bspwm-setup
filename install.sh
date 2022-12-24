@@ -58,6 +58,7 @@ if command_exists pacman; then
 		firefox \
 		thunderbird \
 		signal-desktop \
+		element-desktop \
 		terminus-font \
 		ttf-hack \
 		noto-fonts \
@@ -75,10 +76,13 @@ if command_exists pacman; then
 
 	paru -S --noconfirm cava i3lock-fancy-rapid-git
 elif command_exists apt; then
-	${SUDO} apt install -y gnupg gcc cmake g++ pkg-config libfontconfig1-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev
+	${SUDO} apt install -y gnupg gcc cmake g++ pkg-config libfontconfig1-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev apt-transport-https
 
 	wget -O- https://updates.signal.org/desktop/apt/keys.asc | ${SUDO} apt-key add -
 	echo "deb [arch=$(dpkg --print-architecture)] https://updates.signal.org/desktop/apt xenial main" | sudo tee /etc/apt/sources.list.d/signal-xenial.list
+
+	${SUDO} wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg
+	echo "deb [signey-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/default main" | ${SUDO} tee /etc/apt/sources.list.d/element-io.list
 
 	${SUDO} apt update
 	${SUDO} apt install --no-install-recommends -y \
@@ -96,6 +100,7 @@ elif command_exists apt; then
 		firefox-esr \
 		thunderbird \
 		signal-desktop \
+		element-desktop \
 		fonts-terminus-otb \
 		fonts-hack \
 		fonts-noto \

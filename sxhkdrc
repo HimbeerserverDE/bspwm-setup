@@ -78,6 +78,10 @@ super + shift + l
 super + shift + s
 	signal-desktop
 
+# element
+super + shift + m
+	element-desktop
+
 #
 # bspwm hotkeys
 #
