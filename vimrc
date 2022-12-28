@@ -15,6 +15,12 @@ augroup go_save | au!
 	autocmd BufWritePost *.go redraw!
 augroup end
 
+augroup rust_save | au!
+	autocmd BufWritePost *.rs !cargo fmt
+	autocmd BufWritePost *.rs edit!
+	autocmd BufWritePost *.rs redraw!
+augroup end
+
 autocmd FileType rust setlocal ts=4 sw=4 expandtab
 autocmd FileType rust set shiftwidth=4
 autocmd FileType rust set softtabstop=4
