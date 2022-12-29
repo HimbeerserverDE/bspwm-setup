@@ -106,6 +106,10 @@ super + {t,shift + t,s,f}
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
+# intro sequence
+super + ctrl + s
+	~/bin/wmintro
+
 #
 # focus/swap
 #
