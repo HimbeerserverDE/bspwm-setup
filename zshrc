@@ -22,7 +22,6 @@ export PATH="$HOME/.espressif/tools/xtensa-esp32-elf-gcc/8_4_0-esp-2021r2-patch3
 
 export EDITOR="vim"
 
-export TERM="xterm-256color"
 ZSH_THEME="himbeer" # set by `omz`
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
