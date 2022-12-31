@@ -44,6 +44,7 @@ if [ ${UID} -ne 0 ]; then
 fi
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+echo '. "$HOME/.cargo/env"' >> ~/.zshenv
 source ~/.cargo/env
 
 if command_exists pacman; then
