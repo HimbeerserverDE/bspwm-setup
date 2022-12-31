@@ -1,3 +1,6 @@
+" make 256color in tmux work
+set background=dark
+
 if 1
 	augroup vimStartup
 		au!
@@ -30,5 +33,4 @@ nnoremap <Enter> moO<Esc>`o
 set autoindent
 set number
 set tabstop=4
-set background=dark # make 256color in tmux work
 syntax on
