@@ -9,6 +9,8 @@ WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'reset; slw' &
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e neo-matrix -D &
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e tty-clock -srDB &
 
+while [ -z "$(pgrep -x musikbox)" ]; do sleep 1; done
 while [ -n "$(pgrep -x musikbox)" ]; do sleep 1; done
 
+bspc rule -r *
 killall alacritty
