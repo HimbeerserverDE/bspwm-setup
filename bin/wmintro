@@ -4,19 +4,19 @@ bspc wm -l ~/.config/bspwm/intro.canvas
 ~/.config/bspwm/intro.rules
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e musikbox -e -p ~/.wmintro_audio &
-sleep 0.1
+sleep 0.25
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e neo-matrix -D &
-sleep 0.1
+sleep 0.25
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
-sleep 0.1
+sleep 0.25
 
 PATH="${PATH}:${HOME}/bin" WINIT_X11_SCALE_FACTOR=1.0 alacritty -e slw &
-sleep 0.1
+sleep 0.25
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e tty-clock -srDB &
-sleep 0.1
+sleep 0.25
 
 while [ -n "$(pgrep -x musikbox)" ]; do sleep 1; done
 
