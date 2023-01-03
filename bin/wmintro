@@ -3,7 +3,7 @@
 bspc wm -l ~/.config/bspwm/intro.canvas
 ~/.config/bspwm/intro.rules
 
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e musikbox -e -n -p ~/.wmintro_audio &
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e musikbox -e -n -v 0.3 -p ~/.wmintro_audio &
 sleep 0.25
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
