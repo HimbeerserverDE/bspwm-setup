@@ -1,29 +1,13 @@
 #! /bin/bash
 
-####
 bspc monitor 1 -f
 sleep 1
-####
 
-WINIT_X11_SCALE_FACTOR=1.0 alacritty &
-sleep 1
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e tty-clock -srDB &
-sleep 1
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
-sleep 1
+~/bin/wmsequence
 
-####
 bspc monitor 2 -f
 sleep 1
-####
 
-WINIT_X11_SCALE_FACTOR=1.0 alacritty &
-sleep 1
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e tty-clock -srDB &
-sleep 1
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
-sleep 1
+~/bin/wmsequence
 
-####
 cvlc ~/.wmintro_audio
-####

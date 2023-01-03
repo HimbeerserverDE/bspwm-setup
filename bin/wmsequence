@@ -1,0 +1,10 @@
+#! /bin/bash
+
+WINIT_X11_SCALE_FACTOR=1.0 alacritty &
+sleep 1
+
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e tty-clock -srDB &
+sleep 1
+
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
+sleep 1
