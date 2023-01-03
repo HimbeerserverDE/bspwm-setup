@@ -4,12 +4,20 @@ bspc wm -l ~/.config/bspwm/intro.canvas
 ~/.config/bspwm/intro.rules
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e musikbox -e -p ~/.wmintro_audio &
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e slw &
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e neo-matrix -D &
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e tty-clock -srDB &
+while [ -z "$(pgrep -x musikbox)" ]; do false; done
 
-while [ -z "$(pgrep -x musikbox)" ]; do sleep 1; done
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
+while [ -z "$(pgrep -x cava)" ]; do false; done
+
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e slw &
+while [ -z "$(pgrep -x slw)" ]; do false; done
+
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e neo-matrix -D &
+while [ -z "$(pgrep -x neo-matrix)" ]; do false; done
+
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e tty-clock -srDB &
+while [ -z "$(pgrep -x tty-clock)" ]; do false; done
+
 while [ -n "$(pgrep -x musikbox)" ]; do sleep 1; done
 
 bspc rule -r *
