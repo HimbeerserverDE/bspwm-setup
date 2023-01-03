@@ -19,7 +19,7 @@ while [ true ]; do
 		FLAGS="${FLAGS}-w"
 	fi
 
-	sl -e -${CARS} ${FLAGS} | lolcat
+	sl -${CARS} ${FLAGS} | lolcat
 
 	sleep 1
 done
