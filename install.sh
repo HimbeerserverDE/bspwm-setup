@@ -72,9 +72,10 @@ if command_exists pacman; then
 		wireplumber \
 		alsa-utils \
 		chafa \
-		xdg-user-dirs
+		xdg-user-dirs \
+		ttf-hanazono
 
-	paru -S --noconfirm cava i3lock-fancy-rapid-git
+	paru -S --noconfirm cava i3lock-fancy-rapid-git neo-matrix
 elif command_exists apt; then
 	${SUDO} apt install -y gnupg gcc cmake g++ pkg-config libfontconfig1-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev apt-transport-https
 
