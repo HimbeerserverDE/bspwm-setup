@@ -1,5 +1,7 @@
 #! /bin/bash
 
+reset
+
 while [ true ]; do
 	CARS=$(( ${RANDOM} % 16 + 1 ))
 

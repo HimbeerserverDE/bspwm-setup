@@ -5,7 +5,7 @@ bspc wm -l ~/.config/bspwm/intro.canvas
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e musikbox -e -p ~/.wmintro_audio &
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
-WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'reset; slw' &
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e slw &
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e neo-matrix -D &
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e tty-clock -srDB &
 
