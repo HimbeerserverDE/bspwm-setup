@@ -22,3 +22,4 @@ while [ -n "$(pgrep -x musikbox)" ]; do sleep 1; done
 
 bspc rule -r *
 killall alacritty
+bspc monitor -f 1
