@@ -20,6 +20,20 @@ while [ true ]; do
 	fi
 
 	if [ $(( $(rand) % 2 )) -gt 0 ]; then
+		FLAGS="${FLAGS}-d "
+	fi
+
+	if [ $(( $(rand) % 2 )) -gt 0 ]; then
+		FLAGS="${FLAGS}-F "
+	fi
+
+	if [ $(( $(rand) % 2 )) -gt 0 ]; then
+		FLAGS="${FLAGS}-G "
+		FLAGS=$(echo ${FLAGS} | sed 's/-c //g')
+		FLAGS=$(echo ${FLAGS} | sed 's/-l //g')
+	fi
+
+	if [ $(( $(rand) % 2 )) -gt 0 ]; then
 		FLAGS="${FLAGS}-l "
 	fi
 
