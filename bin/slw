@@ -1,24 +1,30 @@
 #! /bin/bash
 
+rand() {
+	tr -dc 0-9 < /dev/urandom | head -c 5 | sed 's/^0*//'
+	echo
+}
+
 reset
 
 while [ true ]; do
-	CARS=$(( ${RANDOM} % 16 + 1 ))
+	CARS=$(( $(rand) % 16 + 1 ))
+	FLAGS=""
 
-	if [ $(( ${RANDOM} % 2 )) -eq 0 ]; then
+	if [ $(( $(rand) % 2 )) -gt 0 ]; then
 		FLAGS="${FLAGS}-a "
 	fi
 
-	if [ $(( ${RANDOM} % 2 )) -eq 0 ]; then
-		FLAGS="${FLAGS}-c"
+	if [ $(( $(rand) % 2 )) -gt 0 ]; then
+		FLAGS="${FLAGS}-c "
 	fi
 
-	if [ $(( ${RANDOM} % 2 )) -eq 0 ]; then
-		FLAGS="${FLAGS}-l"
+	if [ $(( $(rand) % 2 )) -gt 0 ]; then
+		FLAGS="${FLAGS}-l "
 	fi
 
-	if [ $(( ${RANDOM} % 2 )) -eq 0 ]; then
-		FLAGS="${FLAGS}-w"
+	if [ $(( $(rand) % 2 )) -gt 0 ]; then
+		FLAGS="${FLAGS}-w "
 	fi
 
 	sl -${CARS} ${FLAGS} | lolcat
