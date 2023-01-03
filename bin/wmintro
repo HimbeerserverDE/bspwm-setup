@@ -1,13 +1,14 @@
 #! /bin/bash
 
-bspc monitor 1 -f
-sleep 1
+bspc wm -l ~/.config/bspwm/intro.canvas
+~/.config/bspwm/intro.rules
 
-~/bin/wmsequence
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e musikbox -e -p ~/.wmintro_audio &
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'reset; slw' &
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e neo-matrix -D &
+WINIT_X11_SCALE_FACTOR=1.0 alacritty -e tty-clock -srDB &
 
-bspc monitor 2 -f
-sleep 1
+while [ -n "$(pgrep -x musikbox)" ]; do sleep 1; done
 
-~/bin/wmsequence
-
-musikbox -e -p ~/.wmintro_audio
+killall alacritty

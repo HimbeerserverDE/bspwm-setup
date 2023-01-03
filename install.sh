@@ -124,6 +124,8 @@ fi
 mkdir -p ~/.config/bspwm
 ln -sf ${PWD}/bspwmrc ~/.config/bspwm/bspwmrc
 ln -sf ${PWD}/init_monitor.sh ~/.config/bspwm/init_monitor.sh
+ln -sf ${PWD}/intro.canvas ~/.config/bspwm/intro.canvas
+ln -sf ${PWD}/intro.rules ~/.config/bspwm/intro.rules
 
 mkdir -p ~/.config/sxhkd
 ln -sf ${PWD}/sxhkdrc ~/.config/sxhkd/sxhkdrc
