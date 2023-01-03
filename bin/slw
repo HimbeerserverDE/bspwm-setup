@@ -12,18 +12,6 @@ while [ true ]; do
 	fi
 
 	if [ $(( ${RANDOM} % 2 )) -gt 0 ]; then
-		FLAGS="${FLAGS}-d"
-	fi
-
-	if [ $(( ${RANDOM} % 2 )) -gt 0 ]; then
-		FLAGS="${FLAGS}-F"
-	fi
-
-	if [ $(( ${RANDOM} % 2 )) -gt 0 ]; then
-		FLAGS="${FLAGS}-G"
-	fi
-
-	if [ $(( ${RANDOM} % 2 )) -gt 0 ]; then
 		FLAGS="${FLAGS}-l"
 	fi
 
