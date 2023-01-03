@@ -158,6 +158,8 @@ ln -sf ${PWD}/xinitrc ~/.xinitrc
 mkdir -p ~/.gnupg
 ln -sf ${PWD}/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
+cargo install --git https://github.com/HimbeerserverDE/musikbox.git
+
 chsh -s /bin/zsh
 
 echo -e "\e[1m\e[1;32mSuccess! You can now log in on tty1."
