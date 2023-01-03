@@ -10,4 +10,4 @@ sleep 1
 
 ~/bin/wmsequence
 
-cvlc ~/.wmintro_audio
+musikbox -e -p ~/.wmintro_audio
