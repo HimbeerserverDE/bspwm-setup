@@ -110,9 +110,13 @@ super + ctrl + {m,x,y,z}
 super + ctrl + s
 	~/bin/wmintro
 
-# toggle unsafe mode
+# enter unsafe mode
 super + ctrl + u
 	~/bin/wmunsafe
+
+# enter normal mode
+super + ctrl + n
+	~/bin/wmnormal
 
 #
 # focus/swap
