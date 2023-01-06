@@ -30,7 +30,7 @@ killall -qw pipewire-pulse; pipewire-pulse &
 while [ -z "$(pgrep -x pipewire-pulse)" ]; do false; done
 killall -qw wireplumber; wireplumber &
 
-~/.fehbg
+feh --no-fehbg --bg-fill ~/.config/bspwm/wallpaper
 
 killall -qw picom; picom -b
 killall -qw dunst; dunst &
