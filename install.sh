@@ -127,6 +127,9 @@ ln -sf ${PWD}/init_monitor.sh ~/.config/bspwm/init_monitor.sh
 ln -sf ${PWD}/intro.canvas ~/.config/bspwm/intro.canvas
 ln -sf ${PWD}/intro.rules ~/.config/bspwm/intro.rules
 
+find ${PWD} -name "intro_*.canvas" | xargs ln -sf -t ~/.config/bspwm/
+find ${PWD} -name "intro_*.rules" | xargs ln -sf -t ~/.config/bspwm/
+
 mkdir -p ~/.config/sxhkd
 ln -sf ${PWD}/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
