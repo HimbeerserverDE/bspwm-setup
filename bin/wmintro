@@ -32,8 +32,14 @@ sleep 0.25
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e tty-clock -srDB &
 sleep 0.25
 
+# we want the fun stuff to be visible, it's more important than the player
+if [ "${MONITORS}" -eq "1" ]; then
+	bspc desktop -f 2
+fi
+
 while [ -n "$(pgrep -x musikbox)" ]; do sleep 1; done
 
 bspc rule -r *
 killall alacritty
-bspc monitor -f 1
+
+bspc desktop -f 1
