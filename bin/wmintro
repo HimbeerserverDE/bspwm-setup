@@ -1,5 +1,11 @@
 #! /bin/bash
 
+# real windows? (there is always a pidless phantom window)
+if [ "$(xdo pid $(bspc query -N) | wc -l)" -gt 0 ]; then
+	echo "Please close all windows first."
+	exit 1
+fi
+
 bspc wm -l ~/.config/bspwm/intro.canvas
 ~/.config/bspwm/intro.rules
 
