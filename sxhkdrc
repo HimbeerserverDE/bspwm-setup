@@ -118,6 +118,10 @@ super + ctrl + u
 super + ctrl + n
 	~/bin/wmnormal
 
+# enter normal mode and ensure immediate safety
+super + ctrl + shift + n
+	~/bin/wmdanger
+
 #
 # focus/swap
 #
