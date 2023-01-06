@@ -4,21 +4,23 @@
 
 SAFE_DESKTOP_MONITOR_1=$(bspc query -D -m 1 -d '.!occupied' | head -n 1)
 if [ -z "${SAFE_DESKTOP_MONITOR_1}" ]; then
-	SAFE_DESKTOP_MONITOR_1="8"
+	SAFE_DESKTOP_MONITOR_1=$(bspc query -D -d '1:^8')
 fi
 
 SAFE_DESKTOP_MONITOR_2=$(bspc query -D -m 2 -d '.!occupied' | head -n 1)
 if [ -z "${SAFE_DESKTOP_MONITOR_2}" ]; then
-	SAFE_DESKTOP_MONITOR_2="8"
+	SAFE_DESKTOP_MONITOR_2=$(bspc query -D -d '2:^8')
 fi
 
 bspc desktop -f ${SAFE_DESKTOP_MONITOR_1}
 bspc desktop -f ${SAFE_DESKTOP_MONITOR_2}
 
 for KILL in $(bspc query -N -d ${SAFE_DESKTOP_MONITOR_1}); do
-	bspc node -c ${KILL}
+	bspc node -f ${KILL}
+	bspc node -c
 done
 
-for KILL in $(bspc query -N -d ${SAFE_DESKTOP_MONITOR_1}); do
-	bspc node -c ${KILL}
+for KILL in $(bspc query -N -d ${SAFE_DESKTOP_MONITOR_2}); do
+	bspc node -f ${KILL}
+	bspc node -c
 done
