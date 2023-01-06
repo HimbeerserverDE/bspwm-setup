@@ -6,7 +6,7 @@ if [ "$(xdo pid $(bspc query -N) | wc -l)" -gt 0 ]; then
 	exit 1
 fi
 
-MONITORS=$(xrandr --listmonitors | head -n 1 | awk '{print $2}')
+MONITORS=$(xrandr -q | grep ' connected' | wc -l)
 
 ls ~/.config/bspwm/intro_${MONITORS}_monitors.canvas ~/.config/bspwm/intro_${MONITORS}_monitors.rules
 if [ "$?" != "0" ]; then
