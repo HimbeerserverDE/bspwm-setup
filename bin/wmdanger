@@ -15,6 +15,9 @@ fi
 bspc desktop -f ${SAFE_DESKTOP_MONITOR_1}
 bspc desktop -f ${SAFE_DESKTOP_MONITOR_2}
 
+pactl set-sink-mute @DEFAULT_SINK@ 1
+pactl set-source-mute @DEFAULT_SOURCE@ 1
+
 for KILL in $(bspc query -N -d ${SAFE_DESKTOP_MONITOR_1}); do
 	bspc node -f ${KILL}
 	bspc node -c
