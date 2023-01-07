@@ -27,3 +27,5 @@ for KILL in $(bspc query -N -d ${SAFE_DESKTOP_MONITOR_2}); do
 	bspc node -f ${KILL}
 	bspc node -c
 done
+
+killall -s SIGHUP musikbox
