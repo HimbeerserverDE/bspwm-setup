@@ -42,7 +42,7 @@ if [ "${MONITORS}" -eq "1" ]; then
 	bspc desktop -f 2
 fi
 
-while [ -n "$(ps -p ${MUSIKBOX_PID})" ]; do sleep 1; done
+while [ -n "$(ps -p ${MUSIKBOX_PID} | tail -n +2)" ]; do sleep 1; done
 
 bspc rule -r *
 kill ${TERM_PIDS}
