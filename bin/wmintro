@@ -18,8 +18,8 @@ bspc wm -l ~/.config/bspwm/intro_${MONITORS}_monitors.canvas
 ~/.config/bspwm/intro_${MONITORS}_monitors.rules
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e musikbox -e -n -v 0.4 -p ~/.wmintro_audio &
-MUSIKBOX_PID=$(pidof musikbox | tail -n 1)
 sleep 0.25
+MUSIKBOX_PID=$(pidof musikbox | tail -n 1)
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
 TERM_PIDS="${TERM_PIDS}$! "
