@@ -18,7 +18,7 @@ bspc wm -l ~/.config/bspwm/intro_${MONITORS}_monitors.canvas
 ~/.config/bspwm/intro_${MONITORS}_monitors.rules
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e musikbox -e -n -v 0.4 -p ~/.wmintro_audio &
-TERM_PIDS="${TERM_PIDS}$!"
+MUSIKBOX_PID=$(pidof musikbox | tail -n 1)
 sleep 0.25
 
 WINIT_X11_SCALE_FACTOR=1.0 alacritty -e sh -c 'cava | lolcat' &
@@ -42,7 +42,7 @@ if [ "${MONITORS}" -eq "1" ]; then
 	bspc desktop -f 2
 fi
 
-while [ -n "$(pgrep -x musikbox)" ]; do sleep 1; done
+while [ -n "$(ps -p ${MUSIKBOX_PID})" ]; do sleep 1; done
 
 bspc rule -r *
 kill ${TERM_PIDS}
