@@ -1,3 +1,6 @@
 #! /bin/bash
 
 feh --no-fehbg --bg-fill ~/.config/bspwm/unsafe_wallpaper
+
+ln -snf ${HOME}/.config/polybar.d/unsafe ${HOME}/.config/polybar
+polybar-msg cmd restart

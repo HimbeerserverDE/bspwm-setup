@@ -32,6 +32,9 @@ killall -qw wireplumber; wireplumber &
 
 feh --no-fehbg --bg-fill ~/.config/bspwm/wallpaper
 
+# load the normal mode polybar
+ln -snf ${HOME}/.config/polybar.d/normal ${HOME}/.config/polybar 
+
 killall -qw picom; picom -b
 killall -qw dunst; dunst &
 killall -qw polybar; ~/.config/polybar/launch.sh &
