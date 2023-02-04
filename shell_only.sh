@@ -67,7 +67,7 @@ if command_exists pacman; then
 		openssh \
 		ripgrep
 
-	cargo install paru cargo-update
+	cargo install paru
 
 	mkdir -p ~/.config/paru/
 	cat <<EOT > ~/.config/paru/paru.conf
@@ -75,12 +75,11 @@ if command_exists pacman; then
 Sudo = $(which ${SUDO})
 EOT
 
-	paru -S --noconfirm c-lolcat tty-clock-git
+	paru -S --noconfirm tty-clock-git
 elif command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install -y \
 		bat \
-		lolcat \
 		cowsay \
 		fortune \
 		zsh \
@@ -101,6 +100,8 @@ else
 	echo "Your distro is not supported."
 	exit 1
 fi
+
+cargo install cargo-update gping lcat
 
 rm -rf ~/.oh-my-zsh/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
