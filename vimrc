@@ -28,6 +28,10 @@ autocmd FileType rust setlocal ts=4 sw=4 expandtab
 autocmd FileType rust set shiftwidth=4
 autocmd FileType rust set softtabstop=4
 
+autocmd FileType yaml setlocal ts=2 sw=2 expandtab
+autocmd FileType yaml set shiftwidth=2
+autocmd FileType yaml set softtabstop=2
+
 nnoremap <Enter> moO<Esc>`o
 
 set autoindent
