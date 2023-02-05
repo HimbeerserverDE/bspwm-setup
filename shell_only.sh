@@ -57,8 +57,6 @@ if command_exists pacman; then
 		figlet \
 		curl \
 		wget \
-		bc \
-		units \
 		tmux \
 		vim \
 		neofetch \
@@ -74,7 +72,7 @@ if command_exists pacman; then
 Sudo = $(which ${SUDO})
 EOT
 
-	paru -S --noconfirm c-lolcat tty-clock-git
+	paru -S --noconfirm c-lolcat tty-clock-git insect
 elif command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install -y \
