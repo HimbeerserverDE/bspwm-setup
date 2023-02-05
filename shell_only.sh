@@ -57,7 +57,6 @@ if command_exists pacman; then
 		figlet \
 		curl \
 		wget \
-		htop \
 		bc \
 		units \
 		tmux \
@@ -88,7 +87,6 @@ elif command_exists apt; then
 		figlet \
 		curl \
 		wget \
-		htop \
 		tty-clock \
 		bc \
 		units \
@@ -102,7 +100,7 @@ else
 	exit 1
 fi
 
-cargo install cargo-update gping lcat
+cargo install cargo-update gping lcat bottom
 
 rm -rf ~/.oh-my-zsh/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
