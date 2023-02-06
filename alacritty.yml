@@ -21,10 +21,13 @@ font:
     size: 12
     normal:
         family: "Hack"
+        style: "Regular"
     bold:
         family: "Hack"
+        style: "Bold"
     italic:
         family: "Hack"
+        style: "Italic"
 
 colors:
     normal:
