@@ -63,6 +63,7 @@ if command_exists pacman; then
 		ttf-hack \
 		noto-fonts \
 		noto-fonts-emoji \
+		noto-fonts-extra \
 		xclip \
 		hexchat \
 		brightnessctl \
