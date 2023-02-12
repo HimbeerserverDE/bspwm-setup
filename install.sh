@@ -61,6 +61,7 @@ if command_exists pacman; then
 		element-desktop \
 		terminus-font \
 		ttf-hack \
+		ttf-hanazono \
 		noto-fonts \
 		noto-fonts-emoji \
 		noto-fonts-extra \
@@ -73,8 +74,7 @@ if command_exists pacman; then
 		wireplumber \
 		alsa-utils \
 		chafa \
-		xdg-user-dirs \
-		ttf-hanazono
+		xdg-user-dirs
 
 	paru -S --noconfirm cava i3lock-fancy-rapid-git neo-matrix
 elif command_exists apt; then
@@ -105,6 +105,7 @@ elif command_exists apt; then
 		element-desktop \
 		fonts-terminus-otb \
 		fonts-hack \
+		fonts-hanazono \
 		fonts-noto \
 		fonts-noto-color-emoji \
 		xclip \
