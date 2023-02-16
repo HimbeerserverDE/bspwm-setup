@@ -74,7 +74,8 @@ if command_exists pacman; then
 		wireplumber \
 		alsa-utils \
 		chafa \
-		xdg-user-dirs
+		xdg-user-dirs \
+		xss-lock
 
 	paru -S --noconfirm cava i3lock-fancy-rapid-git neo-matrix
 elif command_exists apt; then
@@ -117,7 +118,8 @@ elif command_exists apt; then
 		wireplumber \
 		alsa-utils \
 		chafa \
-		xdg-user-dirs
+		xdg-user-dirs \
+		xss-lock
 else
 	echo "Your distro is not supported."
 	exit 1
