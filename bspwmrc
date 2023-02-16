@@ -40,7 +40,7 @@ killall -qw dunst; dunst &
 killall -qw polybar; ~/.config/polybar/launch.sh &
 killall -qw init_monitor.sh; ~/.config/bspwm/init_monitor.sh &
 
-bspc monitor 'eDP-1' -n 1 -d 1 2 3 4 5 6 7 8 9
+bspc monitor 'eDP1' -n 1 -d 1 2 3 4 5 6 7 8 9
 
 bspc config border_width		0
 bspc config window_gap			10
