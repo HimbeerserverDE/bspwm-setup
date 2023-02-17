@@ -18,6 +18,8 @@
 while [ true ]; do
 	if [ "$(xrandr -q | grep 'DP2' | awk '{print $2}')" == "connected" ]; then
 		xrandr --output 'DP2' --auto
+		sleep 4
+
 		xrandr --output 'DP2' --right-of 'eDP1'
 		bspc monitor 'DP2' -n 2 -d 1 2 3 4 5 6 7 8 9
 		exit 0
