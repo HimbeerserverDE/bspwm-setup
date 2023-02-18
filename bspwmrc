@@ -22,6 +22,9 @@ fi
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+xrandr --output 'DP2' --auto
+xrandr --output 'DP2' --right-of 'eDP1'
+
 xss-lock --transfer-sleep-lock -- i3lock-fancy-rapid 1 10 &
 
 killall -qw pipewire; pipewire &
