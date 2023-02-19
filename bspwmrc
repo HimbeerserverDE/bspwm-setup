@@ -32,6 +32,7 @@ while [ -z "$(pgrep -x pipewire)" ]; do false; done
 killall -qw pipewire-pulse; pipewire-pulse &
 while [ -z "$(pgrep -x pipewire-pulse)" ]; do false; done
 killall -qw wireplumber; wireplumber &
+while [ -z "$(pgrep -x wireplumber)" ]; do false; done
 
 feh --no-fehbg --bg-fill ~/.config/bspwm/wallpaper
 
