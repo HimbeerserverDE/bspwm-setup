@@ -59,12 +59,14 @@ if command_exists pacman; then
 		thunderbird \
 		signal-desktop \
 		element-desktop \
+		fontconfig \
 		terminus-font \
 		ttf-hack \
 		ttf-hanazono \
 		noto-fonts \
 		noto-fonts-emoji \
 		noto-fonts-extra \
+		ttf-dejavu \
 		xclip \
 		hexchat \
 		brightnessctl \
@@ -104,11 +106,13 @@ elif command_exists apt; then
 		thunderbird \
 		signal-desktop \
 		element-desktop \
+		fontconfig \
 		fonts-terminus-otb \
 		fonts-hack \
 		fonts-hanazono \
 		fonts-noto \
 		fonts-noto-color-emoji \
+		fonts-dejavu \
 		xclip \
 		hexchat \
 		brightnessctl \
