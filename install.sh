@@ -147,6 +147,9 @@ ln -sf ${PWD}/polybar ~/.config/polybar.d
 mkdir -p ~/.config
 ln -sf ${PWD}/picom.conf ~/.config/picom.conf
 
+mkdir -p ~/.config/fontconfig
+ln -sf ${PWD}/fonts.conf ~/.config/fontconfig/fonts.conf
+
 ${SUDO} usermod -aG video ${USER}
 
 xdg-user-dirs-update --set DESKTOP ~
