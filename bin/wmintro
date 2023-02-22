@@ -2,7 +2,7 @@
 
 # real windows? (there is always a pidless phantom window)
 if [ "$(xdo pid $(bspc query -N) | wc -l)" -gt 0 ]; then
-	echo "Please close all windows first."
+	notify-send "BSPWM Intro" "Please close all windows first."
 	exit 1
 fi
 
