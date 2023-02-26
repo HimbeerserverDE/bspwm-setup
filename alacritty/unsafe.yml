@@ -14,7 +14,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 window:
-    opacity: 0.8
+    opacity: 0.33
     class: "alacritty"
 
 font:
@@ -30,6 +30,8 @@ font:
         style: "Italic"
 
 colors:
+    primary:
+        background: '#eeeeee'
     normal:
         black:   '#000000'
         red:     '#ff3333'
