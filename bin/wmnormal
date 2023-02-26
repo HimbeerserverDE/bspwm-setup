@@ -2,5 +2,7 @@
 
 feh --no-fehbg --bg-fill ~/.config/bspwm/wallpaper
 
+ln -sf ${HOME}/.config/alacritty/normal.yml ${HOME}/.config/alacritty/alacritty.yml
+
 ln -snf ${HOME}/.config/polybar.d/normal ${HOME}/.config/polybar
 polybar-msg cmd restart

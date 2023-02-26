@@ -36,6 +36,9 @@ while [ -z "$(pgrep -x wireplumber)" ]; do false; done
 
 feh --no-fehbg --bg-fill ~/.config/bspwm/wallpaper
 
+# load the normal mode alacritty config
+ln -sf ${HOME}/.config/alacritty/normal.yml ${HOME}/.config/alacritty/alacritty.yml
+
 # load the normal mode polybar
 ln -snf ${HOME}/.config/polybar.d/normal ${HOME}/.config/polybar 
 

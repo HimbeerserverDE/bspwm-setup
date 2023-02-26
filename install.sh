@@ -167,8 +167,8 @@ xdg-user-dirs-update --set VIDEOS ~/videos
 
 cargo install alacritty
 
-mkdir -p ~/.config/alacritty
-ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
+mkdir -p ~/.config
+ln -sf ${PWD}/alacritty ~/.config/alacritty
 
 mkdir -p ~/
 ln -sf ${PWD}/xinitrc ~/.xinitrc
