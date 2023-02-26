@@ -2,7 +2,7 @@
 
 feh --no-fehbg --bg-fill ~/.config/bspwm/unsafe_wallpaper
 
-ln -sf ${HOME}/.config/alacritty/unsafe.yml ${HOME}/.config/alacritty/alacritty.yml
+cp -p ${HOME}/.config/alacritty/unsafe.yml ${HOME}/.config/alacritty/alacritty.yml
 
 ln -snf ${HOME}/.config/polybar.d/unsafe ${HOME}/.config/polybar
 polybar-msg cmd restart
