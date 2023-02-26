@@ -148,9 +148,6 @@ ln -sf ${PWD}/rofi_config.rasi ~/.config/rofi/config.rasi
 # not the actual config location, it will be symlinked by the mode switch
 ln -sf ${PWD}/polybar ~/.config/polybar.d
 
-mkdir -p ~/.config
-ln -sf ${PWD}/picom.conf ~/.config/picom.conf
-
 mkdir -p ~/.config/fontconfig
 ln -sf ${PWD}/fonts.conf ~/.config/fontconfig/fonts.conf
 
