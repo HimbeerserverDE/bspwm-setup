@@ -17,6 +17,11 @@
 
 set -e
 
+if [[ -z "$1" || -z "$2" ]]; then
+	echo -e "\e[1m\e[1;31mUsage: <xkblayout> <xkbvariant>"
+	exit 1
+fi
+
 echo -e "\e[1m\e[1;31mMAKE SURE YOU ARE IN THE DIRECTORY THIS SCRIPT IS LOCATED IN!"
 echo -e "\e[0m\e[1;31mIf you're sure you are in the correct dir, press Enter."
 read
@@ -128,6 +133,15 @@ else
 	echo "Your distro is not supported."
 	exit 1
 fi
+
+cat <<EOT | ${SUDO} tee /etc/X11/xorg.conf.d/00-keyboard.conf
+Section "InputClass"
+	Identifier "system-keyboard"
+	MatchIsKeyboard "on"
+	Option "XkbLayout" "$1"
+	Option "XkbVariant" "$2"
+EndSection
+EOT
 
 mkdir -p ~/.config/bspwm
 ln -sf ${PWD}/bspwmrc ~/.config/bspwm/bspwmrc
