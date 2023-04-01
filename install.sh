@@ -86,7 +86,8 @@ if command_exists pacman; then
 		gstreamer \
 		gst-plugins-base \
 		gst-plugins-good \
-		gst-plugins-bad
+		gst-plugins-bad \
+		sl
 
 	paru -S --noconfirm cava i3lock-fancy-rapid-git neo-matrix
 elif command_exists apt; then
@@ -132,7 +133,11 @@ elif command_exists apt; then
 		alsa-utils \
 		chafa \
 		xdg-user-dirs \
-		xss-lock
+		xss-lock \
+		gstreamer1.0-plugins-base \
+		gstreamer1.0-plugins-good \
+		gstreamer1.0-plugins-bad \
+		sl
 else
 	echo "Your distro is not supported."
 	exit 1
