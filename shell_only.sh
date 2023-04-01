@@ -71,8 +71,7 @@ if command_exists pacman; then
 		make \
 		automake \
 		autoconf \
-		m4 \
-		aclocal
+		m4
 
 	cargo install paru
 
