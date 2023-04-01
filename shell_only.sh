@@ -62,7 +62,17 @@ if command_exists pacman; then
 		neofetch \
 		fzf \
 		openssh \
-		ripgrep
+		ripgrep \
+		which \
+		gcc \
+		pkg-config \
+		openssl \
+		fakeroot \
+		make \
+		automake \
+		autoconf \
+		m4 \
+		aclocal
 
 	cargo install paru
 

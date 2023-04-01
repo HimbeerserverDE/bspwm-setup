@@ -82,7 +82,11 @@ if command_exists pacman; then
 		alsa-utils \
 		chafa \
 		xdg-user-dirs \
-		xss-lock
+		xss-lock \
+		gstreamer \
+		gst-plugins-base \
+		gst-plugins-good \
+		gst-plugins-bad
 
 	paru -S --noconfirm cava i3lock-fancy-rapid-git neo-matrix
 elif command_exists apt; then
