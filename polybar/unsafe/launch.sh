@@ -15,18 +15,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-sleep 1
+SCR1=$(xrandr -q | grep ' connected' | grep primary | awk '{print $1}')
+
+cp -p ${HOME}/.config/polybar/template.ini ${HOME}/.config/polybar/config.ini
+sed -i "s/SCR1/${SCR1}/g" ${HOME}/.config/polybar/config.ini
 
 polybar --reload -q main -c "${HOME}/.config/polybar/config.ini" &
-polybar --reload -q opt -c "${HOME}/.config/polybar/config.ini" &
 
-polybar --reload -q tray -c "${HOME}/.config/polybar/config.ini" &
-
-while [[ $(pgrep -x polybar | wc -l) -lt 3 ]]; do sleep 1; done
-sleep 2
-
-while [ -z "$(bspc query -N -n any.fullscreen)" ]; do sleep 1; done
-sleep 2
-
-TRAYBAR=$(pgrep -x polybar | tail -n 1)
-xdo above -t $(bspc query -N -n any.fullscreen) $(xdo id -p ${TRAYBAR})
+${HOME}/.config/polybar/scr2.sh &
+${HOME}/.config/polybar/tray.sh &
