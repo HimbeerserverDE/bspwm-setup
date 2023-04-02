@@ -17,6 +17,7 @@
 
 while [ -z "${SCR2}" ]; do
 	SCR2=$(xrandr -q | grep ' connected' | grep -v primary | awk '{print $1}')
+	sleep 1
 done
 
 sleep 12
