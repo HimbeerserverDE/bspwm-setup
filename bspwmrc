@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+killall -qw init_monitor.sh scr2.sh tray.sh
+
 MKPRIMARY=$(cat ~/.primary_monitor)
 xrandr --output "${MKPRIMARY}" --primary
 
