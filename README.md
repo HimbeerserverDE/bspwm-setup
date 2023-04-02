@@ -7,6 +7,8 @@ but you can look at the scripts yourself (you should already be doing this).
 The keyboard layout is handled by the installer and written
 to `/etc/X11/xorg.conf.d/00-keyboard.conf` automatically.
 
+You should set your desired primary video output in `~/.primary_monitor`.
+
 ## install.sh
 The `install.sh` script installs the entire setup.
 

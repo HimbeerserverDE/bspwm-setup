@@ -15,6 +15,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+MKPRIMARY=$(cat ~/.primary_monitor)
+xrandr --output "${MKPRIMARY}" --primary
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 SCR1=$(xrandr -q | grep ' connected' | grep primary | awk '{print $1}')
