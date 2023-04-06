@@ -33,6 +33,8 @@ while [ -z "$(pgrep -x pipewire-pulse)" ]; do false; done
 killall -qw wireplumber; wireplumber &
 while [ -z "$(pgrep -x wireplumber)" ]; do false; done
 
+sleep 1
+
 feh --no-fehbg --bg-fill ~/.config/bspwm/wallpaper
 
 # load the normal mode alacritty config
