@@ -49,6 +49,7 @@ killall -qw polybar; ~/.config/polybar/launch.sh &
 killall -qw init_monitor.sh; ~/.config/bspwm/init_monitor.sh &
 
 xset led named "Scroll Lock"
+pgrep -x polkit-dumb-agent > /dev/null || polkit-dumb-agent &
 
 bspc monitor "${SCR1}" -n 1 -d 1 2 3 4 5 6 7 8 9
 
