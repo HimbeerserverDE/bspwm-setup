@@ -31,23 +31,23 @@ font:
 
 colors:
     primary:
-        background: '#eeeeee'
+        background: '#813d9c'
     normal:
         black:   '#000000'
-        red:     '#ff3333'
-        green:   '#33ff33'
-        yellow:  '#ffff33'
-        blue:    '#3366ff'
-        magenta: '#ff33ff'
-        cyan:    '#33dddd'
+        red:     '#d83268'
+        green:   '#11cc11'
+        yellow:  '#cc9900'
+        blue:    '#6699ff'
+        magenta: '#cc11cc'
+        cyan:    '#22bbbb'
         white:   '#d8d8d8'
     bright:
         black:   '#222222'
-        red:     '#ff5555'
-        green:   '#55ff55'
-        blue:    '#5588ff'
-        magenta: '#ff55ff'
-        cyan:    '#55ffff'
+        red:     '#fa5486'
+        green:   '#33ee33'
+        blue:    '#88bbff'
+        magenta: '#ee33ee'
+        cyan:    '#44dddd'
         white:   '#fafafa'
 
 env:
