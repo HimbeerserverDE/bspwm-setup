@@ -10,6 +10,11 @@ pgrep -x ssh-agent > /dev/null || start_ssh_agent
 
 # Start X?
 if [[ "${TTY}" == "/dev/tty1" ]]; then
+	STTY='-echo' ${HOME}/.cargo/bin/hatch
+	if [ "$?" != "0" ]; then
+		exit 1
+	fi
+
 	startx
 	exit 0
 fi
