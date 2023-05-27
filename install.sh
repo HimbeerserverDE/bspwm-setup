@@ -207,8 +207,9 @@ mkdir -p ~/.gnupg
 ln -sf ${PWD}/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
 cargo install --git https://github.com/HimbeerserverDE/musikbox.git
+cargo install --git https://github.com/HimbeerserverDE/hatch.git
 
 chsh -s /bin/zsh
 
-echo -e "\e[1m\e[1;32mSuccess! You can now log in on tty1."
+echo -e "\e[1m\e[1;32mSuccess! You can now log in on tty1. You may wish to enable autologin."
 echo -en "\e[0m"
