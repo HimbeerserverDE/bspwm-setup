@@ -82,10 +82,6 @@ super + shift + s
 super + shift + m
 	element-desktop
 
-# discord
-super + shift + a
-	discord
-
 #
 # bspwm hotkeys
 #
