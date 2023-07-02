@@ -185,5 +185,5 @@ super + {Left,Down,Up,Right}
 #
 
 # rotate the split of the last two focused windows
-super + {x,y}
+super + {x,z}
 	bspc node @parent -R {90,-90}
