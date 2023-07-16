@@ -80,7 +80,7 @@ super + shift + s
 
 # element
 super + shift + m
-	element-desktop
+	LIBGL_ALWAYS_INDIRECT=1 element-desktop
 
 #
 # bspwm hotkeys
