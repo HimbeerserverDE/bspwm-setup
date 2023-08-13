@@ -89,7 +89,7 @@ if command_exists pacman; then
 		gst-plugins-bad \
 		sl
 
-	paru -S --noconfirm cava i3lock-fancy-rapid-git neo-matrix polkit-dumb-agent-git
+	paru -S --noconfirm cava i3lock-fancy-rapid-git neo-matrix
 elif command_exists apt; then
 	${SUDO} apt install -y gnupg gcc cmake g++ pkg-config libfontconfig1-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev apt-transport-https
 
@@ -138,13 +138,6 @@ elif command_exists apt; then
 		gstreamer1.0-plugins-good \
 		gstreamer1.0-plugins-bad \
 		sl
-
-	cat <<EOT > /usr/bin/polkit-dumb-agent
-#!/bin/bash
-
-exit 0
-EOT
-	chmod a+x /usr/bin/polkit-dumb-agent
 else
 	echo "Your distro is not supported."
 	exit 1
