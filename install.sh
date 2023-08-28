@@ -199,6 +199,9 @@ ln -sf ${PWD}/xinitrc ~/.xinitrc
 mkdir -p ~/.gnupg
 ln -sf ${PWD}/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
+mkdir -p ~/.config/cava
+ln -sf ${PWD}/cava_config ~/.config/cava/config
+
 cargo install --git https://github.com/HimbeerserverDE/musikbox.git
 cargo install --git https://github.com/HimbeerserverDE/hatch.git
 
