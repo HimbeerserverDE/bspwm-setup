@@ -119,7 +119,7 @@ super + ctrl + n
 	~/bin/wmnormal
 
 # enter normal mode and ensure immediate safety
-super + ctrl + shift + n
+Pause
 	~/bin/wmdanger
 
 #
