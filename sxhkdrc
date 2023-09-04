@@ -52,11 +52,11 @@ super + l
 
 # power off
 super + alt + s
-	poweroff || systemctl poweroff
+	loginctl poweroff
 
 # reboot
 super + alt + a
-	reboot || systemctl reboot
+	loginctl reboot
 
 # kill session completely
 super + alt + {_,shift + }o
