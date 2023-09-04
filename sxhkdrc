@@ -50,14 +50,6 @@ XF86MonBrightnessUp
 super + l
 	i3lock-fancy-rapid 1 10
 
-# power off
-super + alt + s
-	loginctl poweroff
-
-# reboot
-super + alt + a
-	loginctl reboot
-
 # kill session completely
 super + alt + {_,shift + }o
 	pkill -u {_,-9} ${USER}
