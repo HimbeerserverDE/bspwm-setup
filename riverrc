@@ -1,0 +1,119 @@
+#! /bin/sh
+
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+riverctl map normal Super Return spawn "WINIT_X11_SCALE_FACTOR=1.0 ~/.cargo/bin/alacritty"
+
+# screenshot
+riverctl map normal Super Print spawn "flameshot gui"
+
+# kill session completely
+riverctl map normal Super+Alt O spawn "pkill -u ${USER}"
+
+# kill session completely (force)
+riverctl map normal Super+Alt+Shift O spawn "pkill -9 -u ${USER}"
+
+# firefox
+riverctl map normal Super+Shift F spawn firefox
+
+# hexchat
+riverctl map normal Super+Shift H spawn hexchat
+
+# thunderbird
+riverctl map normal Super+Shift L spawn thunderbird
+
+# signal
+riverctl map normal Super+Shift S spawn signal-desktop
+
+# element
+riverctl map normal Super+Shift M spawn "LIBGL_ALWAYS_INDIRECT=1 element-desktop"
+
+#
+# river hotkeys
+#
+
+# quit river
+riverctl map normal Super+Alt Q exit
+
+# close focused window
+riverctl map normal Super Q close
+
+#
+# state/flags
+#
+
+# toggle floating
+riverctl map normal Super S toggle-float
+
+# toggle fullscreen
+riverctl map normal Super F toggle-fullscreen
+
+#
+# focus/swap
+#
+
+# focus next window
+riverctl map normal Super J focus-view next
+
+# focus previous window
+riverctl map normal Super K focus-view previous
+
+# focus next output
+riverctl map normal Super Period focus-output next
+
+# focus previous output
+riverctl map normal Super Comma focus-output previous
+
+# swap with next window
+riverctl map normal Super+Shift J swap next
+
+# swap with previous window
+riverctl map normal Super+Shift K swap previous
+
+# send to next output
+riverctl map normal Super+Shift Period send-to-output next
+
+# send to previous output
+riverctl map normal Super+Shift Comma send-to-output previous
+
+#
+# move/resize
+#
+
+# expand floating window horizontally
+riverctl map normal Super+Alt+Shift H resize horizontal -20
+
+# expand floating window vertically
+riverctl map normal Super+Alt+Shift J resize vertical 20
+
+# contract floating window vertically
+riverctl map normal Super+Alt+Shift K resize vertical -20
+
+# contract floating window horizontally
+riverctl map normal Super+Alt+Shift L resize horizontal 20
+
+# move floating window left
+riverctl map normal Super+Alt H move left 20
+
+# move floating window down
+riverctl map normal Super+Alt J move down 20
+
+# move floating window up
+riverctl map normal Super+Alt K move up 20
+
+# move floating window right
+riverctl map normal Super+Alt L move right 20
+
+#
+# init
+#
+
+riverctl keyboard-layout $(cat ~/.kblayout)
+
+riverctl border-width 0
+
+riverctl default-layout rivertile
+rivertile -view-padding 5 -outer-padding 5 &
