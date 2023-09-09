@@ -118,6 +118,7 @@ xdg-user-dirs-update --set PICTURES ~/pictures
 xdg-user-dirs-update --set VIDEOS ~/videos
 
 cargo install alacritty
+cargo install river-bsp-layout
 
 mkdir -p ~/.config
 ln -sf ${PWD}/alacritty ~/.config/alacritty
