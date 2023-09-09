@@ -47,11 +47,8 @@ fi
 
 if command_exists pacman; then
 	${SUDO} pacman -Sy --noconfirm --needed \
-		bspwm \
-		sxhkd \
-		xorg \
-		xorg-xinit \
-		xdo \
+		river
+		seatd-openrc
 		rofi \
 		polybar \
 		flameshot \
@@ -72,7 +69,6 @@ if command_exists pacman; then
 		noto-fonts-emoji \
 		noto-fonts-extra \
 		ttf-dejavu \
-		xclip \
 		hexchat \
 		brightnessctl \
 		pipewire \
@@ -80,7 +76,6 @@ if command_exists pacman; then
 		pipewire-pulse \
 		wireplumber \
 		alsa-utils \
-		chafa \
 		xdg-user-dirs \
 		xss-lock \
 		gstreamer \
@@ -89,80 +84,16 @@ if command_exists pacman; then
 		gst-plugins-bad \
 		sl
 
-	paru -S --noconfirm cava i3lock-fancy-rapid-git neo-matrix
-elif command_exists apt; then
-	${SUDO} apt install -y gnupg gcc cmake g++ pkg-config libfontconfig1-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev apt-transport-https
+	paru -S --noconfirm cava neo-matrix
 
-	wget -O- https://updates.signal.org/desktop/apt/keys.asc | ${SUDO} apt-key add -
-	echo "deb [arch=$(dpkg --print-architecture)] https://updates.signal.org/desktop/apt xenial main" | ${SUDO} tee /etc/apt/sources.list.d/signal-xenial.list
-
-	${SUDO} wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg
-	echo "deb [signey-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/default main" | ${SUDO} tee /etc/apt/sources.list.d/element-io.list
-
-	${SUDO} apt update
-	${SUDO} apt install --no-install-recommends -y \
-		bspwm \
-		sxhkd \
-		xorg \
-		xdo \
-		rofi \
-		polybar \
-		flameshot \
-		feh \
-		picom \
-		dunst \
-		vlc \
-		firefox-esr \
-		thunderbird \
-		signal-desktop \
-		element-desktop \
-		fontconfig \
-		fonts-terminus-otb \
-		fonts-hack \
-		fonts-hanazono \
-		fonts-noto \
-		fonts-noto-color-emoji \
-		fonts-dejavu \
-		xclip \
-		hexchat \
-		brightnessctl \
-		cava \
-		pipewire \
-		pipewire-bin \
-		wireplumber \
-		alsa-utils \
-		chafa \
-		xdg-user-dirs \
-		xss-lock \
-		gstreamer1.0-plugins-base \
-		gstreamer1.0-plugins-good \
-		gstreamer1.0-plugins-bad \
-		sl
+	${SUDO} rc-update add seatd boot
 else
 	echo "Your distro is not supported."
 	exit 1
 fi
 
-cat <<EOT | ${SUDO} tee /etc/X11/xorg.conf.d/00-keyboard.conf
-Section "InputClass"
-	Identifier "system-keyboard"
-	MatchIsKeyboard "on"
-	Option "XkbLayout" "$1"
-	Option "XkbVariant" "$2"
-EndSection
-EOT
-
-mkdir -p ~/.config/bspwm
-ln -sf ${PWD}/bspwmrc ~/.config/bspwm/bspwmrc
-ln -sf ${PWD}/init_monitor.sh ~/.config/bspwm/init_monitor.sh
-ln -sf ${PWD}/intro.canvas ~/.config/bspwm/intro.canvas
-ln -sf ${PWD}/intro.rules ~/.config/bspwm/intro.rules
-
-find ${PWD} -name "intro_*.canvas" | xargs ln -sf -t ~/.config/bspwm/
-find ${PWD} -name "intro_*.rules" | xargs ln -sf -t ~/.config/bspwm/
-
-mkdir -p ~/.config/sxhkd
-ln -sf ${PWD}/sxhkdrc ~/.config/sxhkd/sxhkdrc
+mkdir -p ~/.config/river
+ln -sf ${PWD}/riverrc ~/.config/river/init
 
 mkdir -p ~/.config/rofi
 ln -sf ${PWD}/rofi_config ~/.config/rofi/config
@@ -171,12 +102,10 @@ ln -sf ${PWD}/rofi_config.rasi ~/.config/rofi/config.rasi
 # not the actual config location, it will be symlinked by the mode switch
 ln -sf ${PWD}/polybar ~/.config/polybar.d
 
-mkdir -p ~/.config
-ln -sf ${PWD}/picom.conf ~/.config/picom.conf
-
 mkdir -p ~/.config/fontconfig
 ln -sf ${PWD}/fonts.conf ~/.config/fontconfig/fonts.conf
 
+${SUDO} usermod -aG seat ${USER}
 ${SUDO} usermod -aG video ${USER}
 
 xdg-user-dirs-update --set DESKTOP ~
@@ -193,9 +122,6 @@ cargo install alacritty
 mkdir -p ~/.config
 ln -sf ${PWD}/alacritty ~/.config/alacritty
 
-mkdir -p ~/
-ln -sf ${PWD}/xinitrc ~/.xinitrc
-
 mkdir -p ~/.gnupg
 ln -sf ${PWD}/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
@@ -203,9 +129,8 @@ mkdir -p ~/.config/cava
 ln -sf ${PWD}/cava_config ~/.config/cava/config
 
 cargo install --git https://github.com/HimbeerserverDE/musikbox.git
-cargo install --git https://github.com/HimbeerserverDE/hatch.git
 
 chsh -s /bin/zsh
 
-echo -e "\e[1m\e[1;32mSuccess! You can now log in on tty1. You may wish to enable autologin."
+echo -e "\e[1m\e[1;32mSuccess! You can now log in on tty1."
 echo -en "\e[0m"
