@@ -115,5 +115,5 @@ riverctl keyboard-layout $(cat ~/.kblayout)
 
 riverctl border-width 0
 
-riverctl default-layout rivertile
-rivertile -view-padding 5 -outer-padding 5 &
+riverctl spawn ~/.cargo/bin/river-bsp-layout
+riverctl default-layout bsp-layout
