@@ -10,9 +10,6 @@ riverctl map normal Super Return spawn "WINIT_X11_SCALE_FACTOR=1.0 ~/.cargo/bin/
 # program launcher
 riverctl map normal Super A spawn "wofi -S run"
 
-# screenshot
-riverctl map normal Super Print spawn "flameshot gui"
-
 # lock screen
 riverctl map normal Super L spawn waylock
 

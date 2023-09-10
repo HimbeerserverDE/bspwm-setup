@@ -52,7 +52,6 @@ if command_exists pacman; then
 		wofi \
 		waybar \
 		waylock \
-		flameshot \
 		swaybg \
 		swayidle \
 		picom \
