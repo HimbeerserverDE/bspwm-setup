@@ -55,7 +55,6 @@ if command_exists pacman; then
 		swaybg \
 		swayidle \
 		picom \
-		dunst \
 		libnotify \
 		vlc \
 		firefox \
@@ -84,7 +83,7 @@ if command_exists pacman; then
 		gst-plugins-bad \
 		sl
 
-	paru -S --noconfirm cava neo-matrix
+	paru -S --noconfirm cava neo-matrix wired
 
 	${SUDO} rc-update add seatd boot
 else
