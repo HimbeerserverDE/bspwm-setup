@@ -158,3 +158,5 @@ riverctl spawn waybar
 riverctl spawn pipewire
 riverctl spawn pipewire-pulse
 riverctl spawn wireplumber
+
+riverctl spawn dunst
