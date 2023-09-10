@@ -27,7 +27,9 @@
 		}
 	},
 	"wireplumber": {
-		"format-muted": "0%",
+		"format": "{icon} {volume}%",
+		"format-muted": "🔇 {volume}%",
+		"format-icons": ["🔈", "🔉", "🔊"],
 		"reverse-scrolling": 1
 	},
 	"clock": {
