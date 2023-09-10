@@ -15,6 +15,7 @@
 		"interval": 2
 	},
 	"cpu": {
+		"format": "💻 {usage}%",
 		"interval": 2
 	},
 	"memory": {
