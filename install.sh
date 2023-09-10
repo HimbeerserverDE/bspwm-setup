@@ -47,10 +47,11 @@ fi
 
 if command_exists pacman; then
 	${SUDO} pacman -Sy --noconfirm --needed \
-		river
-		seatd-openrc
+		river \
+		seatd-openrc \
 		wofi \
 		waybar \
+		waylock \
 		flameshot \
 		swaybg \
 		picom \
@@ -84,7 +85,7 @@ if command_exists pacman; then
 		gst-plugins-bad \
 		sl
 
-	paru -S --noconfirm cava neo-matrix 
+	paru -S --noconfirm cava neo-matrix
 
 	${SUDO} rc-update add seatd boot
 else

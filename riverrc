@@ -13,6 +13,10 @@ riverctl map normal Super A spawn "wofi -S run"
 # screenshot
 riverctl map normal Super Print spawn "flameshot gui"
 
+# lock screen
+super + l
+	waylock
+
 # kill session completely
 riverctl map normal Super+Alt O spawn "pkill -u ${USER}"
 
