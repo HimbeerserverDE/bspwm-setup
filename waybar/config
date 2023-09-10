@@ -29,7 +29,8 @@
 	"wireplumber": {
 		"format": "{icon} {volume}%",
 		"format-muted": "🔇 {volume}%",
-		"format-icons": ["🔈", "🔉", "🔊"]
+		"format-icons": ["🔈", "🔉", "🔊"],
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 	},
 	"clock": {
 		"format": "{:%Y-%m-%d %H:%M:%S}",
