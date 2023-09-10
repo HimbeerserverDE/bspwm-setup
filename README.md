@@ -1,5 +1,10 @@
 # bspwm-setup
 
+This used to be an actual bspwm environment but the repository is now being
+used for my current setup regardless of what it's based on.
+The current setup actually uses river which is a Wayland replacement for
+bspwm.
+
 ## Software
 
 The software the scripts install depends on your distro.
@@ -35,7 +40,7 @@ on headless servers, or if you don't want to use the rest of the setup.
 
 A full install is recommended.
 
-## Starting a wayland session
+## Starting a Wayland session
 
 By default this setup launches river when zsh is started on tty1.
 You can however use a display manager if you want.
