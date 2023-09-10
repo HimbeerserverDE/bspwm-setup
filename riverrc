@@ -155,3 +155,7 @@ riverctl default-layout bsp-layout
 riverctl spawn "swaybg -i ~/.wallpaper"
 
 riverctl spawn waybar
+
+riverctl spawn pipewire
+riverctl spawn pipewire-pulse
+riverctl spawn wireplumber
