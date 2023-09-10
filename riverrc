@@ -142,3 +142,5 @@ riverctl border-width 0
 
 riverctl spawn ~/.cargo/bin/river-bsp-layout
 riverctl default-layout bsp-layout
+
+riverctl spawn "swaybg -i ~/.wallpaper"

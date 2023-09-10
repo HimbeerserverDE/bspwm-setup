@@ -52,7 +52,7 @@ if command_exists pacman; then
 		rofi \
 		polybar \
 		flameshot \
-		feh \
+		swaybg \
 		picom \
 		dunst \
 		libnotify \
