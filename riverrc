@@ -153,3 +153,5 @@ riverctl default-layout bsp-layout
 riverctl spawn "swaybg -i ~/.wallpaper"
 
 riverctl spawn waybar
+
+riverctl spawn "swayidle -w timeout 600 waylock"

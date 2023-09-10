@@ -54,6 +54,7 @@ if command_exists pacman; then
 		waylock \
 		flameshot \
 		swaybg \
+		swayidle \
 		picom \
 		dunst \
 		libnotify \
@@ -78,7 +79,6 @@ if command_exists pacman; then
 		wireplumber \
 		alsa-utils \
 		xdg-user-dirs \
-		xss-lock \
 		gstreamer \
 		gst-plugins-base \
 		gst-plugins-good \
