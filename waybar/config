@@ -3,9 +3,14 @@
 	"modules-left": ["river/tags", "network"],
 	"modules-right": ["tray", "cpu", "memory", "wireplumber", "battery", "backlight", "clock"],
 	"network": {
-		"format-disconnected": "disconnected",
-		"format-linked": "{essid} {signalStrength}% noconfig",
-		"format-wifi": "{essid} {signalStrength}% {bandwidthDownBytes} {bandwidthUpBytes}",
+		"format-disconnected": "{icon}",
+		"format-linked": "{icon} {essid} 📡 {signalStrength}%",
+		"format-wifi": "{icon} {essid} 📡 {signalStrength}% ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+		"format-icons": {
+			"disconnected": "📵",
+			"linked": "🔗",
+			"wifi": "🌐",
+		},
 		"interface": "wlan0",
 		"interval": 2
 	},
