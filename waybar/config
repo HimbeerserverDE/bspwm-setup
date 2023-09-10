@@ -19,7 +19,7 @@
 		"interval": 2
 	},
 	"memory": {
-		"format": "{avail} GiB",
+		"format": "🐏 {avail} GiB",
 		"interval": 5,
 		"states": {
 			"warning": 70,
