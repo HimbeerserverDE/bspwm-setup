@@ -143,6 +143,8 @@ riverctl map normal Super+Shift 0 set-view-tags ${ALL_TAGS}
 # init
 #
 
+riverctl spawn "swayidle -w timeout 600 waylock"
+
 riverctl keyboard-layout $(cat ~/.kblayout)
 
 riverctl border-width 0
@@ -153,5 +155,3 @@ riverctl default-layout bsp-layout
 riverctl spawn "swaybg -i ~/.wallpaper"
 
 riverctl spawn waybar
-
-riverctl spawn "swayidle -w timeout 600 waylock"
