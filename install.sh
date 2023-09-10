@@ -75,6 +75,7 @@ if command_exists pacman; then
 		pipewire-pulse \
 		wireplumber \
 		alsa-utils \
+		xdg-desktop-portal-wlr \
 		xdg-user-dirs \
 		gstreamer \
 		gst-plugins-base \
@@ -83,6 +84,8 @@ if command_exists pacman; then
 		sl
 
 	paru -S --noconfirm cava neo-matrix wired
+
+	${SUDO} pacman -Rndd polkit
 
 	${SUDO} rc-update add seatd boot
 else
