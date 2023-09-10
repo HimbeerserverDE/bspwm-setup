@@ -1,0 +1,27 @@
+{
+	"layer": "top",
+	"modules-left": ["river/tags", "network"],
+	"modules-right": ["tray", "cpu", "memory", "wireplumber", "battery", "backlight", "clock"],
+	"network": {
+		"format-disconnected": "disconnected",
+		"format-linked": "{essid} {signalStrength}% noconfig",
+		"format-wifi": "{essid} {signalStrength}% {bandwidthDownBytes} {bandwidthUpBytes}",
+		"interface": "wlan0",
+		"interval": 2
+	},
+	"cpu": {
+		"interval": 2
+	},
+	"memory": {
+		"format": "{avail} GiB",
+		"interval": 5
+	},
+	"wireplumber": {
+		"format-muted": "0%",
+		"reverse-scrolling": 1
+	},
+	"clock": {
+		"format": "{:%Y-%m-%d %H:%M:%S}",
+		"interval": 1
+	}
+}

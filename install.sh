@@ -49,8 +49,8 @@ if command_exists pacman; then
 	${SUDO} pacman -Sy --noconfirm --needed \
 		river
 		seatd-openrc
-		rofi \
-		polybar \
+		wofi \
+		waybar \
 		flameshot \
 		swaybg \
 		picom \
@@ -84,7 +84,7 @@ if command_exists pacman; then
 		gst-plugins-bad \
 		sl
 
-	paru -S --noconfirm cava neo-matrix
+	paru -S --noconfirm cava neo-matrix 
 
 	${SUDO} rc-update add seatd boot
 else
@@ -95,12 +95,8 @@ fi
 mkdir -p ~/.config/river
 ln -sf ${PWD}/riverrc ~/.config/river/init
 
-mkdir -p ~/.config/rofi
-ln -sf ${PWD}/rofi_config ~/.config/rofi/config
-ln -sf ${PWD}/rofi_config.rasi ~/.config/rofi/config.rasi
-
-# not the actual config location, it will be symlinked by the mode switch
-ln -sf ${PWD}/polybar ~/.config/polybar.d
+mkdir -p ~/.config/waybar
+ln -sf ${PWD}/waybar.json ~/.config/waybar/config
 
 mkdir -p ~/.config/fontconfig
 ln -sf ${PWD}/fonts.conf ~/.config/fontconfig/fonts.conf
