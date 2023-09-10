@@ -1,5 +1,0 @@
-bspc rule -a Alacritty:alacritty -o node=@^1:^1:/
-bspc rule -a Alacritty:alacritty -o node=@^1:^2:/1/1
-bspc rule -a Alacritty:alacritty -o node=@^1:^2:/1/2
-bspc rule -a Alacritty:alacritty -o node=@^1:^2:/2/1
-bspc rule -a Alacritty:alacritty -o node=@^1:^2:/2/2
