@@ -114,8 +114,8 @@ xdg-user-dirs-update --set VIDEOS ~/videos
 cargo install alacritty
 cargo install river-bsp-layout
 
-mkdir -p ~/.config
-ln -sf ${PWD}/alacritty ~/.config/alacritty
+mkdir -p ~/.config/alacritty
+ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 mkdir -p ~/.gnupg
 ln -sf ${PWD}/gpg-agent.conf ~/.gnupg/gpg-agent.conf
