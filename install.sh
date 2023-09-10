@@ -96,8 +96,7 @@ fi
 mkdir -p ~/.config/river
 ln -sf ${PWD}/riverrc ~/.config/river/init
 
-mkdir -p ~/.config/waybar
-ln -sf ${PWD}/waybar.json ~/.config/waybar/config
+ln -sf ${PWD}/waybar ~/.config/waybar
 
 mkdir -p ~/.config/fontconfig
 ln -sf ${PWD}/fonts.conf ~/.config/fontconfig/fonts.conf
