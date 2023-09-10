@@ -38,6 +38,14 @@ button:hover {
 	color: #d8d8d8;
 }
 
+#memory.warning {
+	color: #f93;
+}
+
+#memory.critical {
+	color: #f33;
+}
+
 #network,
 #tray,
 #cpu,
