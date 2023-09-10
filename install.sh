@@ -123,6 +123,9 @@ ln -sf ${PWD}/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 mkdir -p ~/.config/cava
 ln -sf ${PWD}/cava_config ~/.config/cava/config
 
+mkdir -p ~/.config/wired
+ln -sf ${PWD}/wired.ron ~/.config/wired/wired.ron
+
 cargo install --git https://github.com/HimbeerserverDE/musikbox.git
 
 chsh -s /bin/zsh
