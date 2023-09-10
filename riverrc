@@ -108,6 +108,31 @@ riverctl map normal Super+Alt K move up 20
 riverctl map normal Super+Alt L move right 20
 
 #
+# tags
+#
+
+ALL_TAGS=$(((1 << 32) - 1))
+
+for i in $(seq 1 9); do
+	TAGS=$((1 << ($i - 1)))
+
+	# focus tag
+	riverctl map normal Super $i set-focused-tags ${TAGS}
+
+	# tag focused window (toggle)
+	riverctl map normal Super+Shift $i toggle-view-tags ${TAGS}
+
+	# toggle tag focus
+	riverctl map normal Super+Control $i toggle-focused-tags ${TAGS}
+done
+
+# focus all tags
+riverctl map normal Super 0 set-focused-tags ${ALL_TAGS}
+
+# tag focused window (all)
+riverctl map normal Super+Shift 0 set-view-tags ${ALL_TAGS}
+
+#
 # init
 #
 
