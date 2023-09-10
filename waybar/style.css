@@ -1,0 +1,50 @@
+* {
+	font-family: Terminus;
+}
+
+window#waybar {
+	background-color: #111;
+	color: #d8d8d8;
+}
+
+button {
+	box-shadow: inset 0 -3px transparent;
+	border: none;
+	border-radius: 0;
+}
+
+button:hover {
+	background: inherit;
+	box-shadow: inset 0 -3px #fff;
+}
+
+#tags button {
+	color: #6c6c6c;
+}
+
+#tags button:hover {
+	text-shadow: inherit;
+}
+
+#tags button.focused {
+	box-shadow: inset 0 -3px #d8d8d8;
+}
+
+#tags button.urgent {
+	color: #f33;
+}
+
+#tags button.occupied {
+	color: #d8d8d8;
+}
+
+#network,
+#tray,
+#cpu,
+#memory,
+#wireplumber,
+#battery,
+#backlight,
+#clock {
+	padding: 0 10px;
+}
