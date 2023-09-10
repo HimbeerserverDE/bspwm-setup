@@ -29,8 +29,7 @@
 	"wireplumber": {
 		"format": "{icon} {volume}%",
 		"format-muted": "🔇 {volume}%",
-		"format-icons": ["🔈", "🔉", "🔊"],
-		"reverse-scrolling": 1
+		"format-icons": ["🔈", "🔉", "🔊"]
 	},
 	"clock": {
 		"format": "{:%Y-%m-%d %H:%M:%S}",
