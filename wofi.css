@@ -7,7 +7,7 @@
 	background-color: #333;
 	border: none;
 	border-radius: 0;
-	outline-width: 0;
+	box-shadow: none;
 }
 
 #entry, #text {
