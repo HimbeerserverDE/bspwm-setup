@@ -98,6 +98,9 @@ ln -sf ${PWD}/riverrc ~/.config/river/init
 
 ln -sf ${PWD}/waybar ~/.config/waybar
 
+mkdir -p ~/.config/wofi
+ln -sf ${PWD}/wofi.css ~/.config/wofi/style.css
+
 mkdir -p ~/.config/fontconfig
 ln -sf ${PWD}/fonts.conf ~/.config/fontconfig/fonts.conf
 
