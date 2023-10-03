@@ -152,8 +152,16 @@ riverctl spawn "swaybg -i ~/.wallpaper"
 
 riverctl spawn waybar
 
+killall -qw pipewire
 riverctl spawn pipewire
+while [ -z "$(pgrep -x pipewire)" ]; do false; done
+
+killall -qw pipewire-pulse
 riverctl spawn pipewire-pulse
+while [ -z "$(pgrep -x pipewire-pulse)" ]; do false; done
+
+killall -qw wireplumber
 riverctl spawn wireplumber
+while [ -z "$(pgrep -x wireplumber)" ]; do false; done
 
 riverctl spawn wired
