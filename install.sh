@@ -54,6 +54,7 @@ if command_exists pacman; then
 		waylock \
 		swaybg \
 		swayidle \
+		grim \
 		libnotify \
 		vlc \
 		firefox \
