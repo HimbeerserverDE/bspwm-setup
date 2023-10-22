@@ -142,7 +142,7 @@ riverctl map normal Super+Shift 0 set-view-tags ${ALL_TAGS}
 # init
 #
 
-riverctl spawn "swayidle timeout 600 waylock timeout 900 \"wlopm --off '*'\" resume \"wlopm --on '*'\""
+riverctl spawn "swayidle timeout 600 waylock timeout 900 \"wlr-randr --output $(wlr-randr | grep -E '^[^[:space:]]' | awk '{print $1}') --off\" resume \"wlr-randr --output $(wlr-randr | grep -E '^[^[:space:]]' | awk '{print $1}') --on; riverctl spawn waybar\""
 
 riverctl keyboard-layout $(cat ~/.kblayout)
 
