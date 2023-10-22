@@ -84,7 +84,7 @@ if command_exists pacman; then
 		gst-plugins-bad \
 		sl
 
-	paru -S --noconfirm cava neo-matrix wired wlr-randr
+	paru -S --noconfirm cava neo-matrix wired wlopm
 
 	${SUDO} pacman -Rndd polkit
 
