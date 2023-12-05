@@ -19,8 +19,11 @@ riverctl map normal Super+Alt O spawn "pkill -u ${USER}"
 # kill session completely (force)
 riverctl map normal Super+Alt+Shift O spawn "pkill -9 -u ${USER}"
 
-# screenshot
-riverctl map normal Super Print spawn "GRIM_DEFAULT_DIR=${HOME}/pictures/screenshots grim"
+# screenshot (clipboard only)
+riverctl map normal Super Print spawn "watershot -c"
+
+# screenshot (clipboard + file)
+riverctl map normal Super+Shift Print spawn "watershot -c directory ${HOME}/pictures/screenshots"
 
 # firefox
 riverctl map normal Super+Shift F spawn firefox

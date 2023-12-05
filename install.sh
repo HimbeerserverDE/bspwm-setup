@@ -133,6 +133,7 @@ mkdir -p ~/.config/wired
 ln -sf ${PWD}/wired.ron ~/.config/wired/wired.ron
 
 cargo install --git https://github.com/HimbeerserverDE/musikbox.git
+cargo install --git https://github.com/Kirottu/watershot.git
 
 chsh -s /bin/zsh
 
