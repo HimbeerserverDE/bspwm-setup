@@ -1,0 +1,40 @@
+[colors.bright]
+black = "#222222"
+blue = "#5588ff"
+cyan = "#55ffff"
+green = "#55ff55"
+magenta = "#ff55ff"
+red = "#ff5555"
+white = "#fafafa"
+
+[colors.normal]
+black = "#000000"
+blue = "#3366ff"
+cyan = "#33dddd"
+green = "#33ff33"
+magenta = "#ff33ff"
+red = "#ff3333"
+white = "#d8d8d8"
+yellow = "#ffff33"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12
+
+[font.bold]
+family = "Hack"
+style = "Bold"
+
+[font.italic]
+family = "Hack"
+style = "Italic"
+
+[font.normal]
+family = "Hack"
+style = "Regular"
+
+[window]
+class = "alacritty"
+opacity = 0.72
