@@ -10,7 +10,9 @@ pgrep -x ssh-agent > /dev/null || start_ssh_agent
 
 # Start WM?
 if [[ "${TTY}" == "/dev/tty1" ]]; then
-	river
+	export XDG_CURRENT_DESKTOP=river
+
+	dbus-run-session river
 	exit 0
 fi
 

@@ -145,6 +145,8 @@ riverctl map normal Super+Shift 0 set-view-tags ${ALL_TAGS}
 # init
 #
 
+dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
+
 riverctl spawn "swayidle timeout 600 waylock timeout 900 \"wlopm --off '*'\" resume \"wlopm --on '*'\""
 
 riverctl keyboard-layout $(cat ~/.kblayout)
