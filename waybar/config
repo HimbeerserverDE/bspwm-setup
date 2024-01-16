@@ -32,6 +32,20 @@
 		"format-icons": ["🔈", "🔉", "🔊"],
 		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 	},
+	"battery": {
+		"format": "🔋 {icon} {capacity}% {power} W {time}",
+		"format-charging": "⚡ {icon} {capacity}% {power} W {time}",
+		"format-fully-charged": "🔌 {icon} {capacity}% {power} W {time}",
+		"format-time": "{H}:{m}",
+		"format-icons": {
+			"full": "✅",
+			"low": "🚨"
+		},
+		"states": {
+			"full": 100,
+			"low": 15
+		}
+	},
 	"clock": {
 		"format": "{:%Y-%m-%d %H:%M:%S}",
 		"interval": 1

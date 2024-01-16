@@ -46,6 +46,10 @@ button:hover {
 	color: #f33;
 }
 
+#battery.low {
+	color: #f33;
+}
+
 #network,
 #tray,
 #cpu,
