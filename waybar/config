@@ -46,6 +46,11 @@
 			"low": 15
 		}
 	},
+	"backlight": {
+		"format": "{icon} {percent}%",
+		"format-icons": ["💡"],
+		"scroll-step": 5
+	},
 	"clock": {
 		"format": "{:%Y-%m-%d %H:%M:%S}",
 		"interval": 1
