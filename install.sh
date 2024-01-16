@@ -86,8 +86,6 @@ if command_exists pacman; then
 
 	paru -S --noconfirm cava neo-matrix wired wlopm-git
 
-	${SUDO} pacman -Rndd polkit
-
 	${SUDO} rc-update add seatd boot
 else
 	echo "Your distro is not supported."
