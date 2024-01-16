@@ -46,7 +46,7 @@ if [ ${UID} -ne 0 ]; then
 fi
 
 if command_exists pacman; then
-	${SUDO} pacman -Sy --noconfirm --needed \
+	${SUDO} pacman -Sy --noconfirm --ask 4 --needed \
 		river \
 		seatd-openrc \
 		wofi \
