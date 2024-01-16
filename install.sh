@@ -17,11 +17,6 @@
 
 set -e
 
-if [[ -z "$1" || -z "$2" ]]; then
-	echo -e "\e[1m\e[1;31mUsage: <xkblayout> <xkbvariant>"
-	exit 1
-fi
-
 echo -e "\e[1m\e[1;31mMAKE SURE YOU ARE IN THE DIRECTORY THIS SCRIPT IS LOCATED IN!"
 echo -e "\e[0m\e[1;31mIf you're sure you are in the correct dir, press Enter."
 read
@@ -137,4 +132,5 @@ cargo install --git https://github.com/Kirottu/watershot.git
 chsh -s /bin/zsh
 
 echo -e "\e[1m\e[1;32mSuccess! You can now log in on tty1."
+echo -e "\e[1m\e[1;32mYou can set the keyboard layout in the ~/.kblayout file."
 echo -en "\e[0m"
