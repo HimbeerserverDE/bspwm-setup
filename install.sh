@@ -40,7 +40,7 @@ if [ ${UID} -ne 0 ]; then
 fi
 
 if command_exists pacman; then
-	${SUDO} pacman -Sy --noconfirm --ask 4 --needed \
+	${SUDO} paru -Sy --noconfirm --useask --needed \
 		river \
 		seatd-openrc \
 		alacritty \
@@ -77,9 +77,8 @@ if command_exists pacman; then
 		gst-plugins-base \
 		gst-plugins-good \
 		gst-plugins-bad \
-		sl
-
-	paru -S --noconfirm \
+		sl \
+		# AUR packages
 		river-bsp-layout \
 		watershot \
 		cava \
