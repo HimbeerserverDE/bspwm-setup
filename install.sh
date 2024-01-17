@@ -49,7 +49,6 @@ if command_exists pacman; then
 		waylock \
 		swaybg \
 		swayidle \
-		grim \
 		libnotify \
 		vlc \
 		firefox \
@@ -64,13 +63,13 @@ if command_exists pacman; then
 		noto-fonts-emoji \
 		noto-fonts-extra \
 		ttf-dejavu \
-		hexchat \
 		brightnessctl \
 		pipewire \
 		pipewire-alsa \
 		pipewire-pulse \
 		wireplumber \
 		alsa-utils \
+		xdg-desktop-portal \
 		xdg-desktop-portal-wlr \
 		xdg-user-dirs \
 		gstreamer \
