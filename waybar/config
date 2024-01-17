@@ -1,18 +1,30 @@
 {
 	"layer": "top",
-	"modules-left": ["river/tags", "network"],
+	"modules-left": ["river/tags", "network#eth0", "network#wlan0"],
 	"modules-right": ["tray", "cpu", "memory", "wireplumber", "battery", "backlight", "clock"],
-	"network": {
-		"format-disconnected": "{icon}",
-		"format-linked": "{icon} {essid} 📡 {signalStrength}%",
-		"format-wifi": "{icon} {essid} 📡 {signalStrength}% ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+	"network#eth0": {
+		"format-disconnected": "",
+		"format-linked": "{icon} ⇅",
+		"format-ethernet": "{icon} ⇅ ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+		"format-icons": {
+			"disconnected": "📵",
+			"linked": "🔗",
+			"ethernet": "🌐",
+		},
+		"interface": "eth0",
+		"interval": 1
+	},
+	"network#wlan0": {
+		"format-disconnected": "",
+		"format-linked": "{icon} {essid} 🛜 {signalStrength}%",
+		"format-wifi": "{icon} {essid} 🛜 {signalStrength}% ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
 		"format-icons": {
 			"disconnected": "📵",
 			"linked": "🔗",
 			"wifi": "🌐",
 		},
 		"interface": "wlan0",
-		"interval": 2
+		"interval": 1
 	},
 	"cpu": {
 		"format": "💻 {usage}%",
