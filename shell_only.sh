@@ -44,6 +44,8 @@ if [ ${UID} -ne 0 ]; then
 fi
 
 if command_exists pacman; then
+	${SUDO} sed -i "s/#PACMAN_AUTH=()/PACMAN_AUTH=(${SUDO})/" /etc/makepkg.conf
+
 	${SUDO} pacman -Sy --noconfirm --needed \
 		bat \
 		cowsay \
