@@ -118,7 +118,7 @@ xdg-user-dirs-update --set PICTURES ~/pictures
 xdg-user-dirs-update --set VIDEOS ~/videos
 
 mkdir -p ~/.config/alacritty
-ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf ${PWD}/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 mkdir -p ~/.gnupg
 ln -sf ${PWD}/gpg-agent.conf ~/.gnupg/gpg-agent.conf
