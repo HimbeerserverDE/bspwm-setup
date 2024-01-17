@@ -5,7 +5,7 @@
 #
 
 # terminal emulator
-riverctl map normal Super Return spawn "WINIT_X11_SCALE_FACTOR=1.0 ~/.cargo/bin/alacritty"
+riverctl map normal Super Return spawn "WINIT_X11_SCALE_FACTOR=1.0 alacritty"
 
 # program launcher
 riverctl map normal Super A spawn "wofi -S run"
@@ -153,7 +153,7 @@ riverctl keyboard-layout $(cat ~/.kblayout)
 
 riverctl border-width 0
 
-riverctl spawn ~/.cargo/bin/river-bsp-layout
+riverctl spawn river-bsp-layout
 riverctl default-layout bsp-layout
 
 riverctl spawn "swaybg -i ~/.wallpaper"

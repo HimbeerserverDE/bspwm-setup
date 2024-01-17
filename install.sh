@@ -23,7 +23,6 @@ read
 echo -e "\e[0m"
 
 ./shell_only.sh
-source ~/.cargo/env
 
 function command_exists {
 	command -v $1 &> /dev/null
@@ -44,6 +43,7 @@ if command_exists pacman; then
 	${SUDO} pacman -Sy --noconfirm --ask 4 --needed \
 		river \
 		seatd-openrc \
+		alacritty \
 		wofi \
 		waybar \
 		waylock \
@@ -79,7 +79,13 @@ if command_exists pacman; then
 		gst-plugins-bad \
 		sl
 
-	paru -S --noconfirm cava neo-matrix wired wlopm-git
+	paru -S --noconfirm \
+		river-bsp-layout \
+		watershot \
+		cava \
+		neo-matrix \
+		wired \
+		wlopm-git
 
 	${SUDO} rc-update add seatd boot
 	${SUDO} rc-service seatd start
@@ -111,9 +117,6 @@ xdg-user-dirs-update --set MUSIC ~/music
 xdg-user-dirs-update --set PICTURES ~/pictures
 xdg-user-dirs-update --set VIDEOS ~/videos
 
-cargo install alacritty
-cargo install river-bsp-layout
-
 mkdir -p ~/.config/alacritty
 ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
 
@@ -127,7 +130,6 @@ mkdir -p ~/.config/wired
 ln -sf ${PWD}/wired.ron ~/.config/wired/wired.ron
 
 cargo install --git https://github.com/HimbeerserverDE/musikbox.git
-cargo install --git https://github.com/Kirottu/watershot.git
 
 chsh -s /bin/zsh
 

@@ -43,10 +43,6 @@ if [ ${UID} -ne 0 ]; then
 	fi
 fi
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-echo '. "$HOME/.cargo/env"' >> ~/.zshenv
-source ~/.cargo/env
-
 if command_exists pacman; then
 	${SUDO} pacman -Sy --noconfirm --needed \
 		bat \
@@ -71,9 +67,16 @@ if command_exists pacman; then
 		make \
 		automake \
 		autoconf \
-		m4
+		m4 \
+		rustup \
+		gping \
+		bottom
 
-	cargo install paru
+	rustup default stable
+
+	rm -rf /tmp/paru
+	(cd /tmp && git clone https://aur.archlinux.org/paru.git)
+	(cd /tmp/paru && makepkg -si)
 
 	mkdir -p ~/.config/paru/
 	cat <<EOT > ~/.config/paru/paru.conf
@@ -101,13 +104,14 @@ elif command_exists apt; then
 		vim \
 		neofetch \
 		fzf \
-		openssh-client
+		openssh-client \
+		rust-all
+
+	cargo install cargo-update gping bottom
 else
 	echo "Your distro is not supported."
 	exit 1
 fi
-
-cargo install cargo-update gping lcat bottom
 
 rm -rf ~/.oh-my-zsh/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
