@@ -5,7 +5,7 @@
 #
 
 # terminal emulator
-riverctl map normal Super Return spawn "WINIT_X11_SCALE_FACTOR=1.0 alacritty"
+riverctl map normal Super Return spawn alacritty
 
 # program launcher
 riverctl map normal Super A spawn "wofi -S run"
