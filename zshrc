@@ -20,7 +20,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 export LIBCLANG_PATH="/usr/lib"
-export PATH="$HOME/go/bin:$HOME/bin:/usr/local/go/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/bin:/usr/local/go/bin:$PATH"
 
 export EDITOR="vim"
 
