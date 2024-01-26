@@ -28,9 +28,6 @@ riverctl map normal Super+Shift Print spawn "watershot -c directory ${HOME}/pict
 # firefox
 riverctl map normal Super+Shift F spawn firefox
 
-# hexchat
-riverctl map normal Super+Shift H spawn hexchat
-
 # thunderbird
 riverctl map normal Super+Shift L spawn thunderbird
 
