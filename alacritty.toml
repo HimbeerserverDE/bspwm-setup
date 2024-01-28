@@ -6,6 +6,7 @@ green = "#55ff55"
 magenta = "#ff55ff"
 red = "#ff5555"
 white = "#fafafa"
+yellow = "#ffff55"
 
 [colors.normal]
 black = "#000000"
@@ -15,7 +16,7 @@ green = "#33ff33"
 magenta = "#ff33ff"
 red = "#ff3333"
 white = "#d8d8d8"
-yellow = "#ffff33"
+yellow = "#eeee33"
 
 [env]
 TERM = "xterm-256color"
