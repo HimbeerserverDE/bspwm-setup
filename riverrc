@@ -19,11 +19,8 @@ riverctl map normal Super+Alt O spawn "pkill -u ${USER}"
 # kill session completely (force)
 riverctl map normal Super+Alt+Shift O spawn "pkill -9 -u ${USER}"
 
-# screenshot (clipboard only)
-riverctl map normal Super Print spawn "watershot -c"
-
-# screenshot (clipboard + file)
-riverctl map normal Super+Shift Print spawn "watershot -c directory ${HOME}/pictures/screenshots"
+# screenshot
+riverctl map normal Super Print spawn "shotman --capture region"
 
 # firefox
 riverctl map normal Super+Shift F spawn firefox

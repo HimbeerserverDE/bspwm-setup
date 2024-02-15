@@ -80,7 +80,8 @@ if command_exists pacman; then
 
 	paru -Sy --noconfirm --needed \
 		river-bsp-layout \
-		watershot \
+		shotman \
+		slurp \
 		cava \
 		neo-matrix \
 		wired \
