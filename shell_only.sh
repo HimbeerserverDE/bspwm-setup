@@ -61,7 +61,6 @@ if command_exists pacman; then
 		fzf \
 		openssh \
 		ripgrep \
-		which \
 		gcc \
 		pkg-config \
 		openssl \
@@ -83,7 +82,7 @@ if command_exists pacman; then
 	mkdir -p ~/.config/paru/
 	cat <<EOT > ~/.config/paru/paru.conf
 [bin]
-Sudo = $(which ${SUDO})
+Sudo = $(where ${SUDO})
 EOT
 
 	paru -S --noconfirm --needed \
