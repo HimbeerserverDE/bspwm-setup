@@ -40,7 +40,7 @@ if [ ${UID} -ne 0 ]; then
 fi
 
 if command_exists pacman; then
-	${SUDO} paru -Sy --noconfirm --useask --needed \
+	paru -Sy --noconfirm --useask --needed \
 		river \
 		seatd-openrc \
 		alacritty \
