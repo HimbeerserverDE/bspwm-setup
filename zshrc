@@ -24,6 +24,9 @@ export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/bin:/usr/local/go/bin:$PATH"
 
 export EDITOR="vim"
 
+# vi mode for line editing
+bindkey -v
+
 ZSH_THEME="himbeer" # set by `omz`
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
