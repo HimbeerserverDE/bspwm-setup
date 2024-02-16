@@ -128,7 +128,7 @@ ln -sf ${PWD}/fzf_key_bindings.zsh ~/.zsh_fzf_key_bindings
 ln -sf ${PWD}/fzf_completion.zsh ~/.zsh_fzf_completion
 
 mkdir -p ~/.zprompts
-ln -sf ${PWD}/himbeer.zsh ~/.zprompts/himbeer.zsh
+ln -sf ${PWD}/himbeer.zsh ~/.zprompts/prompt_himbeer_setup
 
 mkdir -p ~/.zplugins
 ln -sf ${PWD}/git.zsh ~/.zplugins/00_git.zsh
