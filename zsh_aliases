@@ -1,2 +1,2 @@
-alias ls="ls --color=auto"
-alias µ="vim"
+alias ls='ls --color=auto'
+alias µ='vim'

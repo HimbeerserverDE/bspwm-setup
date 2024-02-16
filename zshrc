@@ -22,7 +22,7 @@ export HISTSIZE=30000
 export SAVEHIST=30000
 
 export LIBCLANG_PATH="/usr/lib"
-export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/bin:/usr/local/go/bin:$PATH"
+export PATH="${HOME}/.cargo/bin:${HOME}/go/bin:${HOME}/bin:/usr/local/go/bin:${PATH}"
 
 export EDITOR="vim"
 
