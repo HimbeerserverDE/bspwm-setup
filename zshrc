@@ -37,6 +37,10 @@ promptinit
 
 setopt autocd
 
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]-_}={[:upper:][:lower:]_-}' 'r:|=*' 'l:|=* r:|=*'
+
 # vi mode for line editing
 bindkey -v
 
