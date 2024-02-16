@@ -37,9 +37,12 @@ promptinit
 
 setopt autocd
 
+eval $(dircolors -b)
+
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]-_}={[:upper:][:lower:]_-}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # vi mode for line editing
 bindkey -v
