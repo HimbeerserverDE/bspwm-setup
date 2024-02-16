@@ -18,6 +18,8 @@ fi
 
 # Else: Actual ZSH RC
 export HISTFILE="${HOME}/.zsh_history"
+export HISTSIZE=30000
+export SAVEHIST=30000
 
 export LIBCLANG_PATH="/usr/lib"
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/bin:/usr/local/go/bin:$PATH"
@@ -36,6 +38,7 @@ autoload -Uz promptinit
 promptinit
 
 setopt autocd
+setopt appendhistory
 
 eval $(dircolors -b)
 
