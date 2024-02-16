@@ -118,21 +118,24 @@ else
 	exit 1
 fi
 
-rm -rf ~/.oh-my-zsh/
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
 ln -sf ${PWD}/bin ~/bin
 
-mkdir -p ~/
+mkdir -p ~
 ln -sf ${PWD}/zshrc ~/.zshrc
 ln -sf ${PWD}/zsh_aliases ~/.zsh_aliases
+ln -sf ${PWD}/himbeer.zsh ~/.zshtheme.zsh
 ln -sf ${PWD}/fzf_key_bindings.zsh ~/.zsh_fzf_key_bindings
 ln -sf ${PWD}/fzf_completion.zsh ~/.zsh_fzf_completion
+
+mkdir -p ~/.zprompts
+ln -sf ${PWD}/himbeer.zsh ~/.zprompts/himbeer.zsh
+
+mkdir -p ~/.zplugins
+ln -sf ${PWD}/git.zsh ~/.zplugins/00_git.zsh
+ln -sf ${PWD}/git.plugin.zsh ~/.zplugins/git.plugin.zsh
+
 ln -sf ${PWD}/tmux.conf ~/.tmux.conf
 ln -sf ${PWD}/vimrc ~/.vimrc
-
-mkdir -p ~/.oh-my-zsh/
-ln -sf ${PWD}/himbeer.zsh-theme ~/.oh-my-zsh/themes/himbeer.zsh-theme
 
 if called_directly; then
 	echo -e "\e[1m\e[1;32mShell setup has been successfully installed!"

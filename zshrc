@@ -17,19 +17,35 @@ if [[ "${TTY}" == "/dev/tty1" ]]; then
 fi
 
 # Else: Actual ZSH RC
-export ZSH="$HOME/.oh-my-zsh"
+export HISTFILE="${HOME}/.zsh_history"
 
 export LIBCLANG_PATH="/usr/lib"
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/bin:/usr/local/go/bin:$PATH"
 
 export EDITOR="vim"
 
+fpath=("${HOME}/.zprompts" "${fpath[@]}")
+
+autoload -Uz compinit
+compinit
+
+autoload -U colors
+colors
+
+autoload -Uz promptinit
+promptinit
+
+setopt autocd
+
 # vi mode for line editing
 bindkey -v
 
-ZSH_THEME="himbeer" # set by `omz`
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
+find ~/.zplugins -maxdepth 1 -type "f,l" -name "*.zsh" | while read -r PLUGIN
+do
+	source ${PLUGIN}
+done
+
+prompt himbeer
 
 source ~/.zsh_aliases
 

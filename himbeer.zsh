@@ -1,3 +1,5 @@
+#! /bin/zsh
+
 # Copyright (C) 2022  HimbeerserverDE
 # 
 # This program is free software: you can redistribute it and/or modify
@@ -45,6 +47,7 @@ function theme_precmd {
       PR_FILLBAR="\${(l.((${TERMWIDTH} - (${promptsize} + ${USER_ALIAS_LENGTH} + ${pwdsize})))..${PR_HBAR}.)}"
     fi
 
+	setprompt
 }
 
 
@@ -65,6 +68,9 @@ setprompt () {
 
     ###
     # See if we can use colors.
+
+	autoload -U colors
+	colors
 
     autoload zsh/terminfo
     for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE GREY; do
@@ -152,21 +158,21 @@ setprompt () {
     ###
     # Finally, the prompt.
 
-    PROMPT='${PR_SET_CHARSET}${PR_STITLE}${(e)PR_TITLEBAR}\
+    PROMPT="${PR_SET_CHARSET}${PR_STITLE}${(e)PR_TITLEBAR}\
 ${PR_CYAN}${PR_ULCORNER}${PR_HBAR} [ ${PR_BLUE}${HOST} \
 ${PR_MAGENTA}%${PR_PWDLEN}<...<%~%<< ${PR_CYAN}] \
 
 ${PR_CYAN}${PR_LLCORNER}${PR_HBAR}%{${reset_color}%}`git_prompt_info``git_prompt_status`\
-${PR_CYAN} ${PR_CHAR} ${PR_NO_COLOUR}'
+${PR_CYAN} ${PR_CHAR} ${PR_NO_COLOUR}"
 
     # display exitcode on the right when >0
     return_code="%(?..%{${fg[red]}%}%? ⮐%{${reset_color}%})"
-    RPROMPT=' ${return_code}${PR_NO_COLOUR}'
+    RPROMPT=" ${return_code}${PR_NO_COLOUR}"
 
-    PS2='${PR_BLUE}${PR_HBAR}\
+    PS2="${PR_BLUE}${PR_HBAR}\
 ${PR_BLUE}${PR_HBAR}(\
 ${PR_LIGHT_GREEN}%_${PR_BLUE})${PR_HBAR}\
-${PR_CYAN}${PR_HBAR}${PR_NO_COLOUR} '
+${PR_CYAN}${PR_HBAR}${PR_NO_COLOUR} "
 }
 
 setprompt
