@@ -55,6 +55,7 @@ if command_exists pacman; then
 		thunderbird \
 		signal-desktop \
 		element-desktop \
+		kwayland5 \
 		fontconfig \
 		terminus-font \
 		ttf-hack \
