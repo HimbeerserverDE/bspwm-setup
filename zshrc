@@ -62,3 +62,7 @@ source ~/.zsh_aliases
 # fzf
 source ~/.zsh_fzf_key_bindings
 source ~/.zsh_fzf_completion
+
+mkcd() {
+	mkdir $1 && cd $1
+}
