@@ -34,6 +34,9 @@ riverctl map normal Super+Shift S spawn signal-desktop
 # element
 riverctl map normal Super+Shift M spawn "LIBGL_ALWAYS_INDIRECT=1 element-desktop"
 
+# dino
+riverctl map normal Super+Shift P spawn dino
+
 #
 # river hotkeys
 #

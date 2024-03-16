@@ -55,6 +55,7 @@ if command_exists pacman; then
 		thunderbird \
 		signal-desktop \
 		element-desktop \
+		dino \
 		kwayland5 \
 		fontconfig \
 		terminus-font \
