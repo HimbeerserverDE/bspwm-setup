@@ -1,70 +1,215 @@
-{
-	"layer": "top",
-	"modules-left": ["river/tags", "network#eth0", "network#wlan0"],
-	"modules-right": ["tray", "cpu", "memory", "wireplumber", "battery", "backlight", "clock"],
-	"network#eth0": {
-		"format-disconnected": "",
-		"format-linked": "{icon} ⇅",
-		"format-ethernet": "{icon} ⇅ ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
-		"format-icons": {
-			"disconnected": "📵",
-			"linked": "🔗",
-			"ethernet": "🌐",
+[
+	{
+		"output": "eDP-1",
+		"layer": "top",
+		"modules-left": ["river/tags", "network#eth0", "network#wlan0"],
+		"modules-right": ["tray", "cpu", "memory", "wireplumber", "battery", "backlight", "clock"],
+		"network#eth0": {
+			"format-disconnected": "",
+			"format-linked": "{icon} ⇅",
+			"format-ethernet": "{icon} ⇅ ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+			"format-icons": {
+				"disconnected": "📵",
+				"linked": "🔗",
+				"ethernet": "🌐",
+			},
+			"interface": "eth0",
+			"interval": 1
 		},
-		"interface": "eth0",
-		"interval": 1
-	},
-	"network#wlan0": {
-		"format-disconnected": "",
-		"format-linked": "{icon} {essid} 🛜 {signalStrength}%",
-		"format-wifi": "{icon} {essid} 🛜 {signalStrength}% ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
-		"format-icons": {
-			"disconnected": "📵",
-			"linked": "🔗",
-			"wifi": "🌐",
+		"network#wlan0": {
+			"format-disconnected": "",
+			"format-linked": "{icon} {essid} 🛜 {signalStrength}%",
+			"format-wifi": "{icon} {essid} 🛜 {signalStrength}% ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+			"format-icons": {
+				"disconnected": "📵",
+				"linked": "🔗",
+				"wifi": "🌐",
+			},
+			"interface": "wlan0",
+			"interval": 1
 		},
-		"interface": "wlan0",
-		"interval": 1
-	},
-	"cpu": {
-		"format": "💻 {usage}%",
-		"interval": 2
-	},
-	"memory": {
-		"format": "🐏 {avail} GiB",
-		"interval": 5,
-		"states": {
-			"warning": 70,
-			"critical": 90
+		"cpu": {
+			"format": "💻 {usage}%",
+			"interval": 2
+		},
+		"memory": {
+			"format": "🐏 {avail} GiB",
+			"interval": 5,
+			"states": {
+				"warning": 70,
+				"critical": 90
+			}
+		},
+		"wireplumber": {
+			"format": "{icon} {volume}%",
+			"format-muted": "🔇 {volume}%",
+			"format-icons": ["🔈", "🔉", "🔊"],
+			"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+		},
+		"battery": {
+			"format": "🔋 {icon} {capacity}% {power} W {time}",
+			"format-charging": "⚡ {icon} {capacity}% {power} W {time}",
+			"format-fully-charged": "🔌 {icon} {capacity}% {power} W {time}",
+			"format-time": "{H}:{m}",
+			"format-icons": {
+				"full": "✅",
+				"low": "🚨"
+			},
+			"states": {
+				"full": 100,
+				"low": 15
+			}
+		},
+		"backlight": {
+			"format": "{icon} {percent}%",
+			"format-icons": ["💡"],
+			"scroll-step": 5
+		},
+		"clock": {
+			"format": "{:%Y-%m-%d %H:%M:%S}",
+			"interval": 1
 		}
 	},
-	"wireplumber": {
-		"format": "{icon} {volume}%",
-		"format-muted": "🔇 {volume}%",
-		"format-icons": ["🔈", "🔉", "🔊"],
-		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-	},
-	"battery": {
-		"format": "🔋 {icon} {capacity}% {power} W {time}",
-		"format-charging": "⚡ {icon} {capacity}% {power} W {time}",
-		"format-fully-charged": "🔌 {icon} {capacity}% {power} W {time}",
-		"format-time": "{H}:{m}",
-		"format-icons": {
-			"full": "✅",
-			"low": "🚨"
+	{
+		"output": "DP-1",
+		"layer": "top",
+		"modules-left": ["river/tags", "network#eth0", "network#wlan0"],
+		"modules-right": ["tray", "cpu", "memory", "wireplumber", "battery", "backlight", "clock"],
+		"network#eth0": {
+			"format-disconnected": "",
+			"format-linked": "{icon} ⇅",
+			"format-ethernet": "{icon} ⇅ ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+			"format-icons": {
+				"disconnected": "📵",
+				"linked": "🔗",
+				"ethernet": "🌐",
+			},
+			"interface": "eth0",
+			"interval": 1
 		},
-		"states": {
-			"full": 100,
-			"low": 15
+		"network#wlan0": {
+			"format-disconnected": "",
+			"format-linked": "{icon} {essid} 🛜 {signalStrength}%",
+			"format-wifi": "{icon} {essid} 🛜 {signalStrength}% ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+			"format-icons": {
+				"disconnected": "📵",
+				"linked": "🔗",
+				"wifi": "🌐",
+			},
+			"interface": "wlan0",
+			"interval": 1
+		},
+		"cpu": {
+			"format": "💻 {usage}%",
+			"interval": 2
+		},
+		"memory": {
+			"format": "🐏 {avail} GiB",
+			"interval": 5,
+			"states": {
+				"warning": 70,
+				"critical": 90
+			}
+		},
+		"wireplumber": {
+			"format": "{icon} {volume}%",
+			"format-muted": "🔇 {volume}%",
+			"format-icons": ["🔈", "🔉", "🔊"],
+			"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+		},
+		"battery": {
+			"format": "🔋 {icon} {capacity}% {power} W {time}",
+			"format-charging": "⚡ {icon} {capacity}% {power} W {time}",
+			"format-fully-charged": "🔌 {icon} {capacity}% {power} W {time}",
+			"format-time": "{H}:{m}",
+			"format-icons": {
+				"full": "✅",
+				"low": "🚨"
+			},
+			"states": {
+				"full": 100,
+				"low": 15
+			}
+		},
+		"backlight": {
+			"format": "{icon} {percent}%",
+			"format-icons": ["💡"],
+			"scroll-step": 5
+		},
+		"clock": {
+			"format": "{:%Y-%m-%d %H:%M:%S}",
+			"interval": 1
 		}
 	},
-	"backlight": {
-		"format": "{icon} {percent}%",
-		"format-icons": ["💡"],
-		"scroll-step": 5
-	},
-	"clock": {
-		"format": "{:%Y-%m-%d %H:%M:%S}",
-		"interval": 1
+	{
+		"output": "HDMI-A-1",
+		"layer": "top",
+		"modules-left": ["river/tags", "network#eth0", "network#wlan0"],
+		"modules-right": ["tray", "cpu", "memory", "battery", "backlight", "clock"],
+		"network#eth0": {
+			"format-disconnected": "",
+			"format-linked": "{icon} ⇅",
+			"format-ethernet": "{icon} ⇅ ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+			"format-icons": {
+				"disconnected": "📵",
+				"linked": "🔗",
+				"ethernet": "🌐",
+			},
+			"interface": "eth0",
+			"interval": 1
+		},
+		"network#wlan0": {
+			"format-disconnected": "",
+			"format-linked": "{icon} {essid} 🛜 {signalStrength}%",
+			"format-wifi": "{icon} {essid} 🛜 {signalStrength}% ↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+			"format-icons": {
+				"disconnected": "📵",
+				"linked": "🔗",
+				"wifi": "🌐",
+			},
+			"interface": "wlan0",
+			"interval": 1
+		},
+		"cpu": {
+			"format": "💻 {usage}%",
+			"interval": 2
+		},
+		"memory": {
+			"format": "🐏 {avail} GiB",
+			"interval": 5,
+			"states": {
+				"warning": 70,
+				"critical": 90
+			}
+		},
+		"wireplumber": {
+			"format": "{icon} {volume}%",
+			"format-muted": "🔇 {volume}%",
+			"format-icons": ["🔈", "🔉", "🔊"],
+			"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+		},
+		"battery": {
+			"format": "🔋 {icon} {capacity}% {power} W {time}",
+			"format-charging": "⚡ {icon} {capacity}% {power} W {time}",
+			"format-fully-charged": "🔌 {icon} {capacity}% {power} W {time}",
+			"format-time": "{H}:{m}",
+			"format-icons": {
+				"full": "✅",
+				"low": "🚨"
+			},
+			"states": {
+				"full": 100,
+				"low": 15
+			}
+		},
+		"backlight": {
+			"format": "{icon} {percent}%",
+			"format-icons": ["💡"],
+			"scroll-step": 5
+		},
+		"clock": {
+			"format": "{:%Y-%m-%d %H:%M:%S}",
+			"interval": 1
+		}
 	}
-}
+]
