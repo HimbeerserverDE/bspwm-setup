@@ -15,7 +15,7 @@ button {
 
 button:hover {
 	background: inherit;
-	box-shadow: inset 0 -3px #fff;
+	box-shadow: inset 0 -3px #d8d8d8;
 }
 
 #tags button {
