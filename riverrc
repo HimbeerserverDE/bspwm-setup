@@ -150,7 +150,7 @@ riverctl keyboard-layout $(cat ~/.kblayout)
 
 riverctl border-width 0
 
-riverctl spawn river-bsp-layout
+riverctl spawn "river-bsp-layout -i 2 -o 5"
 riverctl default-layout bsp-layout
 
 riverctl spawn "swaybg -i ~/.wallpaper"
