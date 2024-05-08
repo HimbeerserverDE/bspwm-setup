@@ -39,7 +39,7 @@ promptinit
 
 setopt autocd
 setopt appendhistory
-setopt inc_append_history
+setopt share_history
 
 eval $(dircolors -b)
 
