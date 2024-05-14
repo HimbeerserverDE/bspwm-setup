@@ -65,5 +65,5 @@ source ~/.zsh_fzf_key_bindings
 source ~/.zsh_fzf_completion
 
 mkcd() {
-	mkdir $1 && cd $1
+	mkdir -p $1 && cd $1
 }
