@@ -47,4 +47,5 @@ nnoremap <Enter> moO<Esc>`o
 set autoindent
 set number
 set tabstop=4
+set hls is
 syntax on
