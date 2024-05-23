@@ -87,7 +87,8 @@ if command_exists pacman; then
 		cava \
 		neo-matrix \
 		wired \
-		wlopm-git
+		wlopm-git \
+		feh
 
 	${SUDO} rc-update add seatd boot
 	${SUDO} rc-service seatd start
@@ -118,6 +119,9 @@ xdg-user-dirs-update --set DOCUMENTS ~/documents
 xdg-user-dirs-update --set MUSIC ~/music
 xdg-user-dirs-update --set PICTURES ~/pictures
 xdg-user-dirs-update --set VIDEOS ~/videos
+
+xdg-mime default feh.desktop image/jpeg
+xdg-mime default feh.desktop image/png
 
 mkdir -p ~/.config/alacritty
 ln -sf ${PWD}/alacritty.toml ~/.config/alacritty/alacritty.toml
