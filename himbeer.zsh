@@ -180,7 +180,3 @@ setprompt
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
 add-zsh-hook preexec theme_preexec
-
-fortune | cowsay | lolcat
-echo
-neofetch

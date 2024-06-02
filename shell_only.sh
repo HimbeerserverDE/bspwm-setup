@@ -48,16 +48,13 @@ if command_exists pacman; then
 
 	${SUDO} pacman -Sy --noconfirm --needed \
 		bat \
-		cowsay \
-		fortune-mod \
 		zsh \
 		git \
-		figlet \
 		curl \
 		wget \
+		bc \
 		tmux \
 		vim \
-		neofetch \
 		fzf \
 		openssh \
 		ripgrep \
@@ -72,7 +69,7 @@ if command_exists pacman; then
 		m4 \
 		rustup \
 		gping \
-		bottom
+		htop
 
 	rustup default stable
 
@@ -87,32 +84,25 @@ Sudo = $(which ${SUDO})
 EOT
 
 	paru -S --noconfirm --needed \
-		c-lolcat \
-		tty-clock-git \
 		insect
 elif command_exists apt; then
 	${SUDO} apt update
 	${SUDO} apt install -y \
 		bat \
-		lolcat \
-		cowsay \
-		fortune \
 		zsh \
 		git \
-		figlet \
 		curl \
 		wget \
-		tty-clock \
 		bc \
 		units \
 		tmux \
 		vim \
-		neofetch \
 		fzf \
 		openssh-client \
-		rust-all
+		rust-all \
+		htop
 
-	cargo install cargo-update gping bottom
+	cargo install cargo-update gping
 else
 	echo "Your distro is not supported."
 	exit 1
