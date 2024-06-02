@@ -49,6 +49,7 @@ if command_exists pacman; then
 		waylock \
 		swaybg \
 		swayidle \
+		feh \
 		libnotify \
 		vlc \
 		firefox \
@@ -59,7 +60,6 @@ if command_exists pacman; then
 		fontconfig \
 		terminus-font \
 		ttf-hack \
-		ttf-hanazono \
 		noto-fonts \
 		noto-fonts-emoji \
 		noto-fonts-extra \
@@ -76,18 +76,14 @@ if command_exists pacman; then
 		gstreamer \
 		gst-plugins-base \
 		gst-plugins-good \
-		gst-plugins-bad \
-		sl
+		gst-plugins-bad
 
 	paru -Sy --noconfirm --needed \
 		river-bsp-layout \
 		shotman \
 		slurp \
-		cava \
-		neo-matrix \
 		wired \
-		wlopm-git \
-		feh
+		wlopm-git
 
 	${SUDO} rc-update add seatd boot
 	${SUDO} rc-service seatd start
