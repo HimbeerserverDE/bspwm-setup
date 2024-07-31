@@ -28,6 +28,9 @@ augroup zig_save | au!
 	autocmd BufWritePost *.zig !zig fmt '%:p:h'
 	autocmd BufWritePost *.zig edit!
 	autocmd BufWritePost *.zig redraw!
+	autocmd BufWritePost *.zon !zig fmt '%:p:h'
+	autocmd BufWritePost *.zon edit!
+	autocmd BufWritePost *.zon redraw!
 augroup end
 
 autocmd FileType rust setlocal ts=4 sw=4 expandtab
