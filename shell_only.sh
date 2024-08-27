@@ -57,7 +57,6 @@ if command_exists pacman; then
 		vim \
 		fzf \
 		openssh \
-		ripgrep \
 		which \
 		gcc \
 		pkg-config \
