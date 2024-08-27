@@ -51,4 +51,6 @@ set autoindent
 set number
 set tabstop=4
 set hls is
+set textwidth=72
+set formatoptions-=t
 syntax on
