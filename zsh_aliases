@@ -1,3 +1,2 @@
 alias ls='ls --color=auto'
-alias µ='vim'
 alias grep='grep --color'
