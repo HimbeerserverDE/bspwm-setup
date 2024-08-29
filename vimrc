@@ -45,12 +45,12 @@ autocmd FileType yaml setlocal ts=2 sw=2 expandtab
 autocmd FileType yaml set shiftwidth=2
 autocmd FileType yaml set softtabstop=2
 
+autocmd FileType gitcommit setlocal textwidth=72 formatoptions-=t
+
 nnoremap <Enter> moO<Esc>`o
 
 set autoindent
 set number
 set tabstop=4
 set hls is
-set textwidth=72
-set formatoptions-=t
 syntax on
