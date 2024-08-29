@@ -42,6 +42,6 @@ autocmd FileType gitcommit setlocal textwidth=72 formatoptions-=t
 nnoremap <Enter> moO<Esc>`o
 
 set autoindent
-set number
+set number relativenumber
 set hls is
 syntax on
