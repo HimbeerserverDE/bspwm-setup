@@ -45,16 +45,18 @@
 		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 	},
 	"battery": {
-		"format": "🔋 {icon} {capacity}% {power} W {time}",
-		"format-charging": "⚡ {icon} {capacity}% {power} W {time}",
-		"format-fully-charged": "🔌 {icon} {capacity}% {power} W {time}",
+		"format": "{icon} {capacity}% {power} W {time}",
+		"format-charging": "⚡ {capacity}% {power} W {time}",
+		"format-fully-charged": "🔌 {capacity}% {power} W {time}",
 		"format-time": "{H}:{m}",
 		"format-icons": {
-			"full": "✅",
-			"low": "🚨"
+			"full": "🔌",
+			"normal": "🔋",
+			"low": "🔋 🚨"
 		},
 		"states": {
 			"full": 100,
+			"normal": 95,
 			"low": 15
 		}
 	},
