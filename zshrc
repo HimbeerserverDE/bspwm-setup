@@ -40,6 +40,7 @@ promptinit
 setopt autocd
 setopt appendhistory
 setopt share_history
+setopt hist_ignore_all_dups
 
 eval $(dircolors -b)
 
