@@ -1,7 +1,7 @@
 {
 	"layer": "top",
 	"modules-left": ["river/tags", "network#eth0", "network#wlan0"],
-	"modules-right": ["tray", "cpu", "memory", "wireplumber", "battery", "backlight", "clock"],
+	"modules-right": ["tray", "cpu", "memory", "wireplumber", "battery", "backlight", "custom/clock"],
 	"network#eth0": {
 		"format-disconnected": "",
 		"format-linked": "{icon} ⇅",
@@ -65,8 +65,9 @@
 		"format-icons": ["💡"],
 		"scroll-step": 5
 	},
-	"clock": {
-		"format": "{:%Y-%m-%d %H:%M:%S}",
-		"interval": 1
+	"custom/clock": {
+		"format": "{}",
+		"interval": 1,
+		"exec": "date +'%Y-%m-%d %H:%M:%S'"
 	}
 }
