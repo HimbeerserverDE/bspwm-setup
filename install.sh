@@ -76,7 +76,8 @@ if command_exists pacman; then
 		gstreamer \
 		gst-plugins-base \
 		gst-plugins-good \
-		gst-plugins-bad
+		gst-plugins-bad \
+		zathura
 
 	paru -Sy --noconfirm --needed \
 		river-bsp-layout \
@@ -117,6 +118,7 @@ xdg-user-dirs-update --set VIDEOS ~/videos
 
 xdg-mime default feh.desktop image/jpeg
 xdg-mime default feh.desktop image/png
+xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 mkdir -p ~/.config/alacritty
 ln -sf ${PWD}/alacritty.toml ~/.config/alacritty/alacritty.toml
