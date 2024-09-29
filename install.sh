@@ -82,7 +82,7 @@ if command_exists pacman; then
 
 	paru -Sy --noconfirm --needed \
 		river-bsp-layout \
-		shotman \
+		grim \
 		slurp \
 		wired \
 		wlopm-git

@@ -11,6 +11,7 @@ pgrep -x ssh-agent > /dev/null || start_ssh_agent
 # Start WM?
 if [[ "${TTY}" == "/dev/tty1" ]]; then
 	export XDG_CURRENT_DESKTOP=river
+	export GRIM_DEFAULT_DIR="${HOME}/pictures/screenshots"
 
 	dbus-run-session river
 	exit 0

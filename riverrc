@@ -20,7 +20,7 @@ riverctl map normal Super+Alt O spawn "pkill -u ${USER}"
 riverctl map normal Super+Alt+Shift O spawn "pkill -9 -u ${USER}"
 
 # screenshot
-riverctl map normal Super Print spawn "shotman --capture region"
+riverctl map normal Super Print spawn 'grim -g "$(slurp)" - | tee "/tmp/screenshot_$(date +%Y-%m-%d_%H_%M_%S).png" | wl-copy'
 
 # firefox
 riverctl map normal Super+Shift F spawn firefox
