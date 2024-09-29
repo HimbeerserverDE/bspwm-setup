@@ -50,6 +50,7 @@ if command_exists pacman; then
 		swaybg \
 		swayidle \
 		feh \
+		wl-clipboard \
 		libnotify \
 		vlc \
 		firefox \
