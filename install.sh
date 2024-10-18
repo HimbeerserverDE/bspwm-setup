@@ -130,9 +130,6 @@ ln -sf ${PWD}/alacritty.toml ~/.config/alacritty/alacritty.toml
 mkdir -p ~/.gnupg
 ln -sf ${PWD}/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
-mkdir -p ~/.config/cava
-ln -sf ${PWD}/cava_config ~/.config/cava/config
-
 mkdir -p ~/.config/wired
 ln -sf ${PWD}/wired.ron ~/.config/wired/wired.ron
 
