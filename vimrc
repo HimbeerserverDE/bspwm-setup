@@ -46,4 +46,4 @@ set autoindent
 set number relativenumber
 set hls is
 set ttm=100
-syntax on
+syntax off
