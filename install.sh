@@ -54,7 +54,10 @@ if command_exists pacman; then
 		libnotify \
 		vlc \
 		firefox \
-		thunderbird \
+		aerc \
+		mbsync \
+		moreutils \
+		cronie-openrc \
 		signal-desktop \
 		element-desktop \
 		kwayland5 \
@@ -132,6 +135,9 @@ ln -sf ${PWD}/cava_config ~/.config/cava/config
 
 mkdir -p ~/.config/wired
 ln -sf ${PWD}/wired.ron ~/.config/wired/wired.ron
+
+mkdir -p ~/.config/aerc
+ln -sf ${PWD}/aerc.conf ~/.config/aerc/aerc.conf
 
 cargo install --git https://github.com/HimbeerserverDE/musikbox.git
 

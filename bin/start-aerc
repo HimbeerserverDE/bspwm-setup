@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export EDITOR='vim -c "setlocal textwidth=72 formatoptions-=t"'
+
+aerc

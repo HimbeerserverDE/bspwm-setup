@@ -28,6 +28,9 @@ riverctl map normal Super+Shift F spawn firefox
 # thunderbird
 riverctl map normal Super+Shift L spawn thunderbird
 
+# aerc
+riverctl map normal Super+Shift A spawn "alacritty -e ~/bin/start-aerc"
+
 # signal
 riverctl map normal Super+Shift S spawn signal-desktop
 
