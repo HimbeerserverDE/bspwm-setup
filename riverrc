@@ -25,6 +25,9 @@ riverctl map normal Super Print spawn 'grim -g "$(slurp)" - | tee "/tmp/screensh
 # firefox
 riverctl map normal Super+Shift F spawn firefox
 
+# qutebrowser
+riverctl map normal Super+Shift Q spawn qutebrowser
+
 # thunderbird
 riverctl map normal Super+Shift L spawn thunderbird
 
