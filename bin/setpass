@@ -1,0 +1,10 @@
+#!/bin/sh
+
+(umask 4177 && touch ~/.passdb)
+
+cp -p ~/.passdb ~/.passdb.old
+grep --color=never -ve "^$1 = " ~/.passdb.old > ~/.passdb
+
+if [ -n "$2" ]; then
+	echo "$1 = $2" >> ~/.passdb
+fi
