@@ -31,6 +31,9 @@ riverctl map normal Super+Shift Q spawn qutebrowser
 # thunderbird
 riverctl map normal Super+Shift L spawn thunderbird
 
+# zathura
+riverctl map normal Super+Shift Z spawn zathura
+
 # aerc
 riverctl map normal Super+Shift A spawn "alacritty -e ~/bin/start-aerc"
 
