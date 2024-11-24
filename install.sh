@@ -54,7 +54,6 @@ if command_exists pacman; then
 		libnotify \
 		vlc \
 		firefox \
-		qutebrowser \
 		aerc \
 		mbsync \
 		moreutils \
