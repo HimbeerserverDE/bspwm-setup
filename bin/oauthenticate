@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -eo pipefail
+
+if [ -z "$1" -o -z "$2" -o -z "$3" ]; then
+	echo "Usage: oauthenticate <token_uri> <client_id> <refresh_token_file>"
+	exit 1
+fi
+
+RTOK=$(cat "$3")
+
+RESP=$(curl -fsS -X POST "$1" -d "client_id=$2" -d "grant_type=refresh_token" -d "refresh_token=${RTOK}")
+
+echo "${RESP}" | jq -r .refresh_token > $3
+echo "${RESP}" | jq -r .access_token
